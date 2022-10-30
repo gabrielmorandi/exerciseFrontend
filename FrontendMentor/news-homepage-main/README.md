@@ -2,4 +2,4 @@
 
 This is a solution to the [News homepage challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/news-homepage-H6SWTa1MFl). 
 
-https://github.com/gabrielmorandi/exerciseFrontend/blob/main/FrontendMentor/news-homepage-main/design/desktop-preview.jpg
+<img src"https://github.com/gabrielmorandi/exerciseFrontend/blob/main/FrontendMentor/news-homepage-main/design/desktop-preview.jpg" >
