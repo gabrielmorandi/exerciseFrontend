@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frontend Mentor | News homepage</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="../news-homepage-main/assets/images/favicon-32x32.png">
+</head>
+<body>
+    <header id="home">
+        <nav id="nav" class="container-flex">
+            <div class="logo"><a href="index.html"><img src="../news-homepage-main/assets/images/logo.svg" /></a></div>
+            <div class="menu">
+                <div class="mobile-menu">
+                    <img src="../news-homepage-main/assets/images/icon-menu.svg" class="menu-btn"/>
+                    <ul class="menu-content">
+                        <img src="../news-homepage-main/assets/images/icon-menu-close.svg" class="close-btn"/>
+                        <li><a class="a-menu" href="#home">Home</a></li>
+                        <li><a class="a-menu" href="#new">New</a></li>
+                        <li><a class="a-menu" href="#popular">Popular</a></li>
+                        <li><a class="a-menu" href="#">Trending</a></li>
+                        <li><a class="a-menu" href="#">Categories</a></li>
+                    </ul>
+                </div>
+                <div class="desktop-menu">
+                    <ul>
+                        <li><a class="a-menu" href="#home">Home</a></li>
+                        <li><a class="a-menu" href="#new">New</a></li>
+                        <li><a class="a-menu" href="#popular">Popular</a></li>
+                        <li><a class="a-menu" href="#">Trending</a></li>
+                        <li><a class="a-menu" href="#">Categories</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="hero">
+            <div class="hero-content sections-container-flex">
+                <div class="hero-img">
+                    <figure>
+                        <img src="../news-homepage-main/assets/images/image-web-3-mobile.jpg" alt="Web 3.0" class="hero-img-mobile"/>
+                        <img src="../news-homepage-main/assets/images/image-web-3-desktop.jpg" alt="Web 3.0" class="hero-img-desktop">
+                        <div class="figure">
+                            <figcaption><h1>The Bright Future of Web 3.0?</h1></figcaption>
+                            <div class="figure-content">
+                                <p>
+                                    We dive into the next evolution of the web that claims to put the power of the 
+                                    platforms back into the hands of the people. But is it really fulfilling its promise?
+                                </p>
+                                <div>
+                                    <button class="btn-primary">
+                                        Read More
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </figure>
+                </div>
+            </div>
+        </section>
+        <aside id="new">
+            <div class="new sections-container-flex">
+                <h2>New</h2>
+                <div class="news">
+                    <h3>Hydrogen VS Electric Cars</h3>
+                    <p>Will hydrogen-fueled cars ever catch up to EVs?</p>
+                </div>
+                <div class="news">
+                    <h3>The Downsides of AI Artistry</h3>
+                    <p>What are the possible adverse effects of on-demand AI image generation?</p>
+                </div>
+                <div class="news">
+                    <h3>Is VC Funding Drying Up?</h3>
+                    <p>Private funding by VC firms is down 50% YOY. We take a look at what that means.</p>
+                </div>
+            </div>
+        </aside>
+        <section id="popular">
+            <div class="posts">
+                <a href="#" class="post">
+                    <figure class="sections-container-flex">
+                        <img src="../news-homepage-main/assets/images/image-retro-pcs.jpg" alt="Reviving Retro PCs" />
+                        <div class="post-content">
+                            <figcaption>01</figcaption>
+                            <h2>Reviving Retro PCs</h2>
+                            <p>What happens when old PCs are given modern upgrades?</p>
+                        </div>
+                    </figure>
+                </a>
+                <a href="#" class="post">
+                    <figure class="sections-container-flex">
+                        <img src="../news-homepage-main/assets/images/image-top-laptops.jpg" alt="Reviving Retro PCs" />
+                        <div class="post-content">
+                            <figcaption>02</figcaption>
+                            <h2>Top 10 Laptops of 2022</h2>
+                            <p>Our best picks for various needs and budgets.</p>
+                        </div>
+                    </figure>
+                </a>
+                <a href="#" class="post">
+                    <figure class="sections-container-flex posttt">
+                        <img src="../news-homepage-main/assets/images/image-gaming-growth.jpg" alt="Reviving Retro PCs" />
+                        <div class="post-content">
+                            <figcaption>03</figcaption>
+                            <h2>The Growth of Gaming</h2>
+                            <p>How the pandemic has sparked fresh opportunities.</p>
+                        </div>
+                    </figure>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+        Coded by <a href="https://github.com/gabrielmorandi" target="_blank">Gabriel Morandi</a>.
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>
