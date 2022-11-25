@@ -42,12 +42,19 @@ nav img {
 }
 
 .btn-secundary {
-    color: var(--Light--Pink);
+    color: var(--Pink);
     background-color: transparent;
     padding: 6px 20px;
-    border: 1px solid var(--Light--Pink);
+    border: 1px solid var(--Pink);
     border-radius: 20px;
     font-size: .8rem;
+    cursor: pointer;
+}
+
+.btn-secundary:hover {
+    border-color: var(--Light--Pink);
+    color: var(--Light--Pink);
+    transition: .3s;
 }
 
 .hero {
@@ -80,6 +87,12 @@ h1 {
     background-color: var(--Pink);
     box-shadow: 0 5px 8px #ddd;
     font-weight: 600;
+    cursor: pointer;
+}
+
+.btn-primary:hover {
+    background-color: var(--Light--Pink);
+    transition: .3s;
 }
 
 .hero-img {
@@ -132,7 +145,7 @@ h1 {
     display: flex;
     justify-content: center;
     padding-block: 100px 80px;
-    background-color: var(--Very-Pale-Blue);
+    background-color: #f6fbff;
 }
 
 .together-img img {
@@ -144,7 +157,7 @@ h1 {
     display: flex;
     flex-direction: column;
     gap: 20px;
-    background-color: var(--Very-Pale-Blue);
+    background-color: #f6fbff;
 }
 
 .together-text h2 {
@@ -319,6 +332,12 @@ footer {
     background-color: var(--Pink);
     color: var(--Very-Pale-Blue) !important;
     font-weight: 600;
+    cursor: pointer;
+}
+
+.subscribe:hover {
+    background-color: var(--Light--Pink);
+    transition: .3s;
 }
 
 /* huddle */
@@ -352,6 +371,11 @@ footer {
     gap: 15px;
 }
 
+.social i:hover {
+    color: #08c6fb;
+    transition: .3s;
+}
+
 .social i {
     color: var(--Very-Pale-Blue);
     font-size: 1.5rem;
@@ -365,4 +389,216 @@ footer {
 .copy a {
     font-size: .7rem;
     color: var(--Light--Pink);
+}
+
+
+@media screen and (min-width: 1200px) {
+    nav a img{
+        width: 100%;
+    }
+
+    h1 {
+        font-size: 3rem;
+    }
+
+    .hero-content {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .hero-text {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        gap: 25px;
+    }
+
+    .hero-text p {
+        max-width: 565px;
+        margin: 0 auto;
+        font-size: 1.2rem;
+    }
+
+    .btn-primary {
+        padding: 25px 100px;
+        border-radius: 50px ;
+    }
+    .hero-img > img:first-of-type {
+        width: 85%;
+        margin: 0 auto;
+    }
+
+    .informes {
+        margin-block-start: 50px;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+
+    .info {
+        max-width: 300px;
+        margin: 0;
+        padding: 0;
+    }
+
+    .info img {
+        width: 50px;
+    }
+
+    .info p {
+        font-size: 6rem;
+    }
+
+    small {
+        font-size: 1.4rem;
+    }
+
+    .together {
+        background-image: url(images/bg-section-top-desktop-1.svg);
+        padding-block: 165px;
+        display: flex;
+        flex-direction: row-reverse;
+        flex-wrap: wrap;
+    }
+
+    .together-img {
+        width: 50%;
+    }
+
+    .together-text {
+        width: 50%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .together-text h2 {
+        text-align: left;
+        font-size: 3rem;
+    }
+
+    .together-text p {
+        width: 80%;
+        text-align: left;
+        font-size: 1.1rem;
+    }
+
+    .together::after {
+        height: 165px;
+        width: 100%;
+        background-image: url(images/bg-section-bottom-desktop-1.svg);
+    }
+
+    .conversation {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .conversation > img {
+        width: 50%;
+    }
+
+    .conversation > div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 50%;
+    }
+
+    .conversation h2 {
+        text-align: left;
+        font-size: 2.5rem;
+    }
+
+    .conversation p {
+        width: 80%;
+        text-align: left;
+    }
+
+    .users {
+        padding-top: 156px;
+        background-image: url(images/bg-section-top-desktop-2.svg);
+        display: flex;
+        flex-direction: row-reverse;
+        flex-wrap: wrap;
+    }
+
+    .users::after {
+        height: 139px;
+        width: 100%;
+        background-image: url(images/bg-section-bottom-desktop-2.svg);
+        
+    }
+
+    .users-img {
+        background-color: #f6fbff;
+        width: 50%;
+    }
+
+    .users-text {
+        background-color: #f6fbff;
+        width: 50%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .users-text h2 {
+        text-align: left;
+        font-size: 3rem;
+    }
+
+    .users-text p {
+        width: 80%;
+        text-align: left;
+        font-size: 1.1rem;
+    }
+
+    footer {
+        padding-block-start: 158px;
+        background-image: url(images/bg-footer-top-desktop.svg);
+    }
+
+    .footer-content {
+        padding-top: 100px;
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-around;
+        align-items: top;
+        gap: 20%;
+    }
+
+    .huddle {
+        width: 25%;
+        margin: 0 0 0 100px;
+    }
+
+    .news {
+        width: 30%;
+    }
+
+    .news p {
+        width: 70%;
+        font-size: .8rem;
+    }
+
+    .news input:first-of-type {
+        width: 60%;
+    }
+
+    .news input:last-of-type {
+        width: 30% !important;
+        margin: 0;
+    }
+
+    .copy {
+        text-align: left;
+        padding: 10px 0;
+    }
 }
