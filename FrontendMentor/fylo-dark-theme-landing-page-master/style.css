@@ -1,0 +1,347 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Raleway:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+    font-family: 'Open Sans', sans-serif;
+    color: var(--White);
+}
+
+:root {
+    --Dark-Blue-intro: hsl(217, 28%, 15%);
+    --Dark-Blue-main: hsl(218, 28%, 13%);
+    --Dark-Blue-footer: hsl(216, 53%, 9%);
+    --Dark-blues-testmonials: hsl(219, 30%, 18%);
+    --Cyan-gradient-1: hsl(176, 68%, 64%);
+    --Cyan-gradient-2: hsl(198, 60%, 50%);
+    --Red: hsl(0, 100%, 63%);
+    --White: hsl(0, 0%, 100%);
+}
+
+.container-flex {
+    width: 90%;
+    display: flex;
+    margin: 0 auto;
+}
+
+a {
+    text-decoration: none;
+}
+
+small {
+    font-size: 10px;
+}
+
+/* header */
+header {
+    padding-block-start: 15px;
+    width: 100%;
+    background-color: var(--Dark-Blue-intro);
+}
+
+nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav a > img {
+    width: 90px;
+}
+
+nav ul {
+    display: flex;
+    gap: 15px;
+}
+
+nav ul li {
+    list-style: none;
+}
+
+nav ul li a {
+    font-family: 'Raleway', sans-serif;
+    padding: 5px;
+}
+
+.header-content {
+    flex-wrap: wrap;
+}
+
+.hero {
+    width: 100%;
+    margin-block-start: 50px;
+}
+
+.hero figure {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-image: url(images/bg-curvy-mobile.svg);
+    background-repeat: no-repeat;
+    background-position-y: bottom;
+    padding-bottom: 100px;
+}
+
+.hero figure img {
+    width: 80%;
+}
+
+h1 {
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.8rem;
+    width: 90%;
+    margin: -60px auto 0 auto;
+    text-align: center;
+}
+
+.hero-txt {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: var(--Dark-Blue-main);
+    padding-block-start: 60px;
+    margin-block-start: -30px;
+}
+
+.hero-txt p {
+    width: 80%;
+    text-align: center;
+}
+
+.primary-btn {
+    padding-block   : 30px;
+    width: 100%;
+    background-color: var(--Dark-Blue-main);
+    display: flex;
+    justify-content: center;
+}
+
+.primary-btn a button {
+    padding: 15px 90px;
+    border: none;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    border-radius: 25px;
+    background: linear-gradient(95deg, var(--Cyan-gradient-1), var(--Cyan-gradient-2));
+    cursor: pointer;
+}
+
+/* main */
+main {
+    padding-block: 100px 300px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+    background-color: var(--Dark-Blue-main);
+}
+
+/* features */
+#features {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+}
+
+.card figure {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card figcaption {
+    width: 100%;
+    text-align: center;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    font-size: 1.3rem;
+    margin-block: 30px 10px;
+}
+
+.card p {
+    text-align: center;
+}
+
+/* team */
+#team {
+    margin-block-start: 150px;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+}
+
+#team figure {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#team figcaption {
+    margin-block-start: 30px;
+    font: 700 1.3rem 'Raleway', sans-serif;
+}
+
+#team div {
+    display: flex;
+    flex-direction: row;
+}
+
+.seemore {
+    display: flex;
+    align-items: center;
+    color: var(--Cyan-gradient-1);
+    gap: 10px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid var(--Cyan-gradient-1);
+
+}
+
+/* testmonials */
+#testmonials {
+    margin-block-start: 130px;
+    width: 70%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.quotes {
+    width: 25px;
+    margin-inline-start: 5px;
+}
+
+.testmonial {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background-color: var(--Dark-blues-testmonials);
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px var(--Dark-blues-testmonials)
+}
+
+.testmonial img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+.testmonial > div {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+/* footer */
+footer {
+    padding-block-start: 300px;
+    background-color: var(--Dark-Blue-footer);
+}
+
+.access {
+    width: calc(90% - 60px) !important;
+    margin-block-start: -460px;
+    flex-direction: column;
+    gap: 20px;
+    padding: 30px;
+    background-color: var(--Dark-Blue-intro);
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .3);
+}
+
+.access h2 {
+    font-family: 'Revera', sans-serif;
+    font-weight: 400;
+    font-size: 1.6rem;
+    text-align: center;
+}
+
+.access p {
+    text-align: center;
+}
+
+form {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+form input {
+    width: 100%;
+    padding: 15px 20px;
+    border-radius: 25px;
+    border: none;
+}
+
+form input::placeholder {
+    color: #ccc;
+}
+
+form input:last-of-type {
+    background: linear-gradient(95deg, var(--Cyan-gradient-1), var(--Cyan-gradient-2));
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.sobre {
+    margin-block: 75px 50px;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.sobre > div {
+    max-width: 290px;
+    display: flex;
+    align-items: flex-start;
+    gap: 30px;
+}
+
+.links {
+    width: calc(90% + 20px) !important;
+    margin-block-start: 30px;
+}
+
+.links ul li {
+    list-style: none;
+    padding: 10px;
+}
+
+.links ul li a {
+    font-size: 1.3rem;
+}
+
+.social {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-block-start: 50px;
+}
+
+.social a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    border: 1px solid var(--White);
+}
+
+.copy {
+    margin-block-start: 30px;
+    font-size: .7rem;
+    padding: 10px;
+    text-align: center;
+}
+
+.copy a {
+    font-size: .7rem;
+    color: var(--Cyan-gradient-1);
+}
