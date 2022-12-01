@@ -8,6 +8,10 @@
     color: var(--White);
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 :root {
     --Dark-Blue-intro: hsl(217, 28%, 15%);
     --Dark-Blue-main: hsl(218, 28%, 13%);
