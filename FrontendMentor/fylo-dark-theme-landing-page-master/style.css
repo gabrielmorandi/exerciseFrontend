@@ -65,6 +65,10 @@ nav ul li a {
     padding: 5px;
 }
 
+nav ul li a:hover {
+    text-decoration: underline;    
+}
+
 .header-content {
     flex-wrap: wrap;
 }
@@ -100,6 +104,7 @@ h1 {
     width: 100%;
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
     background-color: var(--Dark-Blue-main);
     padding-block-start: 60px;
     margin-block-start: -30px;
@@ -126,6 +131,10 @@ h1 {
     border-radius: 25px;
     background: linear-gradient(95deg, var(--Cyan-gradient-1), var(--Cyan-gradient-2));
     cursor: pointer;
+}
+
+.primary-btn a button:hover {
+    background: linear-gradient(var(--Cyan-gradient-1), var(--Cyan-gradient-1));
 }
 
 /* main */
@@ -179,6 +188,12 @@ main {
     gap: 20px;
 }
 
+#team figure > div {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
 #team figcaption {
     margin-block-start: 30px;
     font: 700 1.3rem 'Raleway', sans-serif;
@@ -196,7 +211,24 @@ main {
     gap: 10px;
     padding-bottom: 5px;
     border-bottom: 1px solid var(--Cyan-gradient-1);
+}
 
+.seemore:hover {
+    color: var(--White);
+    border-color: var(--White);
+    transition: .3s;
+}
+
+.white {
+    display: none;
+}
+
+.seemore:hover > .white {
+    display: flex;
+}
+
+.seemore:hover > .normal {
+    display: none;
 }
 
 /* testmonials */
@@ -276,6 +308,7 @@ form input {
     padding: 15px 20px;
     border-radius: 25px;
     border: none;
+    color: var(--Dark-Blue-footer);
 }
 
 form input::placeholder {
@@ -289,6 +322,10 @@ form input:last-of-type {
     cursor: pointer;
 }
 
+form input:last-of-type:hover {
+    background: linear-gradient(var(--Cyan-gradient-1), var(--Cyan-gradient-1));
+}
+
 .sobre {
     margin-block: 75px 50px;
     flex-wrap: wrap;
@@ -296,10 +333,33 @@ form input:last-of-type {
 }
 
 .sobre > div {
-    max-width: 290px;
     display: flex;
     align-items: flex-start;
     gap: 30px;
+}
+
+.contact {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.contact img:first-of-type {
+    height: 19px;
+}
+
+.contact p:first-of-type {
+    max-width: 290px;
+}
+
+.contact div {
+    width: 100%;
+    display: flex;
+    gap: 30px;
+}
+
+.contact > div:last-child {
+    display: flex;
+    flex-direction: column;
 }
 
 .links {
@@ -314,6 +374,10 @@ form input:last-of-type {
 
 .links ul li a {
     font-size: 1.3rem;
+}
+
+.links ul li a:hover {
+    text-decoration: underline;
 }
 
 .social {
@@ -334,6 +398,16 @@ form input:last-of-type {
     border: 1px solid var(--White);
 }
 
+.social a:hover {
+    border-color: var(--Cyan-gradient-1);
+    transition: .3s;
+}
+
+.social a:hover > i{
+    color: var(--Cyan-gradient-1);
+    transition: .3s;
+}
+
 .copy {
     margin-block-start: 30px;
     font-size: .7rem;
@@ -344,4 +418,182 @@ form input:last-of-type {
 .copy a {
     font-size: .7rem;
     color: var(--Cyan-gradient-1);
+}
+
+.copy a:hover {
+    text-decoration: underline;
+}
+
+@media screen and (min-width: 1100px) {
+    header {
+        padding-block-start: 50px;
+    }
+    nav a img {
+        width: 100%;
+    }
+    nav ul {
+        gap: 20px;
+    }
+    nav ul li a {
+        font-size: 1.2rem;
+    }
+
+    .hero figure {
+        background: none;
+        height: 450px;
+        padding: 0;
+    }
+    .hero figure img {
+        width: 500px;
+        height: 350px;
+    }
+    h1 {
+        font-size: 2.5rem;
+        max-width: 600px;
+    }
+    .hero-txt {
+        background: none;
+        background-image: url(images/bg-curvy-desktop.svg);
+        background-repeat: no-repeat;
+        background-position: top;
+        padding-block-end: 214px;
+    }
+    .hero-txt p{
+        font-size: 1.2rem;
+        max-width: 500px;
+        
+    }
+    .primary-btn {
+        background: none;
+    }
+
+    main {
+        padding: 0;
+    }
+
+    #features {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .card{
+        width: 45%;
+    }
+    .card figure figcaption {
+        font-size: 1.6rem;
+    }
+    .card figure p {
+        max-width: 380px;
+    }
+
+    #team figure {
+        flex-direction: row;
+        align-items: center;
+        justify-content: start;
+        gap: 50px;
+    }
+    #team figure > div {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+    #team figure img {
+        width: 50%;
+    }
+    #team figure figcaption {
+        max-width: 300px;
+        font-size: 2.5rem;
+    }
+    #team figure p {
+        max-width: 450px;
+    }
+    .seemore img {
+        width: 30px !important;
+        height: 30px;
+    }
+
+    .quotess {
+        width: 100%;
+    }
+
+    #testmonials {
+        margin-block-end:230px;
+    }
+
+    .testmonial {
+        max-width: 27%;
+    }
+
+    .access {
+        margin-block-start: -230px;
+        max-width: 45%;
+    }
+
+    form {
+        flex-wrap: nowrap;
+    }
+
+    form input:last-of-type {
+        width: 50%;
+    }
+
+    .sobre {
+        width: 45%;
+        flex-direction: column;
+        flex-wrap: wrap;
+        margin: 75px 0 50px 10%;
+    }
+
+    footer {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding-block-start: 100px;
+    }
+    footer > div:first-of-type {
+        width: 100%;
+    }
+    .sobre > div {
+        gap: 75px;
+    }
+    .contact {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+    }
+    .contact p {
+        width: 290px;
+    }
+    .contact > div:last-child {
+        gap: 20px;
+    }
+    .contact > div:last-child p {
+        max-width: 140px;
+    }
+    .links {
+        width: 12.5% !important;
+        margin: 0 !important;
+        justify-content: center;
+    }
+    .links ul {
+        margin-block-start: 157px;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+    .links ul li {
+        padding: 0;
+    }
+    .links ul li a {
+        font-size: 1.1rem;
+        padding: 5px;
+    }
+    .social {
+        width: 10%;
+        align-items: center;
+    }
+    .copy {
+        width: 100%;
+    }
+
 }
