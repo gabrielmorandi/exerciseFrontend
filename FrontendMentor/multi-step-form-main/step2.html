@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frontend Mentor | Multi-step from</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style-step2.css">
+</head>
+
+<body>
+    <main>
+        <aside>
+            <ul>
+                <li class="nums">1</li>
+                <li class="nums active">2</li>
+                <li class="nums">3</li>
+                <li class="nums">4</li>
+            </ul>
+        </aside>
+        <section>
+            <form action="step3.html" id="form">
+                <h2>Select your plan</h2>
+                <p>You have the option of monthly or yearly billing.</p>
+                <div class="radio">
+                    <label>
+                        <input type="radio" name="option" checked>
+                        <img src="assets/images/icon-arcade.svg" alt="">
+                        <div>
+                            <span>Arcade</span>
+                            <P>$9/mo</P>
+                        </div>
+                    </label>
+                </div>
+                <div class="radio">
+                    <label>
+                        <input type="radio" name="option">
+                        <img src="assets/images/icon-advanced.svg" alt="">
+                        <div>
+                            <span>Advanced</span>
+                            <P>$12/mo</P>
+                        </div>
+                    </label>
+                </div>
+                <div class="radio">
+                    <label>
+                        <input type="radio" name="option">
+                        <img src="assets/images/icon-pro.svg" alt="">
+                        <div>
+                            <span>Pro</span>
+                            <P>$15/mo</P>
+                        </div>
+                    </label>
+                </div>
+                <div class="plan">
+                    <p class="p1">Monthly</p>
+                    <label class="switch">
+                        <input type="checkbox">
+                        <span class="slider round"></span>
+                    </label>
+                    <p class="p2">Yearly</p>
+                </div>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <a href="index.html">Go Back</a>
+        <button form="form">Next Step</button>
+    </footer>
+
+    <script type="module" src="main.js"></script>
+</body>
+</html>

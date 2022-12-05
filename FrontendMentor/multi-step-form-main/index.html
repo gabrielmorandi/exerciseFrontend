@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frontend Mentor | Multi-step from</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style-step1.css">
+</head>
+<body>
+    <main>
+        <aside>
+            <ul>
+                <li class="nums active">1</li>
+                <li class="nums">2</li>
+                <li class="nums">3</li>
+                <li class="nums">4</li>
+            </ul>
+        </aside>
+        <section>
+            <div class="card">
+                <h2>Personal Info</h2>
+                <p>Please provide your name, email address, and phone number.</p>
+                <form action="step2.html" method="post" id="form">
+                    <label for="name">Name</label>
+                    <input type="text" name="name" placeholder="e.g. Stephen King" required>
+                    <label for="email">Email Address</label>
+                    <input type="email" name="email" placeholder="e.g. stephenking@lorem.com" required>
+                    <label for="number">Phone Number</label>
+                    <input type="tel" name="number" placeholder="e.g. +1 234 567 890" size="10" minlength="10" maxlength="10" required>
+                </form>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <button form="form">Next Step</button>
+    </footer>
+
+    <script src="step1.js"></script>
+</body>
+</html>

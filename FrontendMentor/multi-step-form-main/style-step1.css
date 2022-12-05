@@ -1,0 +1,18 @@
+/* form */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    color: var(--Marine-blue);
+}
+form input {
+    padding: 10px 20px;
+    border: 1px solid var(--Light-gray);
+    border-radius: 5px;
+    margin-block-end: 15px;
+}
+form input::placeholder {
+    color: var(--Cool-gray);
+}
