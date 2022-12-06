@@ -1,3 +1,8 @@
+.yearspan {
+    font-size: .8rem;
+    font-weight: 400;
+}
+
 section p {
     max-width: 250px;
 }
@@ -14,7 +19,7 @@ section p {
     gap: 10px;
 }
 .radio {
-    padding: 20px;
+    padding: 15px;
     border: 1px solid var(--Light-gray);
     border-radius: 10px;
     position: relative;

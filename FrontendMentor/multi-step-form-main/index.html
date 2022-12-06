@@ -24,11 +24,11 @@
                 <p>Please provide your name, email address, and phone number.</p>
                 <form action="step2.html" method="get" id="form">
                     <label for="name">Name</label>
-                    <input type="text" name="name" placeholder="e.g. Stephen King" required>
+                    <input type="text" name="name" placeholder="e.g. Stephen King" required id="name">
                     <label for="email">Email Address</label>
-                    <input type="email" name="email" placeholder="e.g. stephenking@lorem.com" required>
+                    <input type="email" name="email" placeholder="e.g. stephenking@lorem.com" required id="email">
                     <label for="number">Phone Number</label>
-                    <input type="tel" name="number" placeholder="e.g. +1 234 567 890" size="10" minlength="10" maxlength="10" required>
+                    <input type="tel" name="number" placeholder="e.g. +1 234 567 890" size="10" minlength="10" maxlength="10" required id="tel">
                 </form>
             </div>
         </section>
@@ -36,7 +36,6 @@
     <footer>
         <button form="form">Next Step</button>
     </footer>
-
-    <script src="step1.js"></script>
+    <script type="module" src="index.js"></script>
 </body>
 </html>

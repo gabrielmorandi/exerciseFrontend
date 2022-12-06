@@ -1,0 +1,13 @@
+{
+  "name": "multi-step-form-main",
+  "version": "1.0.0",
+  "description": "This is a solution to the [Multi-step form challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/multistep-form-YVAnSdqQBJ).",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC", 
+  "type": "module"
+}
