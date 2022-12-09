@@ -14,45 +14,71 @@
     <main>
         <aside>
             <ul>
-                <li class="nums">1</li>
-                <li class="nums active">2</li>
-                <li class="nums">3</li>
-                <li class="nums">4</li>
+                <div class="step-description">
+                    <li class="nums">1</li>
+                    <div class="step-text">
+                        <span>STEP 1</span>
+                        <p>YOUR INFO</p>
+                    </div>
+                </div>
+                <div class="step-description">
+                    <li class="nums active">2</li>
+                    <div class="step-text">
+                        <span>STEP 2</span>
+                        <p>SELECT PLAN</p>
+                    </div>
+                </div>
+                <div class="step-description">
+                    <li class="nums">3</li>
+                    <div class="step-text">
+                        <span>STEP 3</span>
+                        <p>ADD-ONS</p>
+                    </div>
+                </div>
+                <div class="step-description">
+                    <li class="nums">4</li>
+                    <div class="step-text">
+                        <span>STEP 4</span>
+                        <p>SUMMARY</p>
+                    </div>
+                </div>
             </ul>
         </aside>
         <section>
             <form action="step3.html" method="get" id="form">
                 <h2>Select your plan</h2>
                 <p>You have the option of monthly or yearly billing.</p>
-                <div class="radio">
-                    <label>
-                        <input type="radio" name="option" value="Arcade" checked>
-                        <img src="assets/images/icon-arcade.svg" alt="">
-                        <div>
-                            <span>Arcade</span>
-                            <P class="arc">$9/mo</P>
-                        </div>
-                    </label>
-                </div>
-                <div class="radio">
-                    <label>
-                        <input type="radio" name="option" value="Advanced">
-                        <img src="assets/images/icon-advanced.svg" alt="">
-                        <div>
-                            <span>Advanced</span>
-                            <p class="adv">$12/mo</P>
-                        </div>
-                    </label>
-                </div>
-                <div class="radio">
-                    <label>
-                        <input type="radio" name="option" value="Pro">
-                        <img src="assets/images/icon-pro.svg" alt="">
-                        <div>
-                            <span>Pro</span>
-                            <P class="pro">$15/mo</P>
-                        </div>
-                    </label>
+                <div class="radios">
+                    <div class="radio">
+                        <label>
+                            <input type="radio" name="option" value="Arcade" checked>
+                            <img src="assets/images/icon-arcade.svg" alt="">
+                            <div>
+                                <span>Arcade</span>
+                                <P class="arc">$9/mo</P>
+                            </div>
+                        </label>
+                    </div>
+                    <div class="radio">
+                        <label>
+                            <input type="radio" name="option" value="Advanced">
+                            <img src="assets/images/icon-advanced.svg" alt="">
+                            <div>
+                                <span>Advanced</span>
+                                <p class="adv">$12/mo</P>
+                            </div>
+                        </label>
+                    </div>
+                    <div class="radio">
+                        <label>
+                            <input type="radio" name="option" value="Pro">
+                            <img src="assets/images/icon-pro.svg" alt="">
+                            <div>
+                                <span>Pro</span>
+                                <P class="pro">$15/mo</P>
+                            </div>
+                        </label>
+                    </div>
                 </div>
                 <div class="plan">
                     <p class="p1">Monthly</p>
@@ -63,6 +89,10 @@
                     <p class="p2">Yearly</p>
                 </div>
             </form>
+            <div class="button-form-desktop">
+                <a href="index.html">Go Back</a>
+                <button form="form">Next Step</button>
+            </div>
         </section>
     </main>
     <footer>

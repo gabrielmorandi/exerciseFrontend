@@ -18,6 +18,11 @@ section p {
     flex-direction: column;
     gap: 10px;
 }
+.radios {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
 .radio {
     padding: 15px;
     border: 1px solid var(--Light-gray);
@@ -60,6 +65,7 @@ label > div p {
     padding: 10px;
     background-color: var(--Alabaster);
     border-radius: 10px;
+    align-items: center;
 }
 .plan p {
     font-weight: 500;
@@ -127,4 +133,45 @@ footer a {
     color: var(--Cool-gray);
     text-decoration: none;
     margin-left: 5%;
+}
+
+@media screen and (min-width: 1400px) {
+    #form {
+        margin: 0 ;
+        width: 100%;
+    }
+    #form h2 {
+        margin-block-start: 30px;
+        font-size: 2.1rem;
+    }
+    #form p {
+        max-width: none;
+    }
+    .radios {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .radio {
+        margin-block-start: 30px !important;
+        width: 110px;
+        height: 125px;
+    }
+    .radio label {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .radio label img {
+        width: 40px;
+    }
+}
+
+@media screen and (min-width: 1080px) and (max-width: 1400px) {
+    #form {
+        margin: 0;
+    }
+    section {
+        padding-inline: 50px;
+    }
 }

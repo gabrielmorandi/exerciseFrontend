@@ -1,7 +1,7 @@
 sessionStorage.removeItem("check")
 
 const form = document.querySelector('#form')
-const btn = document.querySelector('button')
+const btn = document.querySelectorAll('button')
 const arc = document.querySelector('.arc')
 const adv = document.querySelector('.adv')
 const pro = document.querySelector('.pro')
@@ -25,7 +25,9 @@ checkbox.addEventListener('click', () => {
     }
 })
 
-btn.addEventListener('click', () => {
-    var radio = form.option.value
-    sessionStorage.setItem("radio", radio)
-})
+for (let bt of btn) {
+    bt.addEventListener('click', () => {
+        var radio = form.option.value
+        sessionStorage.setItem("radio", radio)
+    })
+}
