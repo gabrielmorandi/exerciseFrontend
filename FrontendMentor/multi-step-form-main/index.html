@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frontend Mentor | Multi-step from</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style-step1.css">
+</head>
+<body>
+    <main>
+        <aside>
+            <ul>
+                <div class="step-description">
+                    <li class="nums active">1</li>
+                    <div class="step-text">
+                        <span>STEP 1</span>
+                        <p>YOUR INFO</p>
+                    </div>
+                </div>
+                <div class="step-description">
+                    <li class="nums">2</li>
+                    <div class="step-text">
+                        <span>STEP 2</span>
+                        <p>SELECT PLAN</p>
+                    </div>
+                </div>
+                <div class="step-description">
+                    <li class="nums">3</li>
+                    <div class="step-text">
+                        <span>STEP 3</span>
+                        <p>ADD-ONS</p>
+                    </div>
+                </div>
+                <div class="step-description">
+                    <li class="nums">4</li>
+                    <div class="step-text">
+                        <span>STEP 4</span>
+                        <p>SUMMARY</p>
+                    </div>
+                </div>
+            </ul>
+        </aside>
+        <section>
+            <div class="card">
+                <h2>Personal Info</h2>
+                <p>Please provide your name, email address, and phone number.</p>
+                <form action="step2.html" method="get" id="form">
+                    <label for="name">Name</label>
+                    <input type="text" name="name" placeholder="e.g. Stephen King" required id="name">
+                    <label for="email">Email Address</label>
+                    <input type="email" name="email" placeholder="e.g. stephenking@lorem.com" required id="email">
+                    <label for="number">Phone Number</label>
+                    <input type="tel" name="number" placeholder="e.g. +1 234 567 890" size="10" minlength="10" maxlength="10" required id="tel">
+                </form>
+                <div class="button-form-desktop">
+                    <a href="index.html"></a>
+                    <button form="form">Next Step</button>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <button form="form">Next Step</button>
+    </footer>
+    <script type="module" src="index.js"></script>
+</body>
+</html>

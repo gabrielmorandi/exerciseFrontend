@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frontend Mentor | Multi-step from</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style-step3.css">
+</head>
+<body>
+    <main>
+        <aside>
+            <ul>
+                <div class="step-description">
+                    <li class="nums">1</li>
+                    <div class="step-text">
+                        <span>STEP 1</span>
+                        <p>YOUR INFO</p>
+                    </div>
+                </div>
+                <div class="step-description">
+                    <li class="nums">2</li>
+                    <div class="step-text">
+                        <span>STEP 2</span>
+                        <p>SELECT PLAN</p>
+                    </div>
+                </div>
+                <div class="step-description">
+                    <li class="nums active">3</li>
+                    <div class="step-text">
+                        <span>STEP 3</span>
+                        <p>ADD-ONS</p>
+                    </div>
+                </div>
+                <div class="step-description">
+                    <li class="nums">4</li>
+                    <div class="step-text">
+                        <span>STEP 4</span>
+                        <p>SUMMARY</p>
+                    </div>
+                </div>
+            </ul>
+        </aside>
+        <section>
+            <form action="step4.html" id="form">
+                <h2>Pick add-ons</h2>
+                <p>Add-ons help enhance your gaming experience.</p>
+                <label>
+                    <input type="checkbox" checked name="online" value="Online service">
+                    <div>
+                        <p>Online service</p>
+                        <small>Access to multiplayer games</small>
+                    </div>
+                    <p class="one">+$1/mo</p>
+                </label>
+                <label>
+                    <input type="checkbox" checked name="storage" value="Larger storage">
+                    <div>
+                        <p>Larger storage</p>
+                        <small>Extra 1TB of cloud save</small>
+                    </div>
+                    <p class="two">+$2/mo</p>
+                </label>
+                <label>
+                    <input type="checkbox" name="profile" value="Custom profile">
+                    <div>
+                        <p>Customizable profile</p>
+                        <small>Custom theme on your profile</small>
+                    </div>
+                    <p class="two">+$2/mo</p>
+                </label>
+            </form>
+            <div class="button-form-desktop">
+                <a href="step2.html">Go Back</a>
+                <button form="form">Next Step</button>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <a href="step2.html">Go Back</a>
+        <button form="form">Next Step</button>
+    </footer>
+    <script src="step3.js"></script>
+</body>
+</html>
