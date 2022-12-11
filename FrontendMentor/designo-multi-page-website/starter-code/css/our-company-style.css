@@ -1,0 +1,46 @@
+/* header */
+.hero {
+    padding-block: 105px;
+    background-image: url(../assets/about/mobile/bg-pattern-hero-about-mobile.svg);
+    background-repeat: no-repeat;
+    background-position: -500px -125px;
+}
+
+header > img {
+    width: 100%;
+}
+
+.img-about-tablet, .img-about-desktop {
+    display: none;
+}
+
+.real {
+    width: 100%;
+    margin-block-start: 120px;
+    display: grid;
+    place-items: center;
+}
+
+.real > div {
+    width: 100%;
+}
+
+@media screen and (min-width: 660px) {
+    .img-about-mobile {
+        display: none;
+    }
+    .img-about-tablet {
+        display: flex;
+        border-radius: 15px 15px 0 0;
+    }
+
+    header .hero {
+        border-radius: 0 0 15px 15px;
+        margin-block-end: 120px;
+    }
+
+    .real > div {
+        width: 87.2;
+        justify-content: center;
+    }
+}

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+    <title>Frontend Mentor | Designo Agency Website Challenge</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/index-style.css">
+    <link rel="stylesheet" href="./css/contact.css">
+    <link rel="stylesheet" href="./css/cities.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="container-flex">
+                <div class="logo"><a href="index.html"><img src="./assets/shared/desktop/logo-dark.png" alt="Logo-Designo"></a></div>
+                <img src="./assets/shared/mobile/icon-hamburger.svg" alt="Menu-mobile" class="btn-menu">
+                <img src="./assets/shared/mobile/icon-close.svg" alt="Close-Menu-mobile" class="close-btn-menu">
+            </div>
+            <ul class="menu">
+                <li><a href="our-company.html">OUR COMPANY</a></li>
+                <li><a href="locations.html">LOCATIONS</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+            </ul>
+        </nav>
+        <div class="hero">
+            <div class="container-flex">
+                <div class="hero-text">
+                    <h1>Contact Us</h1>
+                    <p>Ready to take it to the next level? Let’s talk about your project or idea and find out how we can help your business grow. If you are looking for unique digital experiences that’s relatable to your users, drop us a line.</p>
+                </div>
+            </div>
+            <form action="#" method="POST">
+            <div class="container-flex">
+                <div class="input">
+                    <input type="text" name="name" placeholder="Name" required>
+                    <span class="error">Can’t be empty <img src="./assets/contact/desktop/icon-error.svg" alt aria-hidden="true"></span>
+                </div>
+                <div class="input">
+                    <input type="email" name="email" placeholder="Email" required>
+                    <span class="error">Can’t be empty <img src="./assets/contact/desktop/icon-error.svg" alt aria-hidden="true"></span>
+                </div>
+                <div class="input">
+                    <input type="tel" name="tel" placeholder="Phone" required>
+                    <span class="error">Can’t be empty <img src="./assets/contact/desktop/icon-error.svg" alt aria-hidden="true"></span>
+                </div>
+                <div class="input">
+                    <textarea name="text-area" rows="5" placeholder="Your Message" required></textarea>
+                    <span class="error">Can’t be empty <img src="./assets/contact/desktop/icon-error.svg" alt aria-hidden="true"></span>
+                </div>
+                <div>
+                    <input class="submit" type="submit" value="SUBMIT">
+                </div>
+            </div>
+        </form>
+        </div>
+    </header>
+    <main>
+        <section class="about">
+            <div class="container-flex">
+                <div class="cards">
+                    <div class="card">
+                        <figure>
+                            <div class="img-bg-1">
+                                <img src="./assets/shared/desktop/illustration-canada.svg" alt="Canada">
+                            </div>
+                            <h2>CANADA</h2>
+                            <div class="btn-secundary">
+                                <a href="locations.html#canada"><button>SEE LOCATION</button></a>
+                            </div>
+                        </figure>
+                    </div>
+                    <div class="card">
+                        <figure>
+                            <div class="img-bg-2">
+                                <img src="./assets/shared/desktop/illustration-australia.svg" alt="Australia">
+                            </div>
+                            <h2>AUSTRALIA</h2>
+                            <div class="btn-secundary">
+                                <a href="locations.html#australia"><button>SEE LOCATION</button></a>
+                            </div>
+                        </figure>
+                    </div>
+                    <div class="card">
+                        <figure>
+                            <div class="img-bg-3">
+                                <img src="./assets/shared/desktop/illustration-united-kingdom.svg" alt="United-kingdon">
+                            </div>
+                            <h2>UNITEDD KINGDON</h2>
+                            <div class="btn-secundary">
+                                <a href="locations.html#uk"><button>SEE LOCATION</button></a>
+                            </div>
+                        </figure>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="container-flex">
+            <div class="footer-top">
+                <div class="logo"><a href="index.html"><img src="./assets/shared/desktop/logo-light.png" alt="Logo-Designo"></a></div>
+                <ul class="footer-menu">
+                    <li><a href="our-company.html">OUR COMPANY</a></li>
+                    <li><a href="locations.html">LOCATIONS</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                </ul>
+            </div>
+            <div class="footer-bottom">
+                <div class="local-info">
+                    <b>Designo Central Office</b>
+                    <p>3886 Wellington Street</p>
+                    <p>Toronto, Ontario M9C 3J5</p>
+                </div>
+                <div class="contact-info">
+                    <b>Contact Us (Central Office)</b>
+                    <p>P : +1 253-863-8967</p>
+                    <p>M : contact@designo.co</p>
+                </div>
+                <div class="socials">
+                    <ul>
+                        <li><a href="#"><img src="./assets/shared/desktop/icon-facebook.svg" alt="Contact-Facebook"></a></li>
+                        <li><a href="#"><img src="./assets/shared/desktop/icon-youtube.svg" alt="Contact-youtube"></a></li>
+                        <li><a href="#"><img src="./assets/shared/desktop/icon-twitter.svg" alt="Contact-twitter"></a></li>
+                        <li><a href="#"><img src="./assets/shared/desktop/icon-pinterest.svg" alt="Contact-pinterest"></a></li>
+                        <li><a href="#"><img src="./assets/shared/desktop/icon-instagram.svg" alt="Contact-instagram"></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="./js/menu.js"></script>
+    <script src="./js/valida-form.js"></script>
+</body>
+</html> 

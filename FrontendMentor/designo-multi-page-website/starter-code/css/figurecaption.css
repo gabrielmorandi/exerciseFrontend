@@ -1,0 +1,65 @@
+/* figurecaption */
+.figurecaption figure {
+    display: grid;
+    place-items: center;
+}
+.figurecaption figure > img {
+    max-width: 100%;
+}
+.figurecaption figure > div {
+    display: grid;
+    place-items: center;
+    background-image: url(../assets/shared/desktop/bg-pattern-three-circles.svg);
+    background-color: #FDF3F0;
+}
+.figurecaption figure > div > div{
+    padding-block: 80px;
+    flex-direction: column;
+    gap: 24px;
+}
+.figurecaption figcaption {
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 36px;
+    color: var(--Peach);
+    text-align: center;
+}
+.figurecaption p {
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 25px;
+    text-align: center;
+}
+
+.img-figurecaption-tablet, .img-figurecaption-desktop {
+    display: none;
+}
+
+@media screen and (min-width: 660px) {
+    .img-figurecaption-mobile {
+        display: none;
+    }
+    .img-figurecaption-tablet {
+        display: flex;
+        width: 100%;
+        border-radius: 15px 15px 0 0;
+    }
+    .figurecaption figure > div {
+        border-radius: 0 0 15px 15px;
+        background-size: 600px;
+        background-repeat: no-repeat;
+        background-position: 120px -215px;
+        width: 100%;
+    }
+    .figurecaption figure > div > div h2, .figurecaption figure > div > div p{
+        max-width: 572px;
+    }
+    .figurecaption figure > div > div p{
+        font-size: 16px;
+        line-height: 26px;
+    }
+    .figurecaption figure > div > div h2{
+        font-size: 40px;
+        line-height: 48px;
+    }
+}

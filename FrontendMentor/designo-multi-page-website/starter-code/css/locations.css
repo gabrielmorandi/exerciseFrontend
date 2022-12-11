@@ -1,0 +1,48 @@
+/* locations */
+.locations {
+    width: 100%;
+    display: grid;
+    place-items: center;
+    gap: 40px;
+}
+.figurecaption figure > div {
+    width: 100%;
+}
+
+.figurecaption .local-info b, .figurecaption .local-info p, .figurecaption .contact-info b, .figurecaption .contact-info p{
+    color: var(--Dark-grey);
+}
+
+.img-locations-tablet {
+    display: none;
+}
+
+@media screen and (min-width: 660px) {
+    .img-locations-mobile {
+        display: none;
+    }
+    .img-locations-tablet {
+        display: flex;
+    }
+    .locations {
+        gap: 120px;
+    }
+
+    .figurecaption {
+        width: 100%;
+        display: grid;
+        place-items: center;
+    }
+    .figurecaption figure{
+        width: 87.2%;
+        gap: 24px;
+    }
+    .figurecaption figure img {
+        width: 100%;
+        border-radius: 15px;
+    }
+    .figurecaption figure > div {
+        width: 100%;
+        border-radius: 15px;
+    }
+}
