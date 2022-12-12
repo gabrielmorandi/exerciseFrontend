@@ -127,7 +127,6 @@ header nav > div {
 .menu-on {
     display: flex;
     margin-block-start: 0;
-    box-shadow: 0 600px 0 600px rgba(0, 0, 0, .5);
 }
 .display-on {
     display: flex;
@@ -404,9 +403,6 @@ footer > div {
 
 @media screen and (min-width: 660px){
     /* menu */
-    .menu {
-        box-shadow: none;
-    }
     .btn-menu, .close-btn-menu {
         display: none;
     }
