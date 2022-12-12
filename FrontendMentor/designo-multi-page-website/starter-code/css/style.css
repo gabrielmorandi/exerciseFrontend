@@ -404,6 +404,9 @@ footer > div {
 
 @media screen and (min-width: 660px){
     /* menu */
+    .menu {
+        box-shadow: none;
+    }
     .btn-menu, .close-btn-menu {
         display: none;
     }
