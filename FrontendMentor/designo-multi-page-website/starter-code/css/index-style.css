@@ -17,6 +17,11 @@
     background-color: var(--White);
     cursor: pointer;
 }
+.btn-primary button:hover {
+    color: var(--White);
+    background-color: var(--Light-peach);
+    transition: .2s;
+}
 
 .hero-img {
     width: 100%;
@@ -128,6 +133,17 @@
 }
 
 @media screen and (min-width: 1000px) {
+    .leaf {
+        top: 530px;
+    }
+    .leaf-b {
+        top: 130px;
+    }
+
+    
+    .about {
+        position: relative;
+    }
     .about .cards {
         flex-direction: row;
         gap: 30px;
@@ -137,23 +153,6 @@
     }
     .about .cards figure .card-text figcaption, .about .cards figure .card-text p {
         text-align: center;
-    }
-    
-    #contact {
-        margin-block-start: 160px;
-    }
-    #contact .contact-content {
-        flex-direction: row;
-        justify-content: space-around;
-        padding-block: 72px 46px;
-        background-position: 360px -150px;
-    }
-    #contact .contact-content .contact-text {
-        justify-content: flex-start;
-        align-items: flex-start;
-    }
-    #contact .contact-content .contact-text h2, #contact .contact-content .contact-text p {
-        text-align: left;
     }
 
     footer .footer-menu {

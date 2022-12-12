@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="./css/cities.css">
 </head>
 <body>
+    <img src="./assets/shared/desktop/bg-pattern-leaf.svg" alt aria-hidden="true" class="leaf">
     <header>
         <nav>
             <div class="container-flex">
@@ -26,22 +27,28 @@
                 <li><a href="contact.html">CONTACT</a></li>
             </ul>
         </nav>
-        <img src="./assets/about/mobile/image-about-hero.jpg" alt="About Us" class="img-about-mobile">
-        <img src="./assets/about/tablet/image-about-hero.jpg" alt="About Us" class="img-about-tablet">
-        <img src="./assets/about/desktop/image-about-hero.jpg" alt="About Us" class="img-about-desktop">
-        <div class="hero">
-            <div class="container-flex">
-                <div class="hero-text">
-                    <h1>About Us</h1>
-                    <p>Founded in 2010, we are a creative agency that produces lasting results for our clients. We’ve partnered with many startups, corporations, and nonprofits alike to craft designs that make real impact. We’re always looking forward to creating brands, products, and digital experiences that connect with our clients’ audiences.</p>
+        <div class="hero-our-company">
+            <picture>
+                <source media="(min-width: 1000px)" srcset="./assets/about/desktop/image-about-hero.jpg">
+                <source media="(min-width: 660px)" srcset="./assets/about/tablet/image-about-hero.jpg">
+                <img src="./assets/about/mobile/image-about-hero.jpg" alt="About Us" class="img-about-mobile">
+            </picture>
+            <div class="hero">
+                <div class="container-flex">
+                    <div class="hero-text">
+                        <h1>About Us</h1>
+                        <p>Founded in 2010, we are a creative agency that produces lasting results for our clients. We’ve partnered with many startups, corporations, and nonprofits alike to craft designs that make real impact. We’re always looking forward to creating brands, products, and digital experiences that connect with our clients’ audiences.</p>
+                    </div>
                 </div>
             </div>
         </div>
         <div class="figurecaption">
             <figure>
-                <img src="./assets/about/mobile/image-world-class-talent.jpg" alt="World-class-talent" class="img-figurecaption-mobile">
-                <img src="./assets/about/tablet/image-world-class-talent.jpg" alt="World-class-talent" class="img-figurecaption-tablet">
-                <img src="./assets/about/desktop/image-world-class-talent.jpg" alt="World-class-talent" class="img-figurecaption-desktop">
+                <picture>
+                    <source media="(min-width: 1000px)" srcset="./assets/about/desktop/image-world-class-talent.jpg">
+                    <source media="(min-width: 660px)" srcset="./assets/about/tablet/image-world-class-talent.jpg">
+                    <img src="./assets/about/mobile/image-world-class-talent.jpg" alt="World-class-talent">
+                </picture>
                 <div>
                     <div class="container-flex">
                         <figcaption>World-class talent</figcaption>
@@ -51,6 +58,7 @@
                 </div>
             </figure>
         </div>
+        <img src="./assets/shared/desktop/bg-pattern-leaf.svg" alt aria-hidden="true" class="leaf">
     </header>
     <main>
         <section class="about">
@@ -83,7 +91,7 @@
                             <div class="img-bg-3">
                                 <img src="./assets/shared/desktop/illustration-united-kingdom.svg" alt="United-kingdon">
                             </div>
-                            <h2>UNITEDD KINGDON</h2>
+                            <h2>UNITED KINGDON</h2>
                             <div class="btn-secundary">
                                 <a href="locations.html#uk"><button>SEE LOCATION</button></a>
                             </div>
@@ -96,14 +104,16 @@
             <div class="container-flex">
                 <div class="figurecaption">
                     <figure>
-                        <img src="./assets/about/mobile/image-real-deal.jpg" alt="World-class-talent" class="img-figurecaption-mobile">
-                        <img src="./assets/about/tablet/image-real-deal.jpg" alt="World-class-talent" class="img-figurecaption-tablet">
-                        <img src="./assets/about/desktop/image-real-deal.jpg" alt="World-class-talent" class="img-figurecaption-desktop">
+                        <picture>
+                            <source media="(min-width: 1000px)" srcset="./assets/about/desktop/image-real-deal.jpg">
+                            <source media="(min-width: 660px)" srcset="./assets/about/tablet/image-real-deal.jpg">
+                            <img src="./assets/about/mobile/image-real-deal.jpg" alt="World-class-talent">
+                        </picture>
                         <div>
                             <div class="container-flex">
-                                <figcaption>World-class talent</figcaption>
-                                <p>We are a crew of strategists, problem-solvers, and technologists. Every design is thoughtfully crafted from concept to launch, ensuring success in its given market. We are constantly updating our skills in a myriad of platforms.</p>
-                                <p>Our team is multi-disciplinary and we are not merely interested in form — content and meaning are just as important. We give great importance to craftsmanship, service, and prompt delivery. Clients have always been impressed with our high-quality outcomes that encapsulates their brand’s story and mission.</p>
+                                <figcaption>The real deal</figcaption>
+                                <p>As strategic partners in our clients’ businesses, we are ready to take on any challenge as our own. Solving real problems require empathy and collaboration, and we strive to bring a fresh perspective to every opportunity. We make design and technology more accessible and give you tools to measure success.</p>
+                                <p>We are visual storytellers in appealing and captivating ways. By combining business and marketing strategies, we inspire audiences to take action and drive real results.</p>
                             </div>
                         </div>
                     </figure>
@@ -118,7 +128,7 @@
                         <p>Ready to take it to the next level? Contact us today and find out how our expertise can help your business grow.</p>
                     </div>
                     <div class="contact-btn">
-                        <button>GET IN TOUCH</button>
+                        <a href="contact.html"><button>GET IN TOUCH</button></a>
                     </div>
                 </div>
             </div>

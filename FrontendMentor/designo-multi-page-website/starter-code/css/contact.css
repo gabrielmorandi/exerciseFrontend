@@ -31,11 +31,15 @@ form input, textarea {
 form input::placeholder, textarea::placeholder {
     color: rgba(255, 255, 255, .5);
 }
+form input:valid {
+    border-bottom: 3px solid var(--White);
+}
 form div > div {
     display: grid;
     place-items: center;
 }
 .submit {
+    width: auto;
     margin-block-start: 28px;
     background-color: var(--White);
     padding: 18px 47px 16px 48px;
@@ -44,6 +48,13 @@ form div > div {
     font-weight: 500;
     font-size: 15px;
     line-height: 22px;
+    border: none !important;
+    cursor: pointer;
+}
+.submit:hover {
+    background-color: #FFAD9B;
+    color: var(--White);
+    transition: .2s;
 }
 .input {
     position: relative;
@@ -64,6 +75,10 @@ form div > div {
     display: flex;
 }
 
+textarea {
+    resize: none;
+}
+
 /* footer */
 footer {
     margin-block-start: 120px;
@@ -79,5 +94,20 @@ footer {
         width: 100%;
         max-width: 100%;
         text-align: left;
+    }
+    
+    header form > div > div {
+        place-items: end;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    header .hero{
+        padding: 0;
+        background-position: 0 bottom;
+    }
+    header form {
+        padding: 0;
+        margin-block: 54px;
     }
 }

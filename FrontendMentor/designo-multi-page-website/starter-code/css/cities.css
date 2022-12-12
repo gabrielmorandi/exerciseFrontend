@@ -1,7 +1,7 @@
 /* ABOUT */
 .about > div {
     display: grid;
-    place-items: center;    
+    place-items: center;
     margin-block-start: 120px;
 }
 .about .cards .card figure {
@@ -54,6 +54,10 @@
     background-color: var(--Peach);
     cursor: pointer;
 }
+.btn-secundary button:hover {
+    background-color: #FFAD9B;
+    transition: .2s;
+}
 
 @media screen and (min-width: 660px) {
     .about .cards .card figure {
@@ -62,5 +66,14 @@
     .about .cards {
         gap: 80px;
     }
+}
 
+@media screen and (min-width: 1000px) {
+    .about > div {
+        margin: 0;
+    }
+    .about .cards {
+        width: 100%;
+        justify-content: space-evenly;
+    }
 }
