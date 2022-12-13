@@ -183,7 +183,7 @@ header nav > div {
     flex-direction: column;
     gap: 24px;
 }
-a:has(.back-img) {
+a .back-img {
     position: relative;
 }
 .back-img {
