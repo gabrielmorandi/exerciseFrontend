@@ -140,6 +140,10 @@
         top: 130px;
     }
 
+    header .hero {
+        background-position: right 0;
+    }
+
     
     .about {
         position: relative;
