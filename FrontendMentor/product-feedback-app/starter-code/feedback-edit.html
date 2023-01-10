@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+    <title>Frontend Mentor | Product feedback app</title>
+    <link rel="stylesheet" href="feedback-detail.css">
+</head>
+<body>
+    <header>
+        <div class="container-flex">
+            <a href="index.html" class="btn-goback-primary">
+                <img src="assets/shared/icon-arrow-left.svg" alt  aria-hidden="true">
+                <p>Go Back</p>
+            </a>
+        </div>
+    </header>
+    <main>
+        <div class="container-grid">
+            <form action="#">
+                <h2>Editing ‘Add a dark theme option’</h2>
+                <label>
+                    <h3>Feedback Title</h3>
+                    <small>Add a short, descriptive headline</small>
+                    <input type="text" name="feedbackTitle" placeholder="Add a dark theme option">
+                </label>
+                <label>
+                    <h3>Category</h3>
+                    <small>Choose a category for your feedback</small>
+                    <select name="Category">
+                        <option value="UI">UI</option>
+                        <option value="UX">UX</option>
+                        <option value="Enhancement">Enhancement</option>
+                        <option value="Bug">Bug</option>
+                        <option value="Feature">Feature</option>
+                    </select>
+                </label>
+                <label>
+                    <h3>Update Status</h3>
+                    <small>Change feature state</small>
+                    <select name="Category">
+                        <option value="Planned">Planned</option>
+                        <option value="In-Progress">In-Progress</option>
+                        <option value="Live">Live</option>
+                    </select>
+                </label>
+                <label>
+                    <h3>Feedback Detail</h3>
+                    <small>Include any specific comments on what should be improved, added, etc</small>
+                    <textarea name="feedbackDetail" rows="4" placeholder="It would help people with light sensitivies and who prefer dark mode."></textarea>
+                </label>
+                <div class="btn-primary">
+                    <div class="btn-purple">
+                        <input type="submit" value="Save Changes">
+                    </div>
+                    <div class="btn-dark-blue">
+                        <button>Cancel</button>
+                    </div>
+                    <div class="btn-red">
+                        <button>Delete</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </main>
+</body>
+</html>

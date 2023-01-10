@@ -1,0 +1,95 @@
+@use '../abstracts/v'
+@use '../abstracts/m'
+
+.feedback-comments
+  width: 100%
+  display: grid
+  place-items: center
+  margin-block-start: 24px
+  > div
+    place-items: center
+    padding: 24px 24px 0 24px
+    border-radius: 10px
+    background-color: v.$white
+    h2
+      width: 100%
+      font-weight: 700
+      font-size: 18px
+      line-height: 26px
+      letter-spacing: -0.25px
+      color: v.$dark-blue
+    .feedback-comment
+      width: 100%
+      display: grid
+      place-items: center
+      border-bottom: 1px solid rgba(#8C92B3, .25)
+      header 
+        width: 100%
+        display: flex
+        justify-content: space-between
+        gap: 1rem
+        img
+          width: 40px
+          height: 40px
+          border-radius: 100%
+        .user
+          width: 100%
+          h3
+            font-weight: 700
+            font-size: 13px
+            line-height: 19px
+            letter-spacing: -0.180556px
+            color: v.$dark-blue
+          h4
+            font-size: 13px
+            line-height: 19px
+            color: v.$gray-blue
+        .reply
+          font-weight: 600
+          font-size: 13px
+          line-height: 19px
+          color: v.$blue
+          cursor: pointer
+      .feedback-comment-content
+        padding-block-end: 24px
+        p
+          font-size: 13px
+          line-height: 19px
+          color: v.$gray-blue
+        .replies
+          display: grid
+          place-items: center
+          margin-block-start: 24px
+          gap: 24px
+          .replie
+            width: 100%
+            padding-inline-start: 10%
+            display: grid
+            place-items: end
+            gap: 1rem
+            padding-block-end: 48px
+            border-left: 1px solid rgba(v.$gray-blue, .1)
+            header
+              padding: 0
+              .reply
+                color: v.$blue
+            .replie-content
+              p
+                font-size: 13px
+                line-height: 19px
+                color: v.$gray-blue
+                .reply-to
+                  color: v.$purple
+                  font-weight: 700
+                  font-size: 13px
+                  line-height: 19px
+            &:last-child
+              margin-block-start: -48px
+              padding-block-end: 0 !important
+              border: none
+            &:first-child
+              margin-block-start: 0
+              padding-block-end: 48px
+              border-left: 1px solid rgba(v.$gray-blue, .1)
+      &:last-child
+        border: none
