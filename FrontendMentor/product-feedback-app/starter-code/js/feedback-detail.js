@@ -4,6 +4,14 @@ const title = urlClass.searchParams.get("title")
 const feed = document.querySelector('.feed .container-grid')
 const feedComments = document.querySelector('.feedback-comments .container-grid')
 const h2 = document.querySelector('.feedback-comments .container-grid h2')
+const divHeader = document.querySelector('header > div')
+
+divHeader.innerHTML += 
+`
+    <a href="feedback-edit.html?title=${title}" class="btn-primary btn-blue">
+        <button>Edit Feedback</button>
+    </a>
+`
 
 fetch('data.json').then((response) => {
     response.json().then((dados) => {
