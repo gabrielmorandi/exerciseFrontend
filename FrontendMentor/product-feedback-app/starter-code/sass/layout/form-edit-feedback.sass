@@ -24,6 +24,8 @@ main
       background-size: contain
       background-position: center
       background-repeat: no-repeat
+    &.plus::before 
+      background-image: url('assets/shared/icon-new-feedback.svg')
     form 
       margin-block-start: 24px
       display: flex
@@ -54,8 +56,6 @@ main
           border: none
           border-radius: 5px
           background-color: v.$white-gray
-          &::placeholder
-            color: v.$dark-blue
         textarea
           resize: none
         select

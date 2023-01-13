@@ -169,6 +169,9 @@ main > div::before {
   background-position: center;
   background-repeat: no-repeat;
 }
+main > div.plus::before {
+  background-image: url("assets/shared/icon-new-feedback.svg");
+}
 main > div form {
   margin-block-start: 24px;
   display: flex;
@@ -202,9 +205,6 @@ main > div form label input, main > div form label textarea {
   border: none;
   border-radius: 5px;
   background-color: #F7F8FD;
-}
-main > div form label input::placeholder, main > div form label textarea::placeholder {
-  color: #3A4374;
 }
 main > div form label textarea {
   resize: none;

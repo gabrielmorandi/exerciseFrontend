@@ -51,7 +51,7 @@ fetch('data.json').then((response) => {
                         <label>
                             <h3>Feedback Title</h3>
                             <small>Add a short, descriptive headline</small>
-                            <input type="text" name="feedbackTitle" placeholder="${message.title}">
+                            <input type="text" name="feedbackTitle" value="${message.title}">
                         </label>
                         <label>
                             <h3>Category</h3>
