@@ -1,0 +1,113 @@
+@use '../abstracts/v'
+@use '../abstracts/m'
+
+main
+  display: grid
+  .selectors
+    display: flex
+    justify-content: space-between
+    border-bottom: 1px solid rgba(#8C92B3, .25)
+    .selector
+      width: 100%
+      display: grid
+      place-items: center
+      padding-block: 20px
+      p
+        font-weight: 700
+        font-size: 13px
+        line-height: 19px
+        letter-spacing: -0.180556px
+        opacity: .4
+    .selector-active
+      position: relative
+      p
+        opacity: 1
+      &::after
+        content: ''
+        display: flex
+        position: absolute
+        left: 0
+        bottom: -1px
+        width: 100%
+        height: 4px
+        background-color: v.$purple
+  > .container-grid
+    place-self: center
+
+
+.circle
+  padding: 4px
+  border-radius: 100%
+.c-orange
+  background-color: v.$orange
+.c-purple
+  background-color: v.$purple
+.c-light-blue
+  background-color: v.$light-blue
+
+.comment
+  width: 100%
+  padding: 24px
+  background: linear-gradient(180deg, rgba(173,31,234,1) 6px, rgba(255,255,255,1) 6px)
+  border-radius: 10px
+  margin-block-start: 1rem
+  display: grid
+  grid-template-columns: 1fr 1fr
+  grid-template-rows: 20px 1fr 32px
+  gap: 1rem
+  .stats
+    grid-row: 1/1
+    grid-column: 1/2
+    display: flex
+    align-items: center
+    gap: 8px
+  .upvote, .comments
+    grid-row: 3/4
+    cursor: pointer
+  .comment-content
+    grid-column: 1/3
+    grid-row: 2/3
+    display: flex
+    flex-direction: column
+    gap: 8px
+    h2
+      font-weight: 700
+      font-size: 13px
+      line-height: 19px
+      letter-spacing: -0.18px
+    > p
+      font-weight: 400
+      font-size: 13px
+      line-height: 19px
+      color: v.$gray-blue
+    > div
+      display: flex
+      justify-content: flex-start
+  .upvote
+    width: 70px
+    display: flex
+    justify-content: center
+    align-items: center
+    gap: 10px
+    background-color: v.$white-blue
+    border-radius: 10px
+    p
+      font-weight: 700
+      font-size: 13px
+      line-height: 19px
+      letter-spacing: -0.18px
+  .comments
+    width: 60px
+    display: flex
+    place-self: end
+    justify-content: flex-end
+    align-items: center
+    justify-content: center
+    gap: 8px
+    p
+      font-weight: 700
+      font-size: 13px
+      line-height: 19px
+      letter-spacing: -0.18px
+    .zero-comments
+      opacity: .5

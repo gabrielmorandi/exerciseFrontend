@@ -1,29 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
-
-  <title>Frontend Mentor | Product feedback app</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+    <title>Frontend Mentor | Product feedback app</title>
+    <link rel="stylesheet" href="roadmap.css">
 </head>
-
 <body>
-  Go back
-  Roadmap
+    <header>
+        <div class="container-flex">
+            <div class="header-left">
+                <a href="index.html" class="btn-goback-primary">
+                    <img src="assets/shared/icon-arrow-left-white.svg" alt aria-hidden="true">
+                    <p>Go Back</p>
+                </a>
+                <h2>Roadmap</h2>
+            </div>
+            <a href="feedback-new.html" class="btn-primary btn-purple">
+                <button>+ Add Feedback</button>
+            </a>
+        </div>
+    </header>
+    <main>
+        <div class="selectors">
+            <div class="selector">
+                <p>Planned (2)</p>
+            </div>
+            <div class="selector selector-active">
+                <p>In-Progress (3)</p>
+            </div>
+            <div class="selector">
+                <p>Live (1)</p>
+            </div>
+        </div>
+        <div class="container-grid">
+            <div class="comment">
+                <div class="stats">
+                    <div class="circle c-purple"></div>
+                    <p>In-Progress</p>
+                </div>
+                <div class="upvote">
+                    <img src="assets/shared/icon-arrow-up.svg" alt="" aria-hidden="true">
+                    <p>123</p>
+                </div>
+                <div class="comment-content">
+                    <h2>More comprehensive reports</h2>
+                    <p>It would be great to see a more detailed breakdown of solutions.</p>
+                    <div>
+                        <div class="category">
+                            <p>feature</p>
+                        </div>
+                    </div>
+                </div>
+                <a href="feedback-detail.html?title=More comprehensive reports" class="comments">
+                    <img src="assets/shared/icon-comments.svg" alt="" aria-hidden="true">
+                    <p>2</p>
+                </a>
+            </div>
+        </div>
+    </main>
 
-  Add Feedback
-
-  Planned <!-- Add number here -->
-  Ideas prioritized for research
-
-  In-Progress <!-- Add number here -->
-  Currently being developed
-
-  Live <!-- Add number here -->
-  Released features
-
+    <script src="js/roadmap.js"></script>
 </body>
 <html

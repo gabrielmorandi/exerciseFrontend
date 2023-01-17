@@ -129,11 +129,28 @@ body {
 header {
   display: grid;
   place-items: center;
-  padding-block: 24px;
+  padding-block: 26px;
+  background-color: #373F68;
 }
 header > div {
   align-items: center;
   justify-content: space-between;
+}
+header > div .header-left {
+  display: grid;
+  place-items: center;
+}
+header > div .header-left h2 {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 26px;
+  letter-spacing: -0.25px;
+  color: #FFFFFF;
+}
+header > div .header-left a p {
+  font-size: 13px;
+  line-height: 19px;
+  color: #FFFFFF !important;
 }
 
 main .feed {
@@ -144,92 +161,140 @@ main .feed > div .comment {
 }
 
 main {
+  display: grid;
+}
+main .selectors {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(140, 146, 179, 0.25);
+}
+main .selectors .selector {
   width: 100%;
   display: grid;
   place-items: center;
-  margin-block: 31px;
+  padding-block: 20px;
 }
-main > div {
-  background-color: #FFFFFF;
-  padding: 24px;
-  border-radius: 10px;
-  position: relative;
-}
-main > div::before {
-  content: "";
-  top: -20px;
-  left: 24px;
-  height: 40px;
-  width: 40px;
-  border-radius: 100%;
-  display: flex;
-  position: absolute;
-  background-image: url("assets/shared/icon-edit-feedback.svg");
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-main > div.plus::before {
-  background-image: url("assets/shared/icon-new-feedback.svg");
-}
-main > div form {
-  margin-block-start: 24px;
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
-}
-main > div form h2 {
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 26px;
-  letter-spacing: -0.25px;
-}
-main > div form label h3, main > div form label small {
+main .selectors .selector p {
   font-weight: 700;
   font-size: 13px;
   line-height: 19px;
   letter-spacing: -0.180556px;
+  opacity: 0.4;
 }
-main > div form label small {
-  font-weight: 400;
-  letter-spacing: inherit;
-  color: #647196;
+main .selectors .selector-active {
+  position: relative;
 }
-main > div form label input, main > div form label textarea {
-  font-weight: 400;
-  font-size: 13px;
-  line-height: 19px;
-  padding: 15px;
-  width: 100%;
-  margin-block-start: 1rem;
-  border: none;
-  border-radius: 5px;
-  background-color: #F7F8FD;
+main .selectors .selector-active p {
+  opacity: 1;
 }
-main > div form label textarea {
-  resize: none;
-}
-main > div form label select {
-  font-weight: 400;
-  font-size: 13px;
-  line-height: 19px;
-  padding: 15px;
-  width: 100%;
-  margin-block-start: 1rem;
-  border: none;
-  border-radius: 5px;
-  background-color: #F7F8FD;
-}
-main > div .btn-primary {
+main .selectors .selector-active::after {
+  content: "";
   display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
-main > div .btn-primary > div {
+  position: absolute;
+  left: 0;
+  bottom: -1px;
   width: 100%;
+  height: 4px;
+  background-color: #AD1FEA;
 }
-main > div .btn-primary button, main > div .btn-primary input {
-  width: 100%;
+main > .container-grid {
+  place-self: center;
 }
 
-/*# sourceMappingURL=feedback-detail.css.map */
+.circle {
+  padding: 4px;
+  border-radius: 100%;
+}
+
+.c-orange {
+  background-color: #F49F85;
+}
+
+.c-purple {
+  background-color: #AD1FEA;
+}
+
+.c-light-blue {
+  background-color: #62BCFA;
+}
+
+.comment {
+  width: 100%;
+  padding: 24px;
+  background: linear-gradient(180deg, rgb(173, 31, 234) 6px, rgb(255, 255, 255) 6px);
+  border-radius: 10px;
+  margin-block-start: 1rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 20px 1fr 32px;
+  gap: 1rem;
+}
+.comment .stats {
+  grid-row: 1/1;
+  grid-column: 1/2;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.comment .upvote, .comment .comments {
+  grid-row: 3/4;
+  cursor: pointer;
+}
+.comment .comment-content {
+  grid-column: 1/3;
+  grid-row: 2/3;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.comment .comment-content h2 {
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 19px;
+  letter-spacing: -0.18px;
+}
+.comment .comment-content > p {
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 19px;
+  color: #647196;
+}
+.comment .comment-content > div {
+  display: flex;
+  justify-content: flex-start;
+}
+.comment .upvote {
+  width: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  background-color: #F2F4FF;
+  border-radius: 10px;
+}
+.comment .upvote p {
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 19px;
+  letter-spacing: -0.18px;
+}
+.comment .comments {
+  width: 60px;
+  display: flex;
+  place-self: end;
+  justify-content: flex-end;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+.comment .comments p {
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 19px;
+  letter-spacing: -0.18px;
+}
+.comment .comments .zero-comments {
+  opacity: 0.5;
+}
+
+/*# sourceMappingURL=roadmap.css.map */
