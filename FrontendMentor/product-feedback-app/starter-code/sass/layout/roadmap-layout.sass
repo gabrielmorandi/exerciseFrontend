@@ -3,6 +3,7 @@
 
 main
   display: grid
+  padding-block-end: 1rem
   .selectors
     display: flex
     justify-content: space-between
@@ -30,7 +31,16 @@ main
         bottom: -1px
         width: 100%
         height: 4px
+    .selector-active.selector-purple
+      &::after
         background-color: v.$purple
+    .selector-active.selector-orange
+      &::after
+        background-color: v.$orange
+    .selector-active.selector-light-blue
+      &::after
+        background-color: v.$light-blue
+        
   > .container-grid
     place-self: center
 
@@ -45,10 +55,17 @@ main
 .c-light-blue
   background-color: v.$light-blue
 
+
+.comment-purple
+  background: linear-gradient(180deg, rgba(173,31,234,1) 6px, rgba(255,255,255,1) 6px)
+.comment-orange
+  background: linear-gradient(180deg, rgba(244, 159, 133, 1) 6px, rgba(255,255,255,1) 6px)
+.comment-light-blue
+  background: linear-gradient(180deg, rgba(98, 188, 250, 1) 6px, rgba(255,255,255,1) 6px)
+
 .comment
   width: 100%
   padding: 24px
-  background: linear-gradient(180deg, rgba(173,31,234,1) 6px, rgba(255,255,255,1) 6px)
   border-radius: 10px
   margin-block-start: 1rem
   display: grid

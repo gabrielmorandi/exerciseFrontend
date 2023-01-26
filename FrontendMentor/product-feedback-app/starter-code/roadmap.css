@@ -162,6 +162,7 @@ main .feed > div .comment {
 
 main {
   display: grid;
+  padding-block-end: 1rem;
 }
 main .selectors {
   display: flex;
@@ -195,7 +196,15 @@ main .selectors .selector-active::after {
   bottom: -1px;
   width: 100%;
   height: 4px;
+}
+main .selectors .selector-active.selector-purple::after {
   background-color: #AD1FEA;
+}
+main .selectors .selector-active.selector-orange::after {
+  background-color: #F49F85;
+}
+main .selectors .selector-active.selector-light-blue::after {
+  background-color: #62BCFA;
 }
 main > .container-grid {
   place-self: center;
@@ -218,10 +227,21 @@ main > .container-grid {
   background-color: #62BCFA;
 }
 
+.comment-purple {
+  background: linear-gradient(180deg, rgb(173, 31, 234) 6px, rgb(255, 255, 255) 6px);
+}
+
+.comment-orange {
+  background: linear-gradient(180deg, rgb(244, 159, 133) 6px, rgb(255, 255, 255) 6px);
+}
+
+.comment-light-blue {
+  background: linear-gradient(180deg, rgb(98, 188, 250) 6px, rgb(255, 255, 255) 6px);
+}
+
 .comment {
   width: 100%;
   padding: 24px;
-  background: linear-gradient(180deg, rgb(173, 31, 234) 6px, rgb(255, 255, 255) 6px);
   border-radius: 10px;
   margin-block-start: 1rem;
   display: grid;
