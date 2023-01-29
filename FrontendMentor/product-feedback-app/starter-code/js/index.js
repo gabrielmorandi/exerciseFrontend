@@ -24,3 +24,8 @@ attFeed(feed, categoryActive.innerHTML, 'Most Upvotes')
 // category selector
 const categories = document.querySelectorAll('.category')
 categorySelector(categories, feed, sortByP)
+
+// upvote
+if (localStorage.getItem('commentName') === null) {
+    localStorage.setItem('commentName', '[]')
+}

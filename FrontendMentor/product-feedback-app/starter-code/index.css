@@ -43,12 +43,24 @@ body {
   color: #4661E6;
 }
 
+.upvote:hover {
+  background-color: #CFD7FF !important;
+  transition: 0.2s;
+}
+
+.upSelect {
+  background-color: #4661E6 !important;
+}
+.upSelect p {
+  color: #FFFFFF;
+}
+
 .btn-primary {
   width: auto;
   display: grid;
   place-items: center;
 }
-.btn-primary button {
+.btn-primary button, .btn-primary input {
   padding: 10.5px 16.5px;
   border: none;
   border-radius: 10px;
@@ -58,35 +70,35 @@ body {
   color: #F2F4FF;
   cursor: pointer;
 }
-.btn-primary button:hover {
+.btn-primary button:hover, .btn-primary input:hover {
   transition: 0.2s;
 }
 
-.btn-purple button {
+.btn-purple button, .btn-purple input {
   background-color: #AD1FEA;
 }
-.btn-purple button:hover {
+.btn-purple button:hover, .btn-purple input:hover {
   background-color: #C75AF6;
 }
 
-.btn-blue button {
+.btn-blue button, .btn-blue input {
   background-color: #4661E6;
 }
-.btn-blue button:hover {
+.btn-blue button:hover, .btn-blue input:hover {
   background-color: #7C91F9;
 }
 
-.btn-dark-blue button {
+.btn-dark-blue button, .btn-dark-blue input {
   background-color: #373F68;
 }
-.btn-dark-blue button:hover {
+.btn-dark-blue button:hover, .btn-dark-blue input:hover {
   background-color: #656EA3;
 }
 
-.btn-red button {
+.btn-red button, .btn-red input {
   background-color: #D73737;
 }
-.btn-red button:hover {
+.btn-red button:hover, .btn-red input:hover {
   background-color: #E98888;
 }
 
@@ -99,8 +111,8 @@ body {
 }
 .btn-goback-primary p {
   font-weight: 700;
-  font-size: 14px;
-  line-height: 20px;
+  font-size: 13px;
+  line-height: 19px;
   color: #647196;
 }
 .btn-goback-primary:hover {
@@ -118,8 +130,8 @@ body {
 }
 .btn-goback-secundary p {
   font-weight: 700;
-  font-size: 14px;
-  line-height: 20px;
+  font-size: 13px;
+  line-height: 19px;
   color: #FFFFFF;
 }
 .btn-goback-secundary:hover p {

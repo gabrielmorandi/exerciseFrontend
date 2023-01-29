@@ -1,3 +1,5 @@
+import { upVote } from "./upvote.js"
+
 class DadosMessage {
     constructor (upvotes, title, description, category, tatalcomments) {
         this.upvotes = upvotes
@@ -222,4 +224,5 @@ export function attFeed(feed, category, sortBy) {
             }
         })
     })
+    upVote()
 }
