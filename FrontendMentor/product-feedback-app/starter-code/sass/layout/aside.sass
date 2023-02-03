@@ -6,14 +6,23 @@ aside
   display: grid
   place-items: center
   position: relative
+  @include m.tablet
+    padding: 40px
+    gap: 10px
+    grid-template-columns: 1fr 2fr
   > header
     width: 100%
     padding-block: 16px
     display: grid
     place-items: center
-    background-image: url('assets/suggestions/mobile/background-header.png')
+    background-image: url('assets/suggestions/tablet/background-header.png')
     background-size: cover
     background-repeat: no-repeat
+    @include m.tablet
+      height: 178px
+      border-radius: 10px
+      place-items: end
+      padding-block: 24px
     > div
       justify-content: space-between
       align-items: center
@@ -27,6 +36,10 @@ aside
           font-size: 15px
           line-height: 22px
           letter-spacing: -0.1875px
+          @include m.tablet
+            font-size: 20px
+            line-height: 29px
+            letter-spacing: -0.25px
         h2
           font-weight: 500
           font-size: 13px
@@ -34,11 +47,17 @@ aside
           color: v.$white
           mix-blend-mode: normal
           opacity: 0.75
+          @include m.tablet
+            font-size: 15px
+            line-height: 22px
       img 
         width: 20px
         height: 17px
       .btn-close-menu
         display: none
+      @include m.tablet
+        .btn-open-menu
+          display: none
   .aside-content
     position: absolute
     display: none
@@ -49,22 +68,43 @@ aside
     top: 73px
     right: 0
     z-index: 2
+    @include m.tablet
+      height: auto
+      display: flex
+      position: relative
+      justify-content: flex-start
+      top: auto
+      right: auto
+      z-index: 1
+      background: transparent
     > div
       width: 72.5%
       background-color: v.$white-gray
       flex-direction: column
       align-items: center
+      @include m.tablet
+        width: 100%
+        flex-direction: row
+        justify-content: space-between
+        gap: 10px
       .categories
         width: 80%
         display: flex
-        justify-content: space-between
+        gap: 8px
         row-gap: 14px
         flex-wrap: wrap
         border-radius: 10px
         padding: 1rem
         margin-block-start: 1.5rem
         background-color: v.$white
+        @include m.tablet
+          margin-block-start: 0
+          width: 100%
+          height: 178px
         .category
+          display: flex
+          align-items: center
+          justify-content: center
           cursor: pointer
         .category-active
           background-color: v.$blue
@@ -79,6 +119,10 @@ aside
         padding: 1rem
         margin-block-start: 1.5rem
         background-color: v.$white
+        @include m.tablet
+          margin-block-start: 0
+          width: 100%
+          height: 178px
         > header
           display: flex
           justify-content: space-between
@@ -126,6 +170,7 @@ aside
               font-weight: 700
               font-size: 16px
               line-height: 23px
+
 .suggestions
   width: 100%
   display: grid

@@ -144,14 +144,29 @@ aside {
   place-items: center;
   position: relative;
 }
+@media screen and (min-width: 700px) {
+  aside {
+    padding: 40px;
+    gap: 10px;
+    grid-template-columns: 1fr 2fr;
+  }
+}
 aside > header {
   width: 100%;
   padding-block: 16px;
   display: grid;
   place-items: center;
-  background-image: url("assets/suggestions/mobile/background-header.png");
+  background-image: url("assets/suggestions/tablet/background-header.png");
   background-size: cover;
   background-repeat: no-repeat;
+}
+@media screen and (min-width: 700px) {
+  aside > header {
+    height: 178px;
+    border-radius: 10px;
+    place-items: end;
+    padding-block: 24px;
+  }
 }
 aside > header > div {
   justify-content: space-between;
@@ -170,6 +185,13 @@ aside > header > div > div h1 {
   line-height: 22px;
   letter-spacing: -0.1875px;
 }
+@media screen and (min-width: 700px) {
+  aside > header > div > div h1 {
+    font-size: 20px;
+    line-height: 29px;
+    letter-spacing: -0.25px;
+  }
+}
 aside > header > div > div h2 {
   font-weight: 500;
   font-size: 13px;
@@ -178,12 +200,23 @@ aside > header > div > div h2 {
   mix-blend-mode: normal;
   opacity: 0.75;
 }
+@media screen and (min-width: 700px) {
+  aside > header > div > div h2 {
+    font-size: 15px;
+    line-height: 22px;
+  }
+}
 aside > header > div img {
   width: 20px;
   height: 17px;
 }
 aside > header > div .btn-close-menu {
   display: none;
+}
+@media screen and (min-width: 700px) {
+  aside > header > div .btn-open-menu {
+    display: none;
+  }
 }
 aside .aside-content {
   position: absolute;
@@ -196,16 +229,36 @@ aside .aside-content {
   right: 0;
   z-index: 2;
 }
+@media screen and (min-width: 700px) {
+  aside .aside-content {
+    height: auto;
+    display: flex;
+    position: relative;
+    justify-content: flex-start;
+    top: auto;
+    right: auto;
+    z-index: 1;
+    background: transparent;
+  }
+}
 aside .aside-content > div {
   width: 72.5%;
   background-color: #F7F8FD;
   flex-direction: column;
   align-items: center;
 }
+@media screen and (min-width: 700px) {
+  aside .aside-content > div {
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 10px;
+  }
+}
 aside .aside-content > div .categories {
   width: 80%;
   display: flex;
-  justify-content: space-between;
+  gap: 8px;
   row-gap: 14px;
   flex-wrap: wrap;
   border-radius: 10px;
@@ -213,7 +266,17 @@ aside .aside-content > div .categories {
   margin-block-start: 1.5rem;
   background-color: #FFFFFF;
 }
+@media screen and (min-width: 700px) {
+  aside .aside-content > div .categories {
+    margin-block-start: 0;
+    width: 100%;
+    height: 178px;
+  }
+}
 aside .aside-content > div .categories .category {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   cursor: pointer;
 }
 aside .aside-content > div .categories .category-active {
@@ -231,6 +294,13 @@ aside .aside-content > div .roadmap {
   padding: 1rem;
   margin-block-start: 1.5rem;
   background-color: #FFFFFF;
+}
+@media screen and (min-width: 700px) {
+  aside .aside-content > div .roadmap {
+    margin-block-start: 0;
+    width: 100%;
+    height: 178px;
+  }
 }
 aside .aside-content > div .roadmap > header {
   display: flex;
