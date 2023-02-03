@@ -61,5 +61,5 @@ export function upVote() {
                 }
             })
         }
-    }, 50)
+    }, 150)
 }
