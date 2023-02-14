@@ -70,6 +70,13 @@ body {
   color: #F2F4FF;
   cursor: pointer;
 }
+@media screen and (min-width: 700px) {
+  .btn-primary button, .btn-primary input {
+    font-size: 14px;
+    line-height: 20px;
+    padding: 12.5px 25px;
+  }
+}
 .btn-primary button:hover, .btn-primary input:hover {
   transition: 0.2s;
 }
@@ -146,7 +153,9 @@ aside {
 }
 @media screen and (min-width: 700px) {
   aside {
-    padding: 40px;
+    width: 87.5%;
+    margin: 0 auto;
+    padding-block: 40px;
     gap: 10px;
     grid-template-columns: 1fr 2fr;
   }
@@ -369,14 +378,45 @@ aside .aside-content > div .roadmap ul li p {
   background-color: #373F68;
   padding-block: 8px;
 }
+@media screen and (min-width: 700px) {
+  .suggestions {
+    background-color: transparent;
+  }
+}
 .suggestions > div {
   justify-content: space-between;
   align-items: center;
 }
-.suggestions > div .suggest {
-  display: none;
+@media screen and (min-width: 700px) {
+  .suggestions > div {
+    padding: 1.5em;
+    border-radius: 10px;
+    background-color: #373F68;
+  }
 }
-.suggestions > div .sort-by {
+.suggestions > div .left {
+  display: flex;
+  align-items: center;
+}
+.suggestions > div .left .suggest {
+  display: none;
+  margin-inline-end: calc(2em - 2px);
+}
+@media screen and (min-width: 700px) {
+  .suggestions > div .left .suggest {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+  }
+}
+.suggestions > div .left .suggest h2, .suggestions > div .left .suggest h2 .totalSuggestions {
+  color: #FFFFFF;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 26px;
+  letter-spacing: -0.25px;
+}
+.suggestions > div .left .sort-by {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -385,26 +425,31 @@ aside .aside-content > div .roadmap ul li p {
   position: relative;
   height: 40px;
 }
-.suggestions > div .sort-by .sort-arrow-up {
+.suggestions > div .left .sort-by .sort-arrow-up {
   display: none;
 }
-.suggestions > div .sort-by p, .suggestions > div .sort-by .sort-span {
+.suggestions > div .left .sort-by p, .suggestions > div .left .sort-by .sort-span {
   color: #F2F4FF;
   font-weight: 400;
-  font-size: 13px;
-  line-height: 19px;
+  font-size: 14px;
+  line-height: 20px;
 }
-.suggestions > div .sort-by p .sort-span, .suggestions > div .sort-by .sort-span .sort-span {
+.suggestions > div .left .sort-by p .sort-span, .suggestions > div .left .sort-by .sort-span .sort-span {
   font-weight: 700;
 }
-.suggestions > div .sort-by .sort-by-active {
+.suggestions > div .left .sort-by .sort-by-active {
   position: absolute;
   top: calc(100% + 24px);
   left: 0;
   display: none;
   place-items: center;
 }
-.suggestions > div .sort-by .sort-by-active ul {
+@media screen and (min-width: 700px) {
+  .suggestions > div .left .sort-by .sort-by-active {
+    top: calc(100% + 40px);
+  }
+}
+.suggestions > div .left .sort-by .sort-by-active ul {
   width: 255px;
   display: flex;
   flex-direction: column;
@@ -412,7 +457,7 @@ aside .aside-content > div .roadmap ul li p {
   background-color: #FFFFFF;
   box-shadow: 0 0 10px 0px rgba(55, 63, 104, 0.3);
 }
-.suggestions > div .sort-by .sort-by-active ul li {
+.suggestions > div .left .sort-by .sort-by-active ul li {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -420,22 +465,22 @@ aside .aside-content > div .roadmap ul li p {
   border-bottom: 1px solid rgba(58, 67, 116, 0.15);
   mix-blend-mode: normal;
 }
-.suggestions > div .sort-by .sort-by-active ul li:last-of-type {
+.suggestions > div .left .sort-by .sort-by-active ul li:last-of-type {
   border: none;
 }
-.suggestions > div .sort-by .sort-by-active ul li p {
+.suggestions > div .left .sort-by .sort-by-active ul li p {
   font-weight: 400;
   font-size: 16px;
   line-height: 23px;
   color: #647196;
 }
-.suggestions > div .sort-by .sort-by-active ul li:hover p {
+.suggestions > div .left .sort-by .sort-by-active ul li:hover p {
   color: #AD1FEA;
 }
-.suggestions > div .sort-by .sort-by-active ul li img {
+.suggestions > div .left .sort-by .sort-by-active ul li img {
   display: none;
 }
-.suggestions > div .sort-by .sort-by-active ul .li-active img {
+.suggestions > div .left .sort-by .sort-by-active ul .li-active img {
   display: flex;
 }
 
@@ -459,9 +504,25 @@ aside .aside-content > div .roadmap ul li p {
   grid-template-rows: 1fr 32px;
   gap: 1rem;
 }
+@media screen and (min-width: 700px) {
+  .feed > div .comment {
+    grid-template-columns: auto 1fr auto;
+    grid-template-rows: 1fr;
+  }
+}
 .feed > div .comment .upvote, .feed > div .comment .comments {
   grid-row: 2/2;
   cursor: pointer;
+}
+@media screen and (min-width: 700px) {
+  .feed > div .comment .upvote {
+    grid-row: 1/2;
+    grid-column: 1/2;
+  }
+  .feed > div .comment .comments {
+    grid-row: 1/2;
+    grid-column: 3/4;
+  }
 }
 .feed > div .comment .comment-content {
   grid-column: 1/3;
@@ -469,16 +530,23 @@ aside .aside-content > div .roadmap ul li p {
   flex-direction: column;
   gap: 8px;
 }
+@media screen and (min-width: 700px) {
+  .feed > div .comment .comment-content {
+    grid-row: 1/2;
+    grid-column: 2/3;
+    margin-inline-start: 1.5em;
+  }
+}
 .feed > div .comment .comment-content h2 {
   font-weight: 700;
-  font-size: 13px;
-  line-height: 19px;
-  letter-spacing: -0.18px;
+  font-size: 18px;
+  line-height: 26px;
+  letter-spacing: -0.25px;
 }
 .feed > div .comment .comment-content > p {
   font-weight: 400;
-  font-size: 13px;
-  line-height: 19px;
+  font-size: 16px;
+  line-height: 23px;
   color: #647196;
 }
 .feed > div .comment .comment-content > div {
@@ -493,6 +561,16 @@ aside .aside-content > div .roadmap ul li p {
   gap: 10px;
   background-color: #F2F4FF;
   border-radius: 10px;
+}
+@media screen and (min-width: 700px) {
+  .feed > div .comment .upvote {
+    max-width: 40px;
+    max-height: 53px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 8px;
+  }
 }
 .feed > div .comment .upvote p {
   font-weight: 700;
@@ -509,11 +587,16 @@ aside .aside-content > div .roadmap ul li p {
   justify-content: center;
   gap: 8px;
 }
+@media screen and (min-width: 700px) {
+  .feed > div .comment .comments {
+    place-self: center;
+  }
+}
 .feed > div .comment .comments p {
   font-weight: 700;
-  font-size: 13px;
-  line-height: 19px;
-  letter-spacing: -0.18px;
+  font-size: 16px;
+  line-height: 23px;
+  letter-spacing: -0.222px;
 }
 .feed > div .comment .comments .zero-comments {
   opacity: 0.5;

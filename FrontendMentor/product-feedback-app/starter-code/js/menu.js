@@ -1,5 +1,7 @@
 import { attFeed } from "./feed.js"
 
+const suggest = document.querySelector('.totalSuggestions')
+
 export function menu(btnOpenMenu, btnCloseMenu, asideContent, html, sort, sortActive, sortArrowDown, sortArrowUp, i, sortLi, sortByP, feed) {
     // open aside menu
     btnOpenMenu.addEventListener('click', () => {
@@ -24,7 +26,7 @@ export function menu(btnOpenMenu, btnCloseMenu, asideContent, html, sort, sortAc
             li.classList.toggle('li-active')
             sortByP.innerHTML = li.innerText
             let categoryActive = document.querySelector('.category-active p')
-            return attFeed(feed, categoryActive.innerText, sortByP.innerText)
+            return attFeed(feed, categoryActive.innerText, sortByP.innerText, suggest)
         })
     }
     sort.addEventListener('click', () => {
@@ -50,7 +52,7 @@ export function categorySelector(categories, feed, sortByP) {
                 cat.classList.remove('category-active')
             }
             category.classList.toggle('category-active')
-            return attFeed(feed, category.innerText, sortByP.innerText)
+            return attFeed(feed, category.innerText, sortByP.innerText, suggest)
         })
     }
 }

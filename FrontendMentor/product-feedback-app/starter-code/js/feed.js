@@ -10,11 +10,11 @@ class DadosMessage {
     }
 }
 
-export function attFeed(feed, category, sortBy) {
+export function attFeed(feed, category, sortBy, suggest) {
     fetch('data.json').then((response) => {
         response.json().then((dados) => {
             feed.innerHTML = ''
-            var orgMsg = []
+            var orgMsg = [], totalSuggestions = 0
             dados.productRequests.map((message) => {
                 if (category == 'All') {
                     if ('comments' in message) {
@@ -128,6 +128,8 @@ export function attFeed(feed, category, sortBy) {
                         }
                     }
                 }
+                totalSuggestions = orgMsg.length
+                suggest.innerHTML = totalSuggestions
             })
             if (sortBy == 'Most Upvotes') {
                 orgMsg.sort((a, b) => {

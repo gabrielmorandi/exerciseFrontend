@@ -18,23 +18,37 @@
       grid-template-columns: 1fr 1fr
       grid-template-rows: 1fr 32px
       gap: 1rem
+      @include m.tablet
+        grid-template-columns: auto 1fr auto
+        grid-template-rows: 1fr
       .upvote, .comments
         grid-row: 2/2
         cursor: pointer
+      @include m.tablet
+        .upvote
+          grid-row: 1/2
+          grid-column: 1/2
+        .comments
+          grid-row: 1/2
+          grid-column: 3/4
       .comment-content
         grid-column: 1/3
         display: flex
         flex-direction: column
         gap: 8px
+        @include m.tablet
+          grid-row: 1/2
+          grid-column: 2/3
+          margin-inline-start: 1.5em
         h2
           font-weight: 700
-          font-size: 13px
-          line-height: 19px
-          letter-spacing: -0.18px
+          font-size: 18px
+          line-height: 26px
+          letter-spacing: -0.25px
         > p
           font-weight: 400
-          font-size: 13px
-          line-height: 19px
+          font-size: 16px
+          line-height: 23px
           color: v.$gray-blue
         > div
           display: flex
@@ -47,6 +61,13 @@
         gap: 10px
         background-color: v.$white-blue
         border-radius: 10px
+        @include m.tablet
+          max-width: 40px
+          max-height: 53px
+          justify-content: center
+          align-items: center
+          flex-direction: column
+          gap: 8px
         p
           font-weight: 700
           font-size: 13px
@@ -60,11 +81,13 @@
         align-items: center
         justify-content: center
         gap: 8px
+        @include m.tablet
+          place-self: center
         p
           font-weight: 700
-          font-size: 13px
-          line-height: 19px
-          letter-spacing: -0.18px
+          font-size: 16px
+          line-height: 23px
+          letter-spacing: -0.222px
         .zero-comments
           opacity: .5
     .no-feedbacks

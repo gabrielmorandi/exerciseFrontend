@@ -7,7 +7,9 @@ aside
   place-items: center
   position: relative
   @include m.tablet
-    padding: 40px
+    width: 87.5%
+    margin: 0 auto
+    padding-block: 40px
     gap: 10px
     grid-template-columns: 1fr 2fr
   > header
@@ -177,60 +179,82 @@ aside
   place-items: center
   background-color: v.$very-dark-blue
   padding-block: 8px
+  @include m.tablet
+    background-color: transparent
   > div
     justify-content: space-between
     align-items: center
-    .suggest
-      display: none
-    .sort-by
+    @include m.tablet
+      padding: 1.5em
+      border-radius: 10px
+      background-color: v.$very-dark-blue
+    .left
       display: flex
       align-items: center
-      justify-content: space-between
-      gap: 8px
-      cursor: pointer
-      position: relative
-      height: 40px
-      .sort-arrow-up
+      .suggest
         display: none
-      p, .sort-span
-        color: v.$white-blue
-        font-weight: 400
-        font-size: 13px
-        line-height: 19px
-        .sort-span
-          font-weight: 700
-      .sort-by-active
-        position: absolute
-        top: calc( 100% + 24px )
-        left: 0
-        display: none
-        place-items: center
-        ul
-          width: 255px
+        margin-inline-end: calc( 2em - 2px )
+        @include m.tablet
           display: flex
-          flex-direction: column
-          border-radius: 10px
-          background-color: v.$white
-          box-shadow: 0 0 10px 0px rgba(v.$very-dark-blue, .3 )
-          li
+          gap: 16px
+          align-items: center
+        h2, h2 .totalSuggestions
+          color: v.$white
+          font-weight: 700
+          font-size: 18px
+          line-height: 26px
+          letter-spacing: -0.25px
+      .sort-by
+        display: flex
+        align-items: center
+        justify-content: space-between
+        gap: 8px
+        cursor: pointer
+        position: relative
+        height: 40px
+        .sort-arrow-up
+          display: none
+        p, .sort-span
+          color: v.$white-blue
+          font-weight: 400
+          font-size: 14px
+          line-height: 20px
+          .sort-span
+            font-weight: 700
+        .sort-by-active
+          position: absolute
+          top: calc( 100% + 24px )
+          left: 0
+          display: none
+          place-items: center
+          @include m.tablet
+            top: calc( 100% + 40px )
+          ul
+            width: 255px
             display: flex
-            justify-content: space-between
-            align-items: center
-            padding: 12px 24px
-            border-bottom: 1px solid rgba(v.$dark-blue, .15)
-            mix-blend-mode: normal
-            &:last-of-type
-              border: none
-            p
-              font-weight: 400
-              font-size: 16px
-              line-height: 23px
-              color: v.$gray-blue
-            &:hover 
-              p
-                color: v.$purple
-            img
-              display: none
-          .li-active
-            img
+            flex-direction: column
+            border-radius: 10px
+            background-color: v.$white
+            box-shadow: 0 0 10px 0px rgba(v.$very-dark-blue, .3 )
+            li
               display: flex
+              justify-content: space-between
+              align-items: center
+              padding: 12px 24px
+              border-bottom: 1px solid rgba(v.$dark-blue, .15)
+              mix-blend-mode: normal
+              &:last-of-type
+                border: none
+              p
+                font-weight: 400
+                font-size: 16px
+                line-height: 23px
+                color: v.$gray-blue
+              &:hover 
+                p
+                  color: v.$purple
+              img
+                display: none
+            .li-active
+              img
+                display: flex
