@@ -1,6 +1,12 @@
 import { menu, categorySelector } from "./menu.js"
 import { attFeed } from "./feed.js"
 
+
+// upvote
+if (localStorage.getItem('commentName') === null) {
+    localStorage.setItem('commentName', '[]')
+}
+
 // menu
 const btnOpenMenu = document.querySelector('.btn-open-menu')
 const btnCloseMenu = document.querySelector('.btn-close-menu')
@@ -25,21 +31,3 @@ attFeed(feed, categoryActive.innerHTML, 'Most Upvotes', suggest)
 // category selector
 const categories = document.querySelectorAll('.category')
 categorySelector(categories, feed, sortByP)
-
-// total suggestions
-// suggest.innerHTML = `${}`
-// console.log(suggest.innerHTML)
-
-// upvote
-if (localStorage.getItem('commentName') === null) {
-    localStorage.setItem('commentName', '[]')
-}
-
-// test upvote
-if (localStorage.getItem('commentName') === null) {
-    console.log('aaa')
-} else {
-    console.log('mmmm')
-    let v = localStorage.getItem('commentName')
-    console.log(v)
-}

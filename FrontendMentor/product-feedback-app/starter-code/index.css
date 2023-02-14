@@ -611,6 +611,11 @@ aside .aside-content > div .roadmap ul li p {
   padding: 76px 24px;
   gap: 14px;
 }
+@media screen and (min-width: 700px) {
+  .feed > div .no-feedbacks {
+    padding-block: 110px;
+  }
+}
 .feed > div .no-feedbacks img {
   margin-block-end: 25px;
 }
@@ -621,10 +626,24 @@ aside .aside-content > div .roadmap ul li p {
   text-align: center;
   letter-spacing: -0.25px;
 }
+@media screen and (min-width: 700px) {
+  .feed > div .no-feedbacks h2 {
+    font-size: 24px;
+    line-height: 35px;
+    letter-spacing: -0.333333px;
+  }
+}
 .feed > div .no-feedbacks p {
+  color: #647196;
   font-size: 13px;
   line-height: 19px;
   text-align: center;
+}
+@media screen and (min-width: 700px) {
+  .feed > div .no-feedbacks p {
+    font-size: 16px;
+    line-height: 23px;
+  }
 }
 .feed > div .no-feedbacks > div {
   margin-block-start: 10px;
