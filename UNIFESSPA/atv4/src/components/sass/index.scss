@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700&display=swap');
+@import './abs/v.scss';
+@import './mixins/m.scss';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Nunito', sans-serif;
+    font-size: 1rem;
+}
+
+body {
+    display: grid;
+    place-items: center;
+    background-color: $purple;
+}
+
+.container-flex {
+    width: 100%;
+    display: flex;
+}
+
+// main 
+main {
+    width: 97vw;
+    padding: 2em;
+    margin-block: 1.5em;
+    display: flex;
+    justify-content: center;
+    border-radius: 15px;
+    border: 2px solid $white;
+    @include mobile {
+        width: 95vw;
+    }
+    > div {
+        flex-direction: column;
+        align-items: center;
+        > header {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            > img {
+                max-width: 300px;
+                @include mobile {
+                    max-width: 150px;
+                }
+            }
+            > h1 > p{
+                font-size: 1.6rem;
+                text-align: center;
+                color: $white;
+            }
+        }
+        > form {
+            width: 100%;
+            max-width: 375px;
+            margin-block-start: 2.5em;
+            display: flex;
+            flex-direction: column;
+            gap: .8rem;
+            > label {
+                font-size: 1.4rem;
+                font-weight: 500;
+                color: $white;
+                text-align: center;
+            }
+            > input {
+                outline: none;
+            }
+            > input[type=number] {
+                font-size: 1.2rem;
+                padding: .5rem;
+                border-radius: 10px;
+                border: 2px solid $white;
+                color: $white;
+                background-color: transparent;
+            }
+            > input[type=submit] {
+                font-size: 1.2rem;
+                padding: .5rem;
+                border-radius: 10px;
+                border: 2px solid $black;
+                color: $white;
+                background-color: $dark;
+                cursor: pointer;
+                &:hover {
+                    transition: .2s;
+                    background-color: $dark-gray;
+                }
+            }
+        }
+    }
+}

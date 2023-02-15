@@ -1,0 +1,96 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Nunito", sans-serif;
+  font-size: 1rem;
+}
+
+body {
+  display: grid;
+  place-items: center;
+  background-color: #5c3f89;
+}
+
+.container-flex {
+  width: 100%;
+  display: flex;
+}
+
+main {
+  width: 97vw;
+  padding: 2em;
+  margin-block: 1.5em;
+  display: flex;
+  justify-content: center;
+  border-radius: 15px;
+  border: 2px solid #fff;
+}
+@media screen and (max-width: 600px) {
+  main {
+    width: 95vw;
+  }
+}
+main > div {
+  flex-direction: column;
+  align-items: center;
+}
+main > div > header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+main > div > header > img {
+  max-width: 300px;
+}
+@media screen and (max-width: 600px) {
+  main > div > header > img {
+    max-width: 150px;
+  }
+}
+main > div > header > h1 > p {
+  font-size: 1.6rem;
+  text-align: center;
+  color: #fff;
+}
+main > div > form {
+  width: 100%;
+  max-width: 375px;
+  margin-block-start: 2.5em;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+main > div > form > label {
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: #fff;
+  text-align: center;
+}
+main > div > form > input {
+  outline: none;
+}
+main > div > form > input[type=number] {
+  font-size: 1.2rem;
+  padding: 0.5rem;
+  border-radius: 10px;
+  border: 2px solid #fff;
+  color: #fff;
+  background-color: transparent;
+}
+main > div > form > input[type=submit] {
+  font-size: 1.2rem;
+  padding: 0.5rem;
+  border-radius: 10px;
+  border: 2px solid #000;
+  color: #fff;
+  background-color: #111;
+  cursor: pointer;
+}
+main > div > form > input[type=submit]:hover {
+  transition: 0.2s;
+  background-color: #333;
+}
+
+/*# sourceMappingURL=index.css.map */
