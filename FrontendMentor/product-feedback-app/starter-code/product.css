@@ -43,6 +43,18 @@ body {
   color: #4661E6;
 }
 
+.upvote:hover {
+  background-color: #CFD7FF !important;
+  transition: 0.2s;
+}
+
+.upSelect {
+  background-color: #4661E6 !important;
+}
+.upSelect p {
+  color: #FFFFFF;
+}
+
 .btn-primary {
   width: auto;
   display: grid;
@@ -57,6 +69,13 @@ body {
   line-height: 19px;
   color: #F2F4FF;
   cursor: pointer;
+}
+@media screen and (min-width: 700px) {
+  .btn-primary button, .btn-primary input {
+    font-size: 14px;
+    line-height: 20px;
+    padding: 12.5px 25px;
+  }
 }
 .btn-primary button:hover, .btn-primary input:hover {
   transition: 0.2s;
@@ -163,9 +182,25 @@ main .feed > div .comment {
   grid-template-rows: 1fr 32px;
   gap: 1rem;
 }
+@media screen and (min-width: 700px) {
+  .feed > div .comment {
+    grid-template-columns: auto 1fr auto;
+    grid-template-rows: 1fr;
+  }
+}
 .feed > div .comment .upvote, .feed > div .comment .comments {
   grid-row: 2/2;
   cursor: pointer;
+}
+@media screen and (min-width: 700px) {
+  .feed > div .comment .upvote {
+    grid-row: 1/2;
+    grid-column: 1/2;
+  }
+  .feed > div .comment .comments {
+    grid-row: 1/2;
+    grid-column: 3/4;
+  }
 }
 .feed > div .comment .comment-content {
   grid-column: 1/3;
@@ -173,16 +208,23 @@ main .feed > div .comment {
   flex-direction: column;
   gap: 8px;
 }
+@media screen and (min-width: 700px) {
+  .feed > div .comment .comment-content {
+    grid-row: 1/2;
+    grid-column: 2/3;
+    margin-inline-start: 1.5em;
+  }
+}
 .feed > div .comment .comment-content h2 {
   font-weight: 700;
-  font-size: 13px;
-  line-height: 19px;
-  letter-spacing: -0.18px;
+  font-size: 18px;
+  line-height: 26px;
+  letter-spacing: -0.25px;
 }
 .feed > div .comment .comment-content > p {
   font-weight: 400;
-  font-size: 13px;
-  line-height: 19px;
+  font-size: 16px;
+  line-height: 23px;
   color: #647196;
 }
 .feed > div .comment .comment-content > div {
@@ -197,6 +239,16 @@ main .feed > div .comment {
   gap: 10px;
   background-color: #F2F4FF;
   border-radius: 10px;
+}
+@media screen and (min-width: 700px) {
+  .feed > div .comment .upvote {
+    max-width: 40px;
+    max-height: 53px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 8px;
+  }
 }
 .feed > div .comment .upvote p {
   font-weight: 700;
@@ -213,11 +265,16 @@ main .feed > div .comment {
   justify-content: center;
   gap: 8px;
 }
+@media screen and (min-width: 700px) {
+  .feed > div .comment .comments {
+    place-self: center;
+  }
+}
 .feed > div .comment .comments p {
   font-weight: 700;
-  font-size: 13px;
-  line-height: 19px;
-  letter-spacing: -0.18px;
+  font-size: 16px;
+  line-height: 23px;
+  letter-spacing: -0.222px;
 }
 .feed > div .comment .comments .zero-comments {
   opacity: 0.5;
@@ -232,6 +289,11 @@ main .feed > div .comment {
   padding: 76px 24px;
   gap: 14px;
 }
+@media screen and (min-width: 700px) {
+  .feed > div .no-feedbacks {
+    padding-block: 110px;
+  }
+}
 .feed > div .no-feedbacks img {
   margin-block-end: 25px;
 }
@@ -242,10 +304,24 @@ main .feed > div .comment {
   text-align: center;
   letter-spacing: -0.25px;
 }
+@media screen and (min-width: 700px) {
+  .feed > div .no-feedbacks h2 {
+    font-size: 24px;
+    line-height: 35px;
+    letter-spacing: -0.333333px;
+  }
+}
 .feed > div .no-feedbacks p {
+  color: #647196;
   font-size: 13px;
   line-height: 19px;
   text-align: center;
+}
+@media screen and (min-width: 700px) {
+  .feed > div .no-feedbacks p {
+    font-size: 16px;
+    line-height: 23px;
+  }
 }
 .feed > div .no-feedbacks > div {
   margin-block-start: 10px;
@@ -276,6 +352,11 @@ main .feed > div .comment {
   display: grid;
   place-items: center;
   border-bottom: 1px solid rgba(140, 146, 179, 0.25);
+}
+@media screen and (min-width: 700px) {
+  .feedback-comments > div .feedback-comment {
+    place-items: start;
+  }
 }
 .feedback-comments > div .feedback-comment header {
   width: 100%;
@@ -312,21 +393,43 @@ main .feed > div .comment {
 }
 .feedback-comments > div .feedback-comment .feedback-comment-content {
   padding-block-end: 24px;
+  display: flex;
+  flex-direction: column;
 }
 .feedback-comments > div .feedback-comment .feedback-comment-content p {
   font-size: 13px;
   line-height: 19px;
   color: #647196;
 }
+@media screen and (min-width: 700px) {
+  .feedback-comments > div .feedback-comment .feedback-comment-content p {
+    padding-inline-start: calc(20px + 1rem);
+    margin-inline-start: 20px;
+  }
+}
+@media screen and (min-width: 700px) {
+  .feedback-comments > div .feedback-comment .feedback-comment-content > p {
+    border-left: 1px solid rgba(100, 113, 150, 0.1);
+  }
+}
+.feedback-comments > div .feedback-comment .feedback-comment-content *:last-child {
+  border-left: none;
+}
 .feedback-comments > div .feedback-comment .feedback-comment-content .replies {
-  display: grid;
-  place-items: center;
+  display: flex;
+  flex-direction: column;
   margin-block-start: 24px;
   gap: 24px;
 }
+@media screen and (min-width: 700px) {
+  .feedback-comments > div .feedback-comment .feedback-comment-content .replies {
+    margin-block-start: 0;
+    padding-inline-start: 20px;
+  }
+}
 .feedback-comments > div .feedback-comment .feedback-comment-content .replies .replie {
   width: 100%;
-  padding-inline-start: 10%;
+  padding-inline-start: 24px;
   display: grid;
   place-items: end;
   gap: 1rem;
@@ -357,7 +460,7 @@ main .feed > div .comment {
 }
 .feedback-comments > div .feedback-comment .feedback-comment-content .replies .replie:first-child {
   margin-block-start: 0;
-  padding-block-end: 48px;
+  padding-block: 24px 48px;
   border-left: 1px solid rgba(100, 113, 150, 0.1);
 }
 .feedback-comments > div .feedback-comment:last-child {

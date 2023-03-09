@@ -2,10 +2,16 @@
 @use '../abstracts/m'
 
 header
+  width: 100%
   display: grid
   place-items: center
   padding-block: 26px
   background-color: v.$very-dark-blue
+  @include m.tablet
+    width: v.$m-w
+    max-width: v.$mx-w
+    margin: 40px auto 12px auto
+    border-radius: 10px
   > div 
     align-items: center
     justify-content: space-between

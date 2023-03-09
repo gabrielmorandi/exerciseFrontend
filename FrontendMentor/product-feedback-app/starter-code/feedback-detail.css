@@ -43,6 +43,18 @@ body {
   color: #4661E6;
 }
 
+.upvote:hover {
+  background-color: #CFD7FF !important;
+  transition: 0.2s;
+}
+
+.upSelect {
+  background-color: #4661E6 !important;
+}
+.upSelect p {
+  color: #FFFFFF;
+}
+
 .btn-primary {
   width: auto;
   display: grid;
@@ -57,6 +69,13 @@ body {
   line-height: 19px;
   color: #F2F4FF;
   cursor: pointer;
+}
+@media screen and (min-width: 700px) {
+  .btn-primary button, .btn-primary input {
+    font-size: 14px;
+    line-height: 20px;
+    padding: 12.5px 25px;
+  }
 }
 .btn-primary button:hover, .btn-primary input:hover {
   transition: 0.2s;
@@ -143,6 +162,12 @@ main .feed > div .comment {
   margin: 0;
 }
 
+@media screen and (min-width: 700px) {
+  header > div, main > div {
+    max-width: 540px !important;
+  }
+}
+
 main {
   width: 100%;
   display: grid;
@@ -154,6 +179,11 @@ main > div {
   padding: 24px;
   border-radius: 10px;
   position: relative;
+}
+@media screen and (min-width: 700px) {
+  main > div {
+    padding: 42px;
+  }
 }
 main > div::before {
   content: "";
@@ -221,9 +251,26 @@ main > div form label select {
   background-color: #F7F8FD;
 }
 main > div .btn-primary {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  place-items: center;
   gap: 1rem;
+}
+@media screen and (min-width: 700px) {
+  main > div .btn-primary {
+    grid-template-columns: 93px 1fr 93px 144px;
+  }
+  main > div .btn-primary > .btn-purple, main > div .btn-primary > .btn-dark-blue, main > div .btn-primary > .btn-red {
+    grid-row-start: 1;
+  }
+  main > div .btn-primary > .btn-purple {
+    grid-column: 4/5;
+  }
+  main > div .btn-primary > .btn-dark-blue {
+    grid-column: 3/4;
+  }
+  main > div .btn-primary > .btn-red {
+    grid-column: 1/2;
+  }
 }
 main > div .btn-primary > div {
   width: 100%;

@@ -23,6 +23,8 @@
       display: grid
       place-items: center
       border-bottom: 1px solid rgba(#8C92B3, .25)
+      @include m.tablet
+        place-items: start
       header 
         width: 100%
         display: flex
@@ -52,18 +54,31 @@
           cursor: pointer
       .feedback-comment-content
         padding-block-end: 24px
+        display: flex
+        flex-direction: column
         p
           font-size: 13px
           line-height: 19px
           color: v.$gray-blue
+          @include m.tablet
+            padding-inline-start: calc( 20px + 1rem )
+            margin-inline-start: 20px
+        > p
+            @include m.tablet
+              border-left: 1px solid rgba(v.$gray-blue, .1)
+        *:last-child
+          border-left: none
         .replies
-          display: grid
-          place-items: center
+          display: flex
+          flex-direction: column
           margin-block-start: 24px
           gap: 24px
+          @include m.tablet
+            margin-block-start: 0
+            padding-inline-start: 20px
           .replie
             width: 100%
-            padding-inline-start: 10%
+            padding-inline-start: 24px
             display: grid
             place-items: end
             gap: 1rem
@@ -89,7 +104,7 @@
               border: none
             &:first-child
               margin-block-start: 0
-              padding-block-end: 48px
+              padding-block: 24px 48px
               border-left: 1px solid rgba(v.$gray-blue, .1)
       &:last-child
         border: none
