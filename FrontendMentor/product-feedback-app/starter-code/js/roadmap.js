@@ -1,3 +1,7 @@
+import { upVote } from "./upvote.js"
+
+upVote()
+
 const selectors = document.querySelectorAll('.selector')
 
 // roadmap selection

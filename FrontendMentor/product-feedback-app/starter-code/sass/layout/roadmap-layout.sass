@@ -12,6 +12,7 @@ main
     border-bottom: 1px solid rgba(#8C92B3, .25)
     @include m.tablet
       @include m.containerGrid
+      max-width: 1100px
       grid-template-columns: 1fr 1fr 1fr
       gap: 10px
       place-items: start
@@ -69,6 +70,7 @@ main
         
   > .container-grid
     place-self: center
+    max-width: 1100px
     @include m.tablet
       grid-template-columns: 1fr 1fr 1fr
       gap: 10px

@@ -43,7 +43,7 @@ body {
   color: #4661E6;
 }
 
-.upvote:hover {
+.upvote:hover, .categories .category:hover {
   background-color: #CFD7FF !important;
   transition: 0.2s;
 }
@@ -60,7 +60,7 @@ body {
   display: grid;
   place-items: center;
 }
-.btn-primary button, .btn-primary input {
+.btn-primary button, .btn-primary input, .btn-primary a {
   padding: 10.5px 16.5px;
   border: none;
   border-radius: 10px;
@@ -71,13 +71,13 @@ body {
   cursor: pointer;
 }
 @media screen and (min-width: 700px) {
-  .btn-primary button, .btn-primary input {
+  .btn-primary button, .btn-primary input, .btn-primary a {
     font-size: 14px;
     line-height: 20px;
     padding: 12.5px 25px;
   }
 }
-.btn-primary button:hover, .btn-primary input:hover {
+.btn-primary button:hover, .btn-primary input:hover, .btn-primary a:hover {
   transition: 0.2s;
 }
 
@@ -95,10 +95,10 @@ body {
   background-color: #7C91F9;
 }
 
-.btn-dark-blue button, .btn-dark-blue input {
+.btn-dark-blue button, .btn-dark-blue input, .btn-dark-blue a {
   background-color: #373F68;
 }
-.btn-dark-blue button:hover, .btn-dark-blue input:hover {
+.btn-dark-blue button:hover, .btn-dark-blue input:hover, .btn-dark-blue a:hover {
   background-color: #656EA3;
 }
 
@@ -155,7 +155,7 @@ header {
 @media screen and (min-width: 700px) {
   header {
     width: 87.5%;
-    max-width: 1200px;
+    max-width: 1100px;
     margin: 40px auto 12px auto;
     border-radius: 10px;
   }
@@ -207,6 +207,7 @@ main .selectors {
     width: 87.5%;
     max-width: 1200px;
     display: grid;
+    max-width: 1100px;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 10px;
     place-items: start;
@@ -283,6 +284,7 @@ main .selectors .selector-active.selector-light-blue::after {
 }
 main > .container-grid {
   place-self: center;
+  max-width: 1100px;
 }
 @media screen and (min-width: 700px) {
   main > .container-grid {
