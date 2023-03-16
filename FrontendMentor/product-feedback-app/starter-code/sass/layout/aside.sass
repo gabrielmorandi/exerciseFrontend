@@ -1,177 +1,206 @@
 @use '../abstracts/v'
 @use '../abstracts/m'
 
-aside
+main .feed
+  @include m.desktop
+    margin: 0
+    min-height: 600px
+    padding-block: 1rem
+    grid-column: 3/4
+    grid-row: 2/3
+    grid-auto-rows: max-content
+
+main
   width: 100%
   display: grid
-  place-items: center
-  position: relative
-  @include m.tablet
-    width: 87.5%
-    margin: 0 auto
-    padding-block: 40px
-    gap: 10px
-    grid-template-columns: 1fr 2fr
-  > header
+  @include m.desktop
+    grid-template-columns: 1fr 255px 825px 1fr
+    place-self: center
+  aside
     width: 100%
-    padding-block: 16px
+    max-width: v.$mx-w
     display: grid
     place-items: center
-    background-image: url('assets/suggestions/tablet/background-header.png')
-    background-size: cover
-    background-repeat: no-repeat
+    position: relative
     @include m.tablet
-      height: 178px
-      border-radius: 10px
-      place-items: end
-      padding-block: 24px
-    > div
-      justify-content: space-between
-      align-items: center
+      width: 87.5%
+      margin: 0 auto
+      padding-block: 40px
+      gap: 10px
+      grid-template-columns: 1fr 2fr
+    @include m.desktop
+      width: 100%
+      grid-row: 1/3
+      grid-column: 2/3
+      grid-template-columns: 1fr
+      grid-auto-rows: max-content
+    > header
+      width: 100%
+      padding-block: 16px
+      display: grid
+      place-items: center
+      background-image: url('assets/suggestions/tablet/background-header.png')
+      background-size: cover
+      background-repeat: no-repeat
+      @include m.tablet
+        height: 178px
+        border-radius: 10px
+        place-items: end
+        padding-block: 24px
       > div
-        display: flex
-        flex-direction: column
-        h1, h2
-          color: v.$white
-        h1
-          font-weight: 700
-          font-size: 15px
-          line-height: 22px
-          letter-spacing: -0.1875px
-          @include m.tablet
-            font-size: 20px
-            line-height: 29px
-            letter-spacing: -0.25px
-        h2
-          font-weight: 500
-          font-size: 13px
-          line-height: 19px
-          color: v.$white
-          mix-blend-mode: normal
-          opacity: 0.75
-          @include m.tablet
-            font-size: 15px
-            line-height: 22px
-      img 
-        width: 20px
-        height: 17px
-      .btn-close-menu
-        display: none
-      @include m.tablet
-        .btn-open-menu
-          display: none
-  .aside-content
-    position: absolute
-    display: none
-    justify-content: flex-end
-    width: 100%
-    height: 100vh
-    background: rgba(0, 0, 0, .5)
-    top: 73px
-    right: 0
-    z-index: 2
-    @include m.tablet
-      height: auto
-      display: flex
-      position: relative
-      justify-content: flex-start
-      top: auto
-      right: auto
-      z-index: 1
-      background: transparent
-    > div
-      width: 72.5%
-      background-color: v.$white-gray
-      flex-direction: column
-      align-items: center
-      @include m.tablet
-        width: 100%
-        flex-direction: row
         justify-content: space-between
-        gap: 10px
-      .categories
-        width: 80%
-        display: flex
-        gap: 8px
-        row-gap: 14px
-        flex-wrap: wrap
-        border-radius: 10px
-        padding: 1rem
-        margin-block-start: 1.5rem
-        background-color: v.$white
-        @include m.tablet
-          margin-block-start: 0
-          width: 100%
-          height: 178px
-        .category
-          display: flex
-          align-items: center
-          justify-content: center
-          cursor: pointer
-        .category-active
-          background-color: v.$blue
-          p
-            color: v.$white
-      .roadmap
-        width: 80%
-        display: flex
-        flex-direction: column
-        gap: 1.5rem
-        border-radius: 10px
-        padding: 1rem
-        margin-block-start: 1.5rem
-        background-color: v.$white
-        @include m.tablet
-          margin-block-start: 0
-          width: 100%
-          height: 178px
-        > header
-          display: flex
-          justify-content: space-between
-          align-items: center
-          h2
-            font-weight: 700
-            font-size: 18px
-            line-height: 26px
-            letter-spacing: -0.25px
-            color: v.$dark-blue
-          a
-            font-weight: 600
-            font-size: 13px
-            line-height: 19px
-            text-decoration-line: underline
-            color: v.$blue
-        ul
+        align-items: center
+        > div
           display: flex
           flex-direction: column
+          h1, h2
+            color: v.$white
+          h1
+            font-weight: 700
+            font-size: 15px
+            line-height: 22px
+            letter-spacing: -0.1875px
+            @include m.tablet
+              font-size: 20px
+              line-height: 29px
+              letter-spacing: -0.25px
+          h2
+            font-weight: 500
+            font-size: 13px
+            line-height: 19px
+            color: v.$white
+            mix-blend-mode: normal
+            opacity: 0.75
+            @include m.tablet
+              font-size: 15px
+              line-height: 22px
+        img 
+          width: 20px
+          height: 17px
+        .btn-close-menu
+          display: none
+        @include m.tablet
+          .btn-open-menu
+            display: none
+    .aside-content
+      position: absolute
+      display: none
+      justify-content: flex-end
+      width: 100%
+      height: 100vh
+      background: rgba(0, 0, 0, .5)
+      top: 73px
+      right: 0
+      z-index: 2
+      @include m.tablet
+        height: auto
+        display: flex
+        position: relative
+        justify-content: flex-start
+        top: auto
+        right: auto
+        z-index: 1
+        background: transparent
+      @include m.desktop
+        max-width: 255px
+        place-self: end
+      > div
+        width: 72.5%
+        background-color: v.$white-gray
+        flex-direction: column
+        align-items: center
+        @include m.tablet
+          width: 100%
+          flex-direction: row
+          justify-content: space-between
+          gap: 10px
+        @include m.desktop
+          flex-direction: column
+        .categories
+          width: 80%
+          display: flex
           gap: 8px
-          li
+          row-gap: 14px
+          flex-wrap: wrap
+          border-radius: 10px
+          padding: 1rem
+          margin-block-start: 1.5rem
+          background-color: v.$white
+          @include m.tablet
+            margin-block-start: 0
+            width: 100%
+            height: 178px
+          .category
+            display: flex
+            align-items: center
+            justify-content: center
+            cursor: pointer
+          .category-active
+            background-color: v.$blue
+            p
+              color: v.$white
+        .roadmap
+          width: 80%
+          display: flex
+          flex-direction: column
+          gap: 1.5rem
+          border-radius: 10px
+          padding: 1rem
+          margin-block-start: 1.5rem
+          background-color: v.$white
+          @include m.tablet
+            margin-block-start: 0
+            width: 100%
+            height: 178px
+          > header
             display: flex
             justify-content: space-between
             align-items: center
-            > div
+            h2
+              font-weight: 700
+              font-size: 18px
+              line-height: 26px
+              letter-spacing: -0.25px
+              color: v.$dark-blue
+            a
+              font-weight: 600
+              font-size: 13px
+              line-height: 19px
+              text-decoration-line: underline
+              color: v.$blue
+              &:hover
+                color: #8397F8
+          ul
+            display: flex
+            flex-direction: column
+            gap: 8px
+            li
               display: flex
-              gap: 16px
+              justify-content: space-between
               align-items: center
+              > div
+                display: flex
+                gap: 16px
+                align-items: center
+                p
+                  color: v.$gray-blue
+                  font-weight: 400
+                  font-size: 16px
+                  line-height: 23px
+                .circle
+                  padding: 4px
+                  border-radius: 100%
+                .c-orange
+                  background-color: v.$orange
+                .c-purple
+                  background-color: v.$purple
+                .c-light-blue
+                  background-color: v.$light-blue
               p
                 color: v.$gray-blue
-                font-weight: 400
+                font-weight: 700
                 font-size: 16px
                 line-height: 23px
-              .circle
-                padding: 4px
-                border-radius: 100%
-              .c-orange
-                background-color: v.$orange
-              .c-purple
-                background-color: v.$purple
-              .c-light-blue
-                background-color: v.$light-blue
-            p
-              color: v.$gray-blue
-              font-weight: 700
-              font-size: 16px
-              line-height: 23px
 
 .suggestions
   width: 100%
@@ -181,6 +210,11 @@ aside
   padding-block: 8px
   @include m.tablet
     background-color: transparent
+  @include m.desktop
+    padding-block-start: 40px
+    grid-column: 3/4
+    grid-row: 1/2
+    grid-auto-rows: max-content
   > div
     justify-content: space-between
     align-items: center
@@ -212,6 +246,9 @@ aside
         cursor: pointer
         position: relative
         height: 40px
+        &:hover
+          > p, .sort-span, > img
+            opacity: .8
         .sort-arrow-up
           display: none
         p, .sort-span

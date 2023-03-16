@@ -166,9 +166,9 @@ export function attFeed(feed, category, sortBy, suggest) {
                     <img src="assets/suggestions/illustration-empty.svg" alt="No Feedbacks">
                     <h2>There is no feedback yet.</h2>
                     <p>Got a suggestion? Found a bug that needs to be squashed? We love hearing about new ideas to improve our app.</p>
-                    <div class="btn-primary btn-purple">
+                    <a href="feedback-new.html" class="btn-primary btn-purple">
                         <button>+ Add Feedback</button>
-                    </div>
+                    </a>
                 </div>
                 `
             } else {
@@ -228,3 +228,15 @@ export function attFeed(feed, category, sortBy, suggest) {
     })
     upVote()
 }
+
+// function allClick() {
+//     let allComments = document.querySelectorAll('.comment')
+//     for (let comment of allComments) {
+//         comment.addEventListener('click', () => {
+//             comment.children[2].click()
+//         })
+//     }
+// }
+// setTimeout(() => {
+//     allClick()
+// }, 150)

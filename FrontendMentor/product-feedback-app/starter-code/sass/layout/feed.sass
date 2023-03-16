@@ -121,5 +121,9 @@
         @include m.tablet
           font-size: 16px
           line-height: 23px
-      > div
+        @include m.desktop
+          max-width: 410px
+      > a
         margin-block-start: 10px
+        @include m.desktop
+          margin-block-start: 34px

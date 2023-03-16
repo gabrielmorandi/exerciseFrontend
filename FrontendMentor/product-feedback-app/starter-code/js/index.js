@@ -1,11 +1,6 @@
 import { menu, categorySelector } from "./menu.js"
 import { attFeed } from "./feed.js"
-
-
-// upvote
-if (localStorage.getItem('commentName') === null) {
-    localStorage.setItem('commentName', '[]')
-}
+import { upVote } from "./upvote.js"
 
 // menu
 const btnOpenMenu = document.querySelector('.btn-open-menu')

@@ -21,13 +21,13 @@ body {
 
 .container-flex {
   width: 87.5%;
-  max-width: 1300px;
+  max-width: 1200px;
   display: flex;
 }
 
 .container-grid {
   width: 87.5%;
-  max-width: 1300px;
+  max-width: 1200px;
   display: grid;
 }
 
@@ -43,7 +43,7 @@ body {
   color: #4661E6;
 }
 
-.upvote:hover {
+.upvote:hover, .categories .category:hover {
   background-color: #CFD7FF !important;
   transition: 0.2s;
 }
@@ -60,7 +60,7 @@ body {
   display: grid;
   place-items: center;
 }
-.btn-primary button, .btn-primary input {
+.btn-primary button, .btn-primary input, .btn-primary a {
   padding: 10.5px 16.5px;
   border: none;
   border-radius: 10px;
@@ -71,13 +71,13 @@ body {
   cursor: pointer;
 }
 @media screen and (min-width: 700px) {
-  .btn-primary button, .btn-primary input {
+  .btn-primary button, .btn-primary input, .btn-primary a {
     font-size: 14px;
     line-height: 20px;
     padding: 12.5px 25px;
   }
 }
-.btn-primary button:hover, .btn-primary input:hover {
+.btn-primary button:hover, .btn-primary input:hover, .btn-primary a:hover {
   transition: 0.2s;
 }
 
@@ -95,10 +95,10 @@ body {
   background-color: #7C91F9;
 }
 
-.btn-dark-blue button, .btn-dark-blue input {
+.btn-dark-blue button, .btn-dark-blue input, .btn-dark-blue a {
   background-color: #373F68;
 }
-.btn-dark-blue button:hover, .btn-dark-blue input:hover {
+.btn-dark-blue button:hover, .btn-dark-blue input:hover, .btn-dark-blue a:hover {
   background-color: #656EA3;
 }
 
@@ -145,14 +145,36 @@ body {
   text-decoration: underline;
 }
 
-aside {
+@media screen and (min-width: 1150px) {
+  main .feed {
+    margin: 0;
+    min-height: 600px;
+    padding-block: 1rem;
+    grid-column: 3/4;
+    grid-row: 2/3;
+    grid-auto-rows: max-content;
+  }
+}
+
+main {
   width: 100%;
+  display: grid;
+}
+@media screen and (min-width: 1150px) {
+  main {
+    grid-template-columns: 1fr 255px 825px 1fr;
+    place-self: center;
+  }
+}
+main aside {
+  width: 100%;
+  max-width: 1200px;
   display: grid;
   place-items: center;
   position: relative;
 }
 @media screen and (min-width: 700px) {
-  aside {
+  main aside {
     width: 87.5%;
     margin: 0 auto;
     padding-block: 40px;
@@ -160,7 +182,16 @@ aside {
     grid-template-columns: 1fr 2fr;
   }
 }
-aside > header {
+@media screen and (min-width: 1150px) {
+  main aside {
+    width: 100%;
+    grid-row: 1/3;
+    grid-column: 2/3;
+    grid-template-columns: 1fr;
+    grid-auto-rows: max-content;
+  }
+}
+main aside > header {
   width: 100%;
   padding-block: 16px;
   display: grid;
@@ -170,38 +201,38 @@ aside > header {
   background-repeat: no-repeat;
 }
 @media screen and (min-width: 700px) {
-  aside > header {
+  main aside > header {
     height: 178px;
     border-radius: 10px;
     place-items: end;
     padding-block: 24px;
   }
 }
-aside > header > div {
+main aside > header > div {
   justify-content: space-between;
   align-items: center;
 }
-aside > header > div > div {
+main aside > header > div > div {
   display: flex;
   flex-direction: column;
 }
-aside > header > div > div h1, aside > header > div > div h2 {
+main aside > header > div > div h1, main aside > header > div > div h2 {
   color: #FFFFFF;
 }
-aside > header > div > div h1 {
+main aside > header > div > div h1 {
   font-weight: 700;
   font-size: 15px;
   line-height: 22px;
   letter-spacing: -0.1875px;
 }
 @media screen and (min-width: 700px) {
-  aside > header > div > div h1 {
+  main aside > header > div > div h1 {
     font-size: 20px;
     line-height: 29px;
     letter-spacing: -0.25px;
   }
 }
-aside > header > div > div h2 {
+main aside > header > div > div h2 {
   font-weight: 500;
   font-size: 13px;
   line-height: 19px;
@@ -210,24 +241,24 @@ aside > header > div > div h2 {
   opacity: 0.75;
 }
 @media screen and (min-width: 700px) {
-  aside > header > div > div h2 {
+  main aside > header > div > div h2 {
     font-size: 15px;
     line-height: 22px;
   }
 }
-aside > header > div img {
+main aside > header > div img {
   width: 20px;
   height: 17px;
 }
-aside > header > div .btn-close-menu {
+main aside > header > div .btn-close-menu {
   display: none;
 }
 @media screen and (min-width: 700px) {
-  aside > header > div .btn-open-menu {
+  main aside > header > div .btn-open-menu {
     display: none;
   }
 }
-aside .aside-content {
+main aside .aside-content {
   position: absolute;
   display: none;
   justify-content: flex-end;
@@ -239,7 +270,7 @@ aside .aside-content {
   z-index: 2;
 }
 @media screen and (min-width: 700px) {
-  aside .aside-content {
+  main aside .aside-content {
     height: auto;
     display: flex;
     position: relative;
@@ -250,21 +281,32 @@ aside .aside-content {
     background: transparent;
   }
 }
-aside .aside-content > div {
+@media screen and (min-width: 1150px) {
+  main aside .aside-content {
+    max-width: 255px;
+    place-self: end;
+  }
+}
+main aside .aside-content > div {
   width: 72.5%;
   background-color: #F7F8FD;
   flex-direction: column;
   align-items: center;
 }
 @media screen and (min-width: 700px) {
-  aside .aside-content > div {
+  main aside .aside-content > div {
     width: 100%;
     flex-direction: row;
     justify-content: space-between;
     gap: 10px;
   }
 }
-aside .aside-content > div .categories {
+@media screen and (min-width: 1150px) {
+  main aside .aside-content > div {
+    flex-direction: column;
+  }
+}
+main aside .aside-content > div .categories {
   width: 80%;
   display: flex;
   gap: 8px;
@@ -276,25 +318,25 @@ aside .aside-content > div .categories {
   background-color: #FFFFFF;
 }
 @media screen and (min-width: 700px) {
-  aside .aside-content > div .categories {
+  main aside .aside-content > div .categories {
     margin-block-start: 0;
     width: 100%;
     height: 178px;
   }
 }
-aside .aside-content > div .categories .category {
+main aside .aside-content > div .categories .category {
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
 }
-aside .aside-content > div .categories .category-active {
+main aside .aside-content > div .categories .category-active {
   background-color: #4661E6;
 }
-aside .aside-content > div .categories .category-active p {
+main aside .aside-content > div .categories .category-active p {
   color: #FFFFFF;
 }
-aside .aside-content > div .roadmap {
+main aside .aside-content > div .roadmap {
   width: 80%;
   display: flex;
   flex-direction: column;
@@ -305,66 +347,69 @@ aside .aside-content > div .roadmap {
   background-color: #FFFFFF;
 }
 @media screen and (min-width: 700px) {
-  aside .aside-content > div .roadmap {
+  main aside .aside-content > div .roadmap {
     margin-block-start: 0;
     width: 100%;
     height: 178px;
   }
 }
-aside .aside-content > div .roadmap > header {
+main aside .aside-content > div .roadmap > header {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-aside .aside-content > div .roadmap > header h2 {
+main aside .aside-content > div .roadmap > header h2 {
   font-weight: 700;
   font-size: 18px;
   line-height: 26px;
   letter-spacing: -0.25px;
   color: #3A4374;
 }
-aside .aside-content > div .roadmap > header a {
+main aside .aside-content > div .roadmap > header a {
   font-weight: 600;
   font-size: 13px;
   line-height: 19px;
   text-decoration-line: underline;
   color: #4661E6;
 }
-aside .aside-content > div .roadmap ul {
+main aside .aside-content > div .roadmap > header a:hover {
+  color: #8397F8;
+}
+main aside .aside-content > div .roadmap ul {
   display: flex;
   flex-direction: column;
   gap: 8px;
 }
-aside .aside-content > div .roadmap ul li {
+main aside .aside-content > div .roadmap ul li {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-aside .aside-content > div .roadmap ul li > div {
+main aside .aside-content > div .roadmap ul li > div {
   display: flex;
   gap: 16px;
   align-items: center;
 }
-aside .aside-content > div .roadmap ul li > div p {
+main aside .aside-content > div .roadmap ul li > div p {
   color: #647196;
   font-weight: 400;
   font-size: 16px;
   line-height: 23px;
 }
-aside .aside-content > div .roadmap ul li > div .circle {
+main aside .aside-content > div .roadmap ul li > div .circle {
   padding: 4px;
   border-radius: 100%;
 }
-aside .aside-content > div .roadmap ul li > div .c-orange {
+main aside .aside-content > div .roadmap ul li > div .c-orange {
   background-color: #F49F85;
 }
-aside .aside-content > div .roadmap ul li > div .c-purple {
+main aside .aside-content > div .roadmap ul li > div .c-purple {
   background-color: #AD1FEA;
 }
-aside .aside-content > div .roadmap ul li > div .c-light-blue {
+main aside .aside-content > div .roadmap ul li > div .c-light-blue {
   background-color: #62BCFA;
 }
-aside .aside-content > div .roadmap ul li p {
+main aside .aside-content > div .roadmap ul li p {
   color: #647196;
   font-weight: 700;
   font-size: 16px;
@@ -381,6 +426,14 @@ aside .aside-content > div .roadmap ul li p {
 @media screen and (min-width: 700px) {
   .suggestions {
     background-color: transparent;
+  }
+}
+@media screen and (min-width: 1150px) {
+  .suggestions {
+    padding-block-start: 40px;
+    grid-column: 3/4;
+    grid-row: 1/2;
+    grid-auto-rows: max-content;
   }
 }
 .suggestions > div {
@@ -424,6 +477,9 @@ aside .aside-content > div .roadmap ul li p {
   cursor: pointer;
   position: relative;
   height: 40px;
+}
+.suggestions > div .left .sort-by:hover > p, .suggestions > div .left .sort-by:hover .sort-span, .suggestions > div .left .sort-by:hover > img {
+  opacity: 0.8;
 }
 .suggestions > div .left .sort-by .sort-arrow-up {
   display: none;
@@ -645,8 +701,18 @@ aside .aside-content > div .roadmap ul li p {
     line-height: 23px;
   }
 }
-.feed > div .no-feedbacks > div {
+@media screen and (min-width: 1150px) {
+  .feed > div .no-feedbacks p {
+    max-width: 410px;
+  }
+}
+.feed > div .no-feedbacks > a {
   margin-block-start: 10px;
+}
+@media screen and (min-width: 1150px) {
+  .feed > div .no-feedbacks > a {
+    margin-block-start: 34px;
+  }
 }
 
 /*# sourceMappingURL=index.css.map */
