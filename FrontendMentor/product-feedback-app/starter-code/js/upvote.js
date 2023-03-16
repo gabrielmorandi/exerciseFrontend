@@ -6,6 +6,11 @@ class upVoteId {
 }
 
 export function upVote() {
+    // upvote
+    if (localStorage.getItem('commentName') === null) {
+        localStorage.setItem('commentName', '[]')
+    }
+
     setTimeout(() => {
         let upVoteButtons = document.querySelectorAll('.upvote')
         let array1 = JSON.parse(localStorage.getItem('commentName'))
@@ -17,6 +22,9 @@ export function upVote() {
             // store
             let a = one.parentElement
             let b = a.children[1].children[0].innerHTML
+            if (b === '') {
+                b = a.children[2].children[0].innerHTML
+            }
             let c = new upVoteId(b, false)
             if (array2.includes(b) === false) {
                 array1.push(c)
