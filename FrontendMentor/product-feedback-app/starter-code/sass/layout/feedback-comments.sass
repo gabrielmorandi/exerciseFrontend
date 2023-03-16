@@ -1,6 +1,10 @@
 @use '../abstracts/v'
 @use '../abstracts/m'
 
+main, header
+  max-width: 730px
+  margin: 0 auto
+
 .feedback-comments
   width: 100%
   display: grid
@@ -52,6 +56,56 @@
           line-height: 19px
           color: v.$blue
           cursor: pointer
+          &:hover
+            text-decoration: underline
+      
+      form
+        display: none
+        width: 100%
+        flex-direction: column
+        gap: 16px
+        align-items: flex-end
+        padding-block-end: 1rem
+        flex-wrap: nowrap
+        @include m.tablet
+          align-items: flex-start
+          flex-direction: row
+          padding-inline: calc(20px + 1rem) 32px
+          margin-inline-start: 20px
+        textarea
+          width: 100%
+          background-color: v.$white-gray
+          padding: 1rem
+          border: none
+          border-radius: 5px
+          resize: none
+          &::placeholder
+            color: #8C92B3
+            font-weight: 400
+            font-size: 13px
+            line-height: 19px
+        .submit
+          display: flex
+          justify-content: space-between
+          align-items: center
+          p
+            font-size: 13px
+            line-height: 19px
+            color: v.$gray-blue
+          input
+            padding: 10.5px 16.5px
+            border: none
+            border-radius: 10px
+            font-weight: 700
+            font-size: 13px
+            line-height: 19px
+            color: v.$white-blue
+            cursor: pointer
+            background-color: v.$purple
+            &:hover
+              background-color: #C75AF6
+      .flex
+        display: flex
       .feedback-comment-content
         padding-block-end: 24px
         display: flex

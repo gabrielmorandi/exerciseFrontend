@@ -21,13 +21,13 @@ body {
 
 .container-flex {
   width: 87.5%;
-  max-width: 1300px;
+  max-width: 1200px;
   display: flex;
 }
 
 .container-grid {
   width: 87.5%;
-  max-width: 1300px;
+  max-width: 1200px;
   display: grid;
 }
 
@@ -43,7 +43,7 @@ body {
   color: #4661E6;
 }
 
-.upvote:hover {
+.upvote:hover, .categories .category:hover {
   background-color: #CFD7FF !important;
   transition: 0.2s;
 }
@@ -60,7 +60,7 @@ body {
   display: grid;
   place-items: center;
 }
-.btn-primary button, .btn-primary input {
+.btn-primary button, .btn-primary input, .btn-primary a {
   padding: 10.5px 16.5px;
   border: none;
   border-radius: 10px;
@@ -71,13 +71,13 @@ body {
   cursor: pointer;
 }
 @media screen and (min-width: 700px) {
-  .btn-primary button, .btn-primary input {
+  .btn-primary button, .btn-primary input, .btn-primary a {
     font-size: 14px;
     line-height: 20px;
     padding: 12.5px 25px;
   }
 }
-.btn-primary button:hover, .btn-primary input:hover {
+.btn-primary button:hover, .btn-primary input:hover, .btn-primary a:hover {
   transition: 0.2s;
 }
 
@@ -95,10 +95,10 @@ body {
   background-color: #7C91F9;
 }
 
-.btn-dark-blue button, .btn-dark-blue input {
+.btn-dark-blue button, .btn-dark-blue input, .btn-dark-blue a {
   background-color: #373F68;
 }
-.btn-dark-blue button:hover, .btn-dark-blue input:hover {
+.btn-dark-blue button:hover, .btn-dark-blue input:hover, .btn-dark-blue a:hover {
   background-color: #656EA3;
 }
 
@@ -160,6 +160,10 @@ main .feed {
 }
 main .feed > div .comment {
   margin: 0;
+  cursor: default;
+}
+main .feed > div .comment .comments {
+  cursor: default;
 }
 
 .feed {
@@ -323,8 +327,23 @@ main .feed > div .comment {
     line-height: 23px;
   }
 }
-.feed > div .no-feedbacks > div {
+@media screen and (min-width: 1150px) {
+  .feed > div .no-feedbacks p {
+    max-width: 410px;
+  }
+}
+.feed > div .no-feedbacks > a {
   margin-block-start: 10px;
+}
+@media screen and (min-width: 1150px) {
+  .feed > div .no-feedbacks > a {
+    margin-block-start: 34px;
+  }
+}
+
+main, header {
+  max-width: 730px;
+  margin: 0 auto;
 }
 
 .feedback-comments {
@@ -390,6 +409,67 @@ main .feed > div .comment {
   line-height: 19px;
   color: #4661E6;
   cursor: pointer;
+}
+.feedback-comments > div .feedback-comment header .reply:hover {
+  text-decoration: underline;
+}
+.feedback-comments > div .feedback-comment form {
+  display: none;
+  width: 100%;
+  flex-direction: column;
+  gap: 16px;
+  align-items: flex-end;
+  padding-block-end: 1rem;
+  flex-wrap: nowrap;
+}
+@media screen and (min-width: 700px) {
+  .feedback-comments > div .feedback-comment form {
+    align-items: flex-start;
+    flex-direction: row;
+    padding-inline: calc(20px + 1rem) 32px;
+    margin-inline-start: 20px;
+  }
+}
+.feedback-comments > div .feedback-comment form textarea {
+  width: 100%;
+  background-color: #F7F8FD;
+  padding: 1rem;
+  border: none;
+  border-radius: 5px;
+  resize: none;
+}
+.feedback-comments > div .feedback-comment form textarea::placeholder {
+  color: #8C92B3;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 19px;
+}
+.feedback-comments > div .feedback-comment form .submit {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.feedback-comments > div .feedback-comment form .submit p {
+  font-size: 13px;
+  line-height: 19px;
+  color: #647196;
+}
+.feedback-comments > div .feedback-comment form .submit input {
+  padding: 10.5px 16.5px;
+  border: none;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 19px;
+  color: #F2F4FF;
+  cursor: pointer;
+  background-color: #AD1FEA;
+}
+.feedback-comments > div .feedback-comment form .submit input:hover {
+  background-color: #C75AF6;
+}
+.feedback-comments > div .feedback-comment .flex {
+  display: flex;
 }
 .feedback-comments > div .feedback-comment .feedback-comment-content {
   padding-block-end: 24px;

@@ -1,3 +1,7 @@
+import { upVote } from "./upvote.js"
+
+upVote()
+
 const urlAtual = window.location.href
 const urlClass = new URL(urlAtual)
 const title = urlClass.searchParams.get("title")
@@ -112,6 +116,12 @@ fetch('data.json').then((response) => {
                                         <div class="feedback-comment-content">
                                             <p>${realComent.content}</p>
                                         </div>
+                                        <form action="index.html">
+                                            <textarea name="textarea" maxlength="250" rows="2" placeholder="Type your reply here"></textarea>
+                                            <div class="submit">
+                                                <input type="submit" value="Post Reply">
+                                            </div>
+                                        </form>
                                     </div>
                                     `
                                 }
@@ -148,3 +158,16 @@ fetch('data.json').then((response) => {
         })
     })
 })
+
+function formReply() {
+    let replyes = document.querySelectorAll('.reply')
+    for (let rep of replyes) {
+        rep.addEventListener('click', () => {
+            rep.parentElement.parentElement.children[2].classList.toggle('flex')
+        })
+    }
+}
+
+setTimeout(() => {
+    formReply()
+}, 150);
