@@ -1,0 +1,40 @@
+@use './v'
+
+@mixin tablet()
+  @media screen and (min-width: 700px)
+    @content
+
+@mixin h1()
+  font-family: 'Barlow', sans-serif
+  font-weight: 900
+  font-size: 48px
+  line-height: 48px
+  text-transform: uppercase
+  color: v.$blue
+  @include tablet
+    font-weight: 900
+    font-size: 56px
+    line-height: 56px
+
+@mixin h2()
+  font-family: 'Barlow', sans-serif
+  font-weight: 900
+  font-size: 32px
+  line-height: 36px
+  text-transform: uppercase
+  color: v.$blue
+
+@mixin h3()
+  font-family: 'Barlow', sans-serif
+  font-weight: 900
+  font-size: 24px
+  line-height: 28px
+  text-transform: uppercase
+  color: v.$blue
+
+@mixin p()
+  font-family: 'Barlow', sans-serif
+  font-weight: 500
+  font-size: 16px
+  line-height: 26px
+  color: v.$blue-gray

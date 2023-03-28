@@ -1,0 +1,24 @@
+@use '../abstracts/v'
+
+.btn
+    button
+        border: none
+        border-radius: 8px
+        padding: 16px 27px
+        font-weight: 700
+        font-size: 16px
+        line-height: 26px
+        color: v.$white
+        cursor: pointer
+    &.btn-primary
+        button
+            background-color: v.$orange
+            &:hover
+                transition: .3s
+                background-color: v.$orange-ligth
+    &.btn-secundary
+        button 
+            background-color: v.$blue-gray
+            &:hover
+                transition: .3s
+                background-color: v.$blue

@@ -1,0 +1,239 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@500;700;900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+p {
+  font-family: "Barlow", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 26px;
+  color: #7B8BAD;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1 {
+  font-family: "Barlow", sans-serif;
+  font-weight: 900;
+  font-size: 48px;
+  line-height: 48px;
+  text-transform: uppercase;
+  color: #162542;
+}
+@media screen and (min-width: 700px) {
+  h1 {
+    font-weight: 900;
+    font-size: 56px;
+    line-height: 56px;
+  }
+}
+
+h2 {
+  font-family: "Barlow", sans-serif;
+  font-weight: 900;
+  font-size: 32px;
+  line-height: 36px;
+  text-transform: uppercase;
+  color: #162542;
+}
+
+h3 {
+  font-family: "Barlow", sans-serif;
+  font-weight: 900;
+  font-size: 24px;
+  line-height: 28px;
+  text-transform: uppercase;
+  color: #162542;
+}
+
+.container-flex {
+  width: 87.25%;
+  max-width: 1200px;
+  display: flex;
+}
+.container-grid {
+  width: 87.25%;
+  max-width: 1200px;
+  display: grid;
+}
+
+.btn button {
+  border: none;
+  border-radius: 8px;
+  padding: 16px 27px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 26px;
+  color: #ffffff;
+  cursor: pointer;
+}
+.btn.btn-primary button {
+  background-color: #F16718;
+}
+.btn.btn-primary button:hover {
+  transition: 0.3s;
+  background-color: #FF9B62;
+}
+.btn.btn-secundary button {
+  background-color: #7B8BAD;
+}
+.btn.btn-secundary button:hover {
+  transition: 0.3s;
+  background-color: #162542;
+}
+
+header {
+  width: 100%;
+  display: grid;
+  place-items: center;
+  gap: 64px;
+}
+header nav {
+  padding-block-start: 23px;
+  width: 87.25%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header .hero {
+  display: grid;
+  place-items: center;
+  gap: 64px;
+}
+header .hero .hero-txt {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  width: 87.25%;
+}
+header .hero .hero-txt div {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+header .hero .hero-txt div p span {
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #7B8BAD;
+}
+header .hero .hero-img {
+  width: 100%;
+  display: grid;
+  gap: 24px;
+}
+header .hero .hero-img > img {
+  justify-self: flex-end;
+  width: 93.625%;
+  border-radius: 20px 0 0 20px;
+}
+header .hero .hero-img div {
+  display: flex;
+  width: 100%;
+  gap: 24px;
+}
+header .hero .hero-img div .img {
+  position: relative;
+  width: 100%;
+  max-width: 107px;
+  height: 193px;
+}
+header .hero .hero-img div .img img {
+  object-fit: cover;
+  object-position: right;
+  border-radius: 0 20px 20px 0;
+  width: 100%;
+}
+header .hero .hero-img div .img::after {
+  border-radius: 0 20px 20px 0;
+  position: absolute;
+  content: "";
+  display: flex;
+  background-color: #F16718;
+  width: 100%;
+  height: 100%;
+  mix-blend-mode: multiply;
+}
+header .hero .hero-img div > img {
+  width: 220px;
+  border-radius: 20px;
+}
+
+main {
+  width: 100%;
+  display: grid;
+  place-items: center;
+  margin-block-start: 75px;
+}
+main > div {
+  flex-direction: column;
+}
+main > div #description {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
+main > div #description h2 {
+  max-width: 255px;
+}
+main > div #description h2, main > div #description p {
+  text-align: center;
+}
+
+main #features {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-block-start: 111px;
+  gap: 64px;
+}
+main #features div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
+main #features div .icon {
+  width: 65px;
+  height: 65px;
+  margin-block-end: 24px;
+  display: grid;
+  place-items: center;
+  background-color: #F16718;
+  border-radius: 16px;
+}
+main #features div h2 {
+  max-width: 237px;
+}
+main #features div h2, main #features div p {
+  text-align: center;
+}
+
+footer {
+  width: 100%;
+  display: grid;
+  place-items: center;
+  margin-block: 96px 50px;
+}
+footer > div {
+  place-items: center;
+}
+footer > div div:first-of-type {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+}
+footer > div p a {
+  font-weight: 700;
+  color: #7B8BAD;
+}
+footer > div p a:hover {
+  text-decoration: underline;
+}
+
+/*# sourceMappingURL=index.css.map */
