@@ -11,13 +11,13 @@
 </head>
 <body>
 	<header>
-		<nav>
-			<img src="./assets/shared/logo.svg" alt="Logo">
-			<a href="#"class="btn btn-secundary">
-				<button>PRE-ORDER NOW</button>
-			</a>
-		</nav>
-		<div class="hero">
+		<div class="container-grid">
+			<nav>
+				<img src="./assets/shared/logo.svg" alt="Logo">
+				<a href="#"class="btn btn-secundary">
+					<button>PRE-ORDER NOW</button>
+				</a>
+			</nav>
 			<div class="hero-txt">
 				<h1>Typemaster Keyboard</h1>
 				<p>Improve your productivity and gaming without breaking the bank. Upgrade to a high quality mechanical typing experience.</p>
@@ -28,15 +28,22 @@
 					<p><span>Release on 5/27</span></p>
 				</div>
 			</div>
-			<div class="hero-img">
+		</div>
+		<div class="hero-img">
+			<picture>
+				<source media="(min-width:700px)" srcset="./assets/tablet/image-keyboard.jpg">
 				<img src="./assets/mobile/image-keyboard.jpg" alt="Keyboard">
-				<div>
-					<div class="img">
-						<img src="./assets/mobile/image-phone-and-keyboard.jpg" alt="image-phone-and-keyboard">
-					</div>
-					<img src="./assets/mobile/image-glass-and-keyboard.jpg" alt="image-glass-and-keyboard">
-				</div>
-			</div>
+			</picture>
+		</div>
+		<div class="hero-img__two">
+			<picture>
+				<source media="(min-width: 700px)" srcset="./assets/tablet/image-phone-and-keyboard.jpg">
+				<img src="./assets/mobile/image-phone-and-keyboard.jpg" alt="image-phone-and-keyboard">
+			</picture>
+			<picture>
+				<source media="(min-width: 700px)" srcset="./assets/tablet/image-glass-and-keyboard.jpg">
+				<img src="./assets/mobile/image-glass-and-keyboard.jpg" alt="image-glass-and-keyboard">
+			</picture>
 		</div>
 	</header>
 	<main>
@@ -81,7 +88,7 @@
 		<div class="container-grid">
 			<div>
 				<p><a href="#">Typemaster 2021</a></p>
-				<p>|</p>
+				<p class="pope">|</p>
 				<p>All Rights Reserved</p>
 			</div>
 			<p>Coded by <a href="https://github.com/gabrielmorandi">Gabriel Morandi</a>.</p>

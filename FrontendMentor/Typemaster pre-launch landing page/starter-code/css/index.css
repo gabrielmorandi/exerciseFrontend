@@ -20,12 +20,18 @@ a {
 h1 {
   font-family: "Barlow", sans-serif;
   font-weight: 900;
-  font-size: 48px;
-  line-height: 48px;
+  font-size: 36px;
+  line-height: 42px;
   text-transform: uppercase;
   color: #162542;
 }
-@media screen and (min-width: 700px) {
+@media screen and (min-width: 369px) {
+  h1 {
+    font-size: 48px;
+    line-height: 48px;
+  }
+}
+@media screen and (min-width: 900px) {
   h1 {
     font-weight: 900;
     font-size: 56px;
@@ -63,14 +69,23 @@ h3 {
 }
 
 .btn button {
+  width: max-content;
   border: none;
   border-radius: 8px;
-  padding: 16px 27px;
+  padding: 16px 20px;
   font-weight: 700;
-  font-size: 16px;
-  line-height: 26px;
+  font-size: 14px;
+  line-height: 18px;
   color: #ffffff;
   cursor: pointer;
+}
+@media screen and (min-width: 369px) {
+  .btn button {
+    padding: 16px 27px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 26px;
+  }
 }
 .btn.btn-primary button {
   background-color: #F16718;
@@ -80,76 +95,83 @@ h3 {
   background-color: #FF9B62;
 }
 .btn.btn-secundary button {
-  background-color: #7B8BAD;
+  background-color: #E8EFF2;
+  color: #162542;
 }
 .btn.btn-secundary button:hover {
   transition: 0.3s;
   background-color: #162542;
+  color: #ffffff;
 }
 
 header {
   width: 100%;
   display: grid;
   place-items: center;
+}
+header .container-grid {
+  padding-block-start: 23px;
+  place-items: center;
   gap: 64px;
 }
-header nav {
-  padding-block-start: 23px;
-  width: 87.25%;
+header .container-grid nav {
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-header .hero {
-  display: grid;
-  place-items: center;
-  gap: 64px;
-}
-header .hero .hero-txt {
+header .container-grid .hero-txt {
+  width: 100%;
   display: flex;
   flex-direction: column;
   gap: 32px;
-  width: 87.25%;
 }
-header .hero .hero-txt div {
+header .container-grid .hero-txt div {
   display: flex;
   align-items: center;
   gap: 32px;
 }
-header .hero .hero-txt div p span {
+header .container-grid .hero-txt div p span {
   font-weight: 700;
   text-transform: uppercase;
   color: #7B8BAD;
 }
-header .hero .hero-img {
+header .hero-img {
   width: 100%;
   display: grid;
-  gap: 24px;
+  margin-block: 64px 24px;
 }
-header .hero .hero-img > img {
+header .hero-img picture {
+  display: grid;
+}
+header .hero-img picture img {
   justify-self: flex-end;
   width: 93.625%;
   border-radius: 20px 0 0 20px;
 }
-header .hero .hero-img div {
+header .hero-img__two {
+  width: 93.625%;
+  justify-self: start;
   display: flex;
-  width: 100%;
+  flex-direction: row;
   gap: 24px;
 }
-header .hero .hero-img div .img {
+header .hero-img__two picture:first-of-type {
   position: relative;
   width: 100%;
   max-width: 107px;
   height: 193px;
 }
-header .hero .hero-img div .img img {
+header .hero-img__two picture:first-of-type img {
   object-fit: cover;
   object-position: right;
   border-radius: 0 20px 20px 0;
   width: 100%;
+  height: 100%;
 }
-header .hero .hero-img div .img::after {
+header .hero-img__two picture:first-of-type::after {
   border-radius: 0 20px 20px 0;
+  top: 0;
   position: absolute;
   content: "";
   display: flex;
@@ -158,8 +180,14 @@ header .hero .hero-img div .img::after {
   height: 100%;
   mix-blend-mode: multiply;
 }
-header .hero .hero-img div > img {
-  width: 220px;
+header .hero-img__two picture:last-of-type {
+  width: 100%;
+}
+header .hero-img__two picture:last-of-type > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
   border-radius: 20px;
 }
 
@@ -223,10 +251,23 @@ footer {
 footer > div {
   place-items: center;
 }
-footer > div div:first-of-type {
+footer > div div {
   display: flex;
-  flex-direction: row;
-  gap: 8px;
+  flex-direction: column;
+}
+@media screen and (min-width: 369px) {
+  footer > div div {
+    flex-direction: row;
+    gap: 8px;
+  }
+}
+footer > div .pope {
+  display: none;
+}
+@media screen and (min-width: 369px) {
+  footer > div .pope {
+    display: flex;
+  }
 }
 footer > div p a {
   font-weight: 700;

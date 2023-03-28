@@ -5,10 +5,16 @@ footer
   margin-block: 96px 50px
   > div
     place-items: center
-    div:first-of-type
+    div
       display: flex
-      flex-direction: row
-      gap: 8px
+      flex-direction: column
+      @include m.mobile
+        flex-direction: row
+        gap: 8px
+    .pope
+      display: none
+      @include m.mobile
+        display: flex
     p
       a
         font-weight: 700
