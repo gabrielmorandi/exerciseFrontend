@@ -91,7 +91,7 @@ h3 {
   background-color: #F16718;
 }
 .btn.btn-primary button:hover {
-  transition: 0.3s;
+  transition: 0.2s;
   background-color: #FF9B62;
 }
 .btn.btn-secundary button {
@@ -99,7 +99,7 @@ h3 {
   color: #162542;
 }
 .btn.btn-secundary button:hover {
-  transition: 0.3s;
+  transition: 0.2s;
   background-color: #162542;
   color: #ffffff;
 }
