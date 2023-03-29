@@ -5,11 +5,19 @@ main
     align-items: center
     margin-block-start: 111px
     gap: 64px
+    @include m.tablet
+      display: grid
+      grid-template-columns: 1fr 1fr
+      gap: 0
+      row-gap: 64px
+      column-gap: 69px
     div
       display: flex
       flex-direction: column
       align-items: center
       gap: 24px
+      @include m.tablet
+        align-items: flex-start
       .icon
         width: 65px
         height: 65px
@@ -22,4 +30,12 @@ main
         max-width: 237px
       h2, p 
         text-align: center
+        @include m.tablet
+          text-align: left
+      p
+        @include m.tablet
+          max-width: 281px
+
+          
+
       

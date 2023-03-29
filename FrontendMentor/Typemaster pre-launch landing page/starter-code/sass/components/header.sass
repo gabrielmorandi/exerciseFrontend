@@ -11,11 +11,26 @@ header
       display: flex
       justify-content: space-between
       align-items: center
+  .hero
+    display: grid
+    place-items: center
+    margin-block-start: 64px
+    @include m.tablet
+      width: 93.625%
+      justify-self: end
+      display: flex
+      flex-direction: row  
+      align-items: center
+      gap: 59px
+      margin-block-end: 40px
     .hero-txt
-      width: 100%
+      width: 87.25%
       display: flex
       flex-direction: column
       gap: 32px
+      @include m.tablet
+        width: 100%
+        max-width: 339px
       div 
         display: flex
         align-items: center
@@ -24,33 +39,49 @@ header
           font-weight: 700
           text-transform: uppercase
           color: v.$blue-gray
-  .hero-img
-    width: 100%
-    display: grid
-    margin-block: 64px 24px
-    picture
+    .hero-img
+      width: 100%
       display: grid
-      img
-        justify-self: flex-end
-        width: 93.625%
-        border-radius: 20px 0 0 20px
+      margin-block: 64px 24px
+      @include m.tablet 
+        margin: 0
+      picture
+        display: grid
+        img
+          justify-self: flex-end
+          width: 93.625%
+          border-radius: 20px 0 0 20px
+          @include m.tablet
+            width: 100%
+            height: 425px
+            object-fit: cover
+            object-position: left
   .hero-img__two
     width: 93.625%
     justify-self: start
     display: flex
     flex-direction: row
     gap: 24px
+    height: 193px
+    @include m.tablet
+      width: 87.25%
+      height: 320px
+      justify-self: center
     picture:first-of-type
       position: relative
       width: 100%
+      height: 100%
       max-width: 107px
-      height: 193px
+      @include m.tablet
+        max-width: 214px
       img 
         object-fit: cover
         object-position: right
         border-radius: 0 20px 20px 0
         width: 100%
         height: 100%
+        @include m.tablet
+          border-radius: 20px
       &::after
         border-radius: 0 20px 20px 0
         top: 0
@@ -61,6 +92,8 @@ header
         width: 100%
         height: 100%
         mix-blend-mode: multiply
+        @include m.tablet
+          border-radius: 20px
     picture:last-of-type
       width: 100%
       > img 

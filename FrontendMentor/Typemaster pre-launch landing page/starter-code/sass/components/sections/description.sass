@@ -9,8 +9,16 @@ main
 			display: flex
 			flex-direction: column
 			align-items: center
+			@include m.tablet
+				flex-direction: row
+				justify-content: space-between
 			gap: 24px
 			h2
 				max-width: 255px
 			h2, p
 				text-align: center
+				@include m.tablet
+					text-align: left
+			p 
+				@include m.tablet
+					max-width: 398px

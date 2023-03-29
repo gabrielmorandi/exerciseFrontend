@@ -120,34 +120,69 @@ header .container-grid nav {
   justify-content: space-between;
   align-items: center;
 }
-header .container-grid .hero-txt {
-  width: 100%;
+header .hero {
+  display: grid;
+  place-items: center;
+  margin-block-start: 64px;
+}
+@media screen and (min-width: 625px) {
+  header .hero {
+    width: 93.625%;
+    justify-self: end;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 59px;
+    margin-block-end: 40px;
+  }
+}
+header .hero .hero-txt {
+  width: 87.25%;
   display: flex;
   flex-direction: column;
   gap: 32px;
 }
-header .container-grid .hero-txt div {
+@media screen and (min-width: 625px) {
+  header .hero .hero-txt {
+    width: 100%;
+    max-width: 339px;
+  }
+}
+header .hero .hero-txt div {
   display: flex;
   align-items: center;
   gap: 32px;
 }
-header .container-grid .hero-txt div p span {
+header .hero .hero-txt div p span {
   font-weight: 700;
   text-transform: uppercase;
   color: #7B8BAD;
 }
-header .hero-img {
+header .hero .hero-img {
   width: 100%;
   display: grid;
   margin-block: 64px 24px;
 }
-header .hero-img picture {
+@media screen and (min-width: 625px) {
+  header .hero .hero-img {
+    margin: 0;
+  }
+}
+header .hero .hero-img picture {
   display: grid;
 }
-header .hero-img picture img {
+header .hero .hero-img picture img {
   justify-self: flex-end;
   width: 93.625%;
   border-radius: 20px 0 0 20px;
+}
+@media screen and (min-width: 625px) {
+  header .hero .hero-img picture img {
+    width: 100%;
+    height: 425px;
+    object-fit: cover;
+    object-position: left;
+  }
 }
 header .hero-img__two {
   width: 93.625%;
@@ -155,12 +190,25 @@ header .hero-img__two {
   display: flex;
   flex-direction: row;
   gap: 24px;
+  height: 193px;
+}
+@media screen and (min-width: 625px) {
+  header .hero-img__two {
+    width: 87.25%;
+    height: 320px;
+    justify-self: center;
+  }
 }
 header .hero-img__two picture:first-of-type {
   position: relative;
   width: 100%;
+  height: 100%;
   max-width: 107px;
-  height: 193px;
+}
+@media screen and (min-width: 625px) {
+  header .hero-img__two picture:first-of-type {
+    max-width: 214px;
+  }
 }
 header .hero-img__two picture:first-of-type img {
   object-fit: cover;
@@ -168,6 +216,11 @@ header .hero-img__two picture:first-of-type img {
   border-radius: 0 20px 20px 0;
   width: 100%;
   height: 100%;
+}
+@media screen and (min-width: 625px) {
+  header .hero-img__two picture:first-of-type img {
+    border-radius: 20px;
+  }
 }
 header .hero-img__two picture:first-of-type::after {
   border-radius: 0 20px 20px 0;
@@ -179,6 +232,11 @@ header .hero-img__two picture:first-of-type::after {
   width: 100%;
   height: 100%;
   mix-blend-mode: multiply;
+}
+@media screen and (min-width: 625px) {
+  header .hero-img__two picture:first-of-type::after {
+    border-radius: 20px;
+  }
 }
 header .hero-img__two picture:last-of-type {
   width: 100%;
@@ -206,11 +264,27 @@ main > div #description {
   align-items: center;
   gap: 24px;
 }
+@media screen and (min-width: 625px) {
+  main > div #description {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
 main > div #description h2 {
   max-width: 255px;
 }
 main > div #description h2, main > div #description p {
   text-align: center;
+}
+@media screen and (min-width: 625px) {
+  main > div #description h2, main > div #description p {
+    text-align: left;
+  }
+}
+@media screen and (min-width: 625px) {
+  main > div #description p {
+    max-width: 398px;
+  }
 }
 
 main #features {
@@ -220,11 +294,25 @@ main #features {
   margin-block-start: 111px;
   gap: 64px;
 }
+@media screen and (min-width: 625px) {
+  main #features {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+    row-gap: 64px;
+    column-gap: 69px;
+  }
+}
 main #features div {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 24px;
+}
+@media screen and (min-width: 625px) {
+  main #features div {
+    align-items: flex-start;
+  }
 }
 main #features div .icon {
   width: 65px;
@@ -240,6 +328,16 @@ main #features div h2 {
 }
 main #features div h2, main #features div p {
   text-align: center;
+}
+@media screen and (min-width: 625px) {
+  main #features div h2, main #features div p {
+    text-align: left;
+  }
+}
+@media screen and (min-width: 625px) {
+  main #features div p {
+    max-width: 281px;
+  }
 }
 
 footer {
