@@ -59,12 +59,12 @@ h3 {
 
 .container-flex {
   width: 87.25%;
-  max-width: 1200px;
+  max-width: 1100px;
   display: flex;
 }
 .container-grid {
   width: 87.25%;
-  max-width: 1200px;
+  max-width: 1100px;
   display: grid;
 }
 
@@ -114,6 +114,16 @@ header .container-grid {
   place-items: center;
   gap: 64px;
 }
+@media screen and (min-width: 625px) {
+  header .container-grid {
+    padding-block-start: 40px;
+  }
+}
+@media screen and (min-width: 900px) {
+  header .container-grid {
+    padding-block-start: 55px;
+  }
+}
 header .container-grid nav {
   width: 100%;
   display: flex;
@@ -124,6 +134,8 @@ header .hero {
   display: grid;
   place-items: center;
   margin-block-start: 64px;
+  gap: 64px;
+  max-width: 1100px;
 }
 @media screen and (min-width: 625px) {
   header .hero {
@@ -134,6 +146,18 @@ header .hero {
     align-items: center;
     gap: 59px;
     margin-block-end: 40px;
+  }
+}
+@media screen and (min-width: 900px) {
+  header .hero {
+    width: 87.25%;
+    justify-self: center;
+    gap: 125px;
+  }
+}
+@media screen and (min-width: 1150px) {
+  header .hero {
+    justify-content: space-between;
   }
 }
 header .hero .hero-txt {
@@ -161,7 +185,6 @@ header .hero .hero-txt div p span {
 header .hero .hero-img {
   width: 100%;
   display: grid;
-  margin-block: 64px 24px;
 }
 @media screen and (min-width: 625px) {
   header .hero .hero-img {
@@ -170,6 +193,16 @@ header .hero .hero-img {
 }
 header .hero .hero-img picture {
   display: grid;
+}
+@media screen and (min-width: 900px) {
+  header .hero .hero-img picture {
+    max-width: 540px;
+  }
+}
+@media screen and (min-width: 1150px) {
+  header .hero .hero-img picture {
+    place-self: end;
+  }
 }
 header .hero .hero-img picture img {
   justify-self: flex-end;
@@ -184,7 +217,77 @@ header .hero .hero-img picture img {
     object-position: left;
   }
 }
-header .hero-img__two {
+@media screen and (min-width: 900px) {
+  header .hero .hero-img picture img {
+    border-radius: 20px;
+  }
+}
+header .hero .box {
+  display: none;
+  position: absolute;
+  right: 0;
+  max-width: 135px;
+  height: 240px;
+  align-self: start;
+}
+@media screen and (min-width: 1400px) {
+  header .hero .box {
+    display: flex;
+  }
+}
+header .hero .box img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  object-position: left;
+}
+
+main {
+  width: 100%;
+  display: grid;
+  place-items: center;
+  margin-block-start: 24px;
+  position: relative;
+}
+main #description {
+  width: 100%;
+  max-width: 1100px;
+  display: grid;
+  place-items: center;
+  gap: 75px;
+}
+@media screen and (min-width: 625px) {
+  main #description {
+    width: 87.25%;
+    column-gap: 24px;
+    row-gap: 72px;
+  }
+}
+@media screen and (min-width: 900px) {
+  main #description {
+    display: flex;
+  }
+}
+main #description .box-left {
+  display: none;
+  position: absolute;
+  top: 244px;
+  left: 0;
+  max-width: 135px;
+  height: 236px;
+}
+@media screen and (min-width: 1400px) {
+  main #description .box-left {
+    display: flex;
+  }
+}
+main #description .box-left img {
+  width: 100%;
+  height: 236px;
+  object-fit: cover;
+  object-position: right;
+}
+main #description .hero-img__two {
   width: 93.625%;
   justify-self: start;
   display: flex;
@@ -193,24 +296,34 @@ header .hero-img__two {
   height: 193px;
 }
 @media screen and (min-width: 625px) {
-  header .hero-img__two {
-    width: 87.25%;
+  main #description .hero-img__two {
+    width: 100%;
     height: 320px;
     justify-self: center;
   }
 }
-header .hero-img__two picture:first-of-type {
+@media screen and (min-width: 900px) {
+  main #description .hero-img__two {
+    height: 480px;
+  }
+}
+main #description .hero-img__two picture:first-of-type {
   position: relative;
   width: 100%;
   height: 100%;
   max-width: 107px;
 }
 @media screen and (min-width: 625px) {
-  header .hero-img__two picture:first-of-type {
+  main #description .hero-img__two picture:first-of-type {
     max-width: 214px;
   }
 }
-header .hero-img__two picture:first-of-type img {
+@media screen and (min-width: 900px) {
+  main #description .hero-img__two picture:first-of-type {
+    max-width: 255px;
+  }
+}
+main #description .hero-img__two picture:first-of-type img {
   object-fit: cover;
   object-position: right;
   border-radius: 0 20px 20px 0;
@@ -218,11 +331,11 @@ header .hero-img__two picture:first-of-type img {
   height: 100%;
 }
 @media screen and (min-width: 625px) {
-  header .hero-img__two picture:first-of-type img {
+  main #description .hero-img__two picture:first-of-type img {
     border-radius: 20px;
   }
 }
-header .hero-img__two picture:first-of-type::after {
+main #description .hero-img__two picture:first-of-type::after {
   border-radius: 0 20px 20px 0;
   top: 0;
   position: absolute;
@@ -234,60 +347,75 @@ header .hero-img__two picture:first-of-type::after {
   mix-blend-mode: multiply;
 }
 @media screen and (min-width: 625px) {
-  header .hero-img__two picture:first-of-type::after {
+  main #description .hero-img__two picture:first-of-type::after {
     border-radius: 20px;
   }
 }
-header .hero-img__two picture:last-of-type {
+main #description .hero-img__two picture:last-of-type {
   width: 100%;
 }
-header .hero-img__two picture:last-of-type > img {
+@media screen and (min-width: 900px) {
+  main #description .hero-img__two picture:last-of-type {
+    max-width: 445px;
+  }
+}
+main #description .hero-img__two picture:last-of-type > img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   object-position: center;
   border-radius: 20px;
 }
-
-main {
+main #description .hero-txt__two {
   width: 100%;
-  display: grid;
-  place-items: center;
-  margin-block-start: 75px;
-}
-main > div {
-  flex-direction: column;
-}
-main > div #description {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 24px;
 }
 @media screen and (min-width: 625px) {
-  main > div #description {
+  main #description .hero-txt__two {
     flex-direction: row;
-    justify-content: space-between;
   }
 }
-main > div #description h2 {
+@media screen and (min-width: 900px) {
+  main #description .hero-txt__two {
+    flex-direction: column;
+    max-width: 255px;
+  }
+}
+main #description .hero-txt__two h2 {
   max-width: 255px;
 }
-main > div #description h2, main > div #description p {
+main #description .hero-txt__two h2, main #description .hero-txt__two p {
   text-align: center;
 }
 @media screen and (min-width: 625px) {
-  main > div #description h2, main > div #description p {
+  main #description .hero-txt__two h2, main #description .hero-txt__two p {
     text-align: left;
   }
 }
+@media screen and (min-width: 900px) {
+  main #description .hero-txt__two h2, main #description .hero-txt__two p {
+    max-width: 255px;
+  }
+}
+main #description .hero-txt__two p {
+  width: 87.25%;
+}
 @media screen and (min-width: 625px) {
-  main > div #description p {
+  main #description .hero-txt__two p {
     max-width: 398px;
+  }
+}
+@media screen and (min-width: 900px) {
+  main #description .hero-txt__two p {
+    width: 100%;
   }
 }
 
 main #features {
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -301,6 +429,12 @@ main #features {
     gap: 0;
     row-gap: 64px;
     column-gap: 69px;
+    align-items: flex-start;
+  }
+}
+@media screen and (min-width: 1150px) {
+  main #features {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
   }
 }
 main #features div {
@@ -326,6 +460,11 @@ main #features div .icon {
 main #features div h2 {
   max-width: 237px;
 }
+@media screen and (min-width: 900px) {
+  main #features div h2 {
+    max-width: max-content;
+  }
+}
 main #features div h2, main #features div p {
   text-align: center;
 }
@@ -337,6 +476,11 @@ main #features div h2, main #features div p {
 @media screen and (min-width: 625px) {
   main #features div p {
     max-width: 281px;
+  }
+}
+@media screen and (min-width: 900px) {
+  main #features div p {
+    max-width: max-content;
   }
 }
 

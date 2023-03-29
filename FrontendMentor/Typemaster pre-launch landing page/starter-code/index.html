@@ -33,28 +33,41 @@
 			</div>
 			<div class="hero-img">
 				<picture>
+					<source media="(min-width:900px)" srcset="./assets/desktop/image-keyboard.jpg">
 					<source media="(min-width:700px)" srcset="./assets/tablet/image-keyboard.jpg">
 					<img src="./assets/mobile/image-keyboard.jpg" alt="Keyboard">
 				</picture>
 			</div>
-		</div>
-		<div class="hero-img__two">
-			<picture>
-				<source media="(min-width: 700px)" srcset="./assets/tablet/image-phone-and-keyboard.jpg">
-				<img src="./assets/mobile/image-phone-and-keyboard.jpg" alt="image-phone-and-keyboard">
-			</picture>
-			<picture>
-				<source media="(min-width: 700px)" srcset="./assets/tablet/image-glass-and-keyboard.jpg">
-				<img src="./assets/mobile/image-glass-and-keyboard.jpg" alt="image-glass-and-keyboard">
+			<picture class="box">
+				<source media="(min-width:1150px)" srcset="./assets/shared/pattern-square.svg">
+				<img src="" alt aria-hidden="true">
 			</picture>
 		</div>
 	</header>
 	<main>
-		<div class="container-flex">
-			<section id="description">
+		<section id="description">
+			<picture class="box-left">
+				<source media="(min-width:1150px)" srcset="./assets/shared/pattern-square.svg">
+				<img src="" alt aria-hidden="true">
+			</picture>
+			<div class="hero-img__two">
+				<picture>
+					<source media="(min-width: 900px)" srcset="./assets/desktop/image-phone-and-keyboard.jpg">
+					<source media="(min-width: 700px)" srcset="./assets/tablet/image-phone-and-keyboard.jpg">
+					<img src="./assets/mobile/image-phone-and-keyboard.jpg" alt="image-phone-and-keyboard">
+				</picture>
+				<picture>
+					<source media="(min-width: 900px)" srcset="./assets/desktop/image-glass-and-keyboard.jpg">
+					<source media="(min-width: 700px)" srcset="./assets/tablet/image-glass-and-keyboard.jpg">
+					<img src="./assets/mobile/image-glass-and-keyboard.jpg" alt="image-glass-and-keyboard">
+				</picture>
+			</div>
+			<div class="hero-txt__two">
 				<h2>mechanical wireless Keyboard</h2>
 				<p>The Typemaster keyboard boasts top-notch build and practical design. It offers a wide variety of switches and keycaps, along with reliable wireless connectivity.</p>
-			</section>
+			</div>
+		</section>
+		<div class="container-flex">
 			<section id="features">
 				<div>
 					<div class="icon">

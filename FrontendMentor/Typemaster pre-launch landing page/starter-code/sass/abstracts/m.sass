@@ -6,8 +6,14 @@
 @mixin tablet()
   @media screen and (min-width: 625px)
     @content
-@mixin desktop()
+@mixin xga()
   @media screen and (min-width: 900px)
+    @content
+@mixin desktop()
+  @media screen and (min-width: 1150px)
+    @content
+@mixin blob()
+  @media screen and (min-width: 1400px)
     @content
 
 @mixin h1()
@@ -20,7 +26,7 @@
   @include mobile
     font-size: 48px
     line-height: 48px
-  @include desktop
+  @include xga
     font-weight: 900
     font-size: 56px
     line-height: 56px

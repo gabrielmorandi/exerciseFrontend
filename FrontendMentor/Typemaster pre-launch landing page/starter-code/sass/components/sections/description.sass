@@ -2,23 +2,108 @@ main
 	width: 100%
 	display: grid
 	place-items: center
-	margin-block-start: 75px
-	> div
-		flex-direction: column
-		#description
+	margin-block-start: 24px
+	position: relative
+	#description
+		width: 100%
+		max-width: 1100px
+		display: grid
+		place-items: center
+		gap: 75px
+		@include m.tablet
+			width: 87.25%
+			column-gap: 24px
+			row-gap: 72px
+		@include m.xga
+			display: flex
+		.box-left
+			display: none
+			position: absolute
+			top: 244px
+			left: 0
+			max-width: 135px
+			height: 236px
+			@include m.blob
+				display: flex
+			img
+				width: 100%
+				height: 236px
+				object-fit: cover
+				object-position: right
+		.hero-img__two
+			width: 93.625%
+			justify-self: start
+			display: flex
+			flex-direction: row
+			gap: 24px
+			height: 193px
+			@include m.tablet
+				width: 100%
+				height: 320px
+				justify-self: center
+			@include m.xga
+				height: 480px
+			picture:first-of-type
+				position: relative
+				width: 100%
+				height: 100%
+				max-width: 107px
+				@include m.tablet
+					max-width: 214px
+				@include m.xga
+					max-width: 255px
+				img
+					object-fit: cover
+					object-position: right
+					border-radius: 0 20px 20px 0
+					width: 100%
+					height: 100%
+					@include m.tablet
+						border-radius: 20px
+				&::after
+					border-radius: 0 20px 20px 0
+					top: 0
+					position: absolute
+					content: ''
+					display: flex
+					background-color: v.$orange
+					width: 100%
+					height: 100%
+					mix-blend-mode: multiply
+					@include m.tablet
+						border-radius: 20px
+			picture:last-of-type
+				width: 100%
+				@include m.xga
+					max-width: 445px
+				> img
+					width: 100%
+					height: 100%
+					object-fit: cover
+					object-position: center
+					border-radius: 20px
+		.hero-txt__two
+			width: 100%
 			display: flex
 			flex-direction: column
 			align-items: center
+			gap: 24px
 			@include m.tablet
 				flex-direction: row
-				justify-content: space-between
-			gap: 24px
+			@include m.xga
+				flex-direction: column
+				max-width: 255px
 			h2
 				max-width: 255px
 			h2, p
 				text-align: center
 				@include m.tablet
 					text-align: left
-			p 
+				@include m.xga
+					max-width: 255px
+			p
+				width: 87.25%
 				@include m.tablet
 					max-width: 398px
+				@include m.xga
+					width: 100%
