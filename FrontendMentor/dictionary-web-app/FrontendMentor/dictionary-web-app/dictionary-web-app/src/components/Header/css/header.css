@@ -1,0 +1,189 @@
+header {
+  width: 100%;
+  display: grid;
+  place-items: center;
+  margin-block: 24px;
+}
+@media screen and (min-width: 500px) {
+  header {
+    margin-block: 58px 51.5px;
+  }
+}
+header > div {
+  place-items: center;
+}
+header > div nav {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header > div nav .switches {
+  display: flex;
+  align-items: center;
+}
+header > div nav .switches .theme {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+@media screen and (min-width: 500px) {
+  header > div nav .switches .theme {
+    gap: 20px;
+  }
+}
+header > div nav .switches .theme .switch {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 20px;
+}
+header > div nav .switches .theme .switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+header > div nav .switches .theme .switch input:checked + .slider {
+  background-color: #a445ed;
+}
+header > div nav .switches .theme .switch input:checked:hover + .slider {
+  background-color: #757575;
+}
+header > div nav .switches .theme .switch input:not(:checked) + .slider {
+  background-color: #757575;
+}
+header > div nav .switches .theme .switch input:not(:checked):hover + .slider {
+  background-color: #a445ed;
+}
+header > div nav .switches .theme .switch input:checked + .slider:before {
+  -webkit-transform: translateX(20px);
+  -ms-transform: translateX(20px);
+  transform: translateX(20px);
+}
+header > div nav .switches .theme .switch .slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  border-radius: 34px;
+}
+header > div nav .switches .theme .switch .slider::before {
+  position: absolute;
+  content: "";
+  height: 14px;
+  width: 14px;
+  left: 3px;
+  bottom: 3px;
+  background-color: #ffffff;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+header > div nav .dropdown {
+  position: relative;
+}
+header > div nav .dropdown .dropdown-trigger {
+  display: flex;
+  width: 100%;
+}
+header > div nav .dropdown .dropdown-trigger button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  height: 2.5em;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: nowrap;
+}
+header > div nav .dropdown .dropdown-trigger button .font-selected {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 24px;
+}
+header > div nav .dropdown .dropdown-trigger::after {
+  content: "";
+  display: flex;
+  height: 100%;
+  min-height: 32px;
+  width: 1px;
+  margin-inline: 10px;
+  background-color: #e9e9e9;
+}
+@media screen and (min-width: 321px) {
+  header > div nav .dropdown .dropdown-trigger::after {
+    margin-inline: 16px;
+  }
+}
+@media screen and (min-width: 500px) {
+  header > div nav .dropdown .dropdown-trigger::after {
+    margin-inline: 26px;
+  }
+}
+header > div nav .dropdown .dropdown-menu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  z-index: 2;
+  display: none;
+  width: 100%;
+  min-width: 160px;
+  padding-block: 24px;
+  margin-block-start: 10px;
+  border-radius: 16px;
+}
+header > div nav .dropdown .dropdown-menu .dropdown-content {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+header > div nav .dropdown .dropdown-menu .dropdown-content .dropdown-item {
+  display: block;
+  width: 100%;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 24px;
+  cursor: pointer;
+  padding-inline: 24px;
+}
+header > div nav .dropdown .dropdown-menu .dropdown-content .dropdown-item:hover {
+  color: #a445ed;
+}
+header > div nav .dropdown .dropdown-menu .dropdown-content .dropdown-item.is-active {
+  color: #a445ed;
+}
+header > div nav .dropdown .dropdown-menu .dropdown-content .dropdown-item.Inter {
+  font-family: "Inter";
+}
+header > div nav .dropdown .dropdown-menu .dropdown-content .dropdown-item.Lora {
+  font-family: "Lora";
+}
+header > div nav .dropdown .dropdown-menu .dropdown-content .dropdown-item.Inconsolata {
+  font-family: "Inconsolata";
+}
+header > div nav .dropdown.is-active .dropdown-menu {
+  display: flex;
+  flex-direction: column;
+}
+
+body.dark nav * {
+  color: #ffffff;
+}
+body.dark .dropdown-menu {
+  background-color: #1f1f1f;
+  box-shadow: 0px 5px 30px #a445ed;
+}
+
+body.light nav * {
+  color: #2d2d2d;
+}
+body.light .dropdown-menu {
+  background-color: #ffffff;
+  box-shadow: 0px 5px 30px rgba(0, 0, 0, 0.1);
+}
+
+/*# sourceMappingURL=header.css.map */

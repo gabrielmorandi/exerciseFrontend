@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <title>Frontend Mentor | QR code component</title>
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap');
+
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    :root {
+        --White: hsl(0, 0%, 100%);
+        --Light-gray: hsl(212, 45%, 89%);
+        --Grayish-blue: hsl(220, 15%, 55%);
+        --Dark-blue: hsl(218, 44%, 22%);
+    }
+
+    .attribution {
+        position: absolute;
+        bottom: 10px;
+        width: 100%;
+        text-align: center;
+        font-size: 11px;
+    }
+    .attribution a { 
+        color: hsl(228, 45%, 44%); 
+    }
+
+    body {
+        height: 100vh;
+        background-color: var(--Light-gray);
+        font-family: 'Outfit', sans-serif;
+    }
+
+    .card {
+        display: flex;
+        width: 100%;
+        height: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .card figure {
+        width: 300px;
+        padding: 20px;
+        background-color: var(--White);
+        border-radius: 20px;
+    }
+
+    .card figure > img {
+        width: 100%;
+        border-radius: 10px;
+    }
+
+    .card figure figcaption {
+        width: 90%;
+        margin: 15px auto;
+        font-family: 'outfit', sans-serif;
+        font-size: 22.5px;
+        font-weight: 700;
+        color: var(--Dark-blue);
+        text-align: center;
+    }
+
+    .card figure p {
+        width: 90%;
+        margin: 0 auto 15px auto;
+        font-family: 'outfit', sans-serif;
+        font-size: 15px;
+        font-weight: 400;
+        color: var(--Grayish-blue);
+        text-align: center;
+    }
+
+  </style>
+</head>
+<body>
+    <div class="card">
+        <figure>
+            <img src="images/image-qr-code.png" alt="QR">
+            <figcaption>Improve your front-end skills by building projects </figcaption>
+            <p> Scan the QR code to visit Frontend Mentor and take your coding sills to the next level</p>
+        </figure>
+    </div>
+    <div class="attribution">
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+        Coded by <a href="https://github.com/gabrielmorandi">Gabriel Morandi</a>.
+    </div>
+</body>
+</html>

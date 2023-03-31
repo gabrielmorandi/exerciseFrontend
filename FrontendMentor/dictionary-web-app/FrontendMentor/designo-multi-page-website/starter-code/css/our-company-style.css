@@ -1,0 +1,89 @@
+/* header */
+.hero {
+    padding-block: 105px;
+    background-image: url(../assets/about/mobile/bg-pattern-hero-about-mobile.svg);
+    background-repeat: no-repeat;
+    background-position: -500px -125px;
+}
+
+header picture, .figurecaption picture {
+    display: flex;
+    width: 100%;
+}
+header picture img {
+    width: 100%;
+}
+
+.real {
+    width: 100%;
+    margin-block-start: 120px;
+    display: grid;
+    place-items: center;
+}
+.real > div {
+    width: 100%;
+}
+
+@media screen and (min-width: 660px) {
+    header .hero {
+        border-radius: 0 0 15px 15px;
+        margin-block-end: 120px;
+    }
+
+    header .hero-our-company, .figurecaption {
+        width: 100%;
+    }
+
+    picture img {
+        border-radius: 15px 15px 0 0;
+    }
+
+    .real > div {
+        width: 87.2%;
+        justify-content: center;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    header .hero-our-company {
+        width: 100%;
+        display: flex;
+        flex-direction: row-reverse;
+        margin-block-end: 160px;
+    }
+    header picture {
+        width: 45%;
+    }
+    header picture img {
+        border-radius: 0 15px 15px 0;
+        max-height: 480px;
+    }
+    header .hero-our-company .hero {
+        width: 55%;
+        margin: 0;
+        border-radius: 15px 0 0 15px;
+    }
+
+    .about {
+        position: relative;
+    }
+    .about .leaf-b {
+        right: -400px;
+        top: 190px;
+        rotate: none;
+    }
+
+    .real .figurecaption figure {
+        flex-direction: row-reverse;
+    }
+    .real .figurecaption picture img {
+        border-radius: 0 15px 15px 0;
+    }
+    .real .figurecaption figure > div{
+        border-radius: 15px 0 0 15px;
+    }
+    .real .figurecaption, .real .figurecaption picture img, .real .figurecaption figure > div{
+        max-height: 640px;
+        min-height: 640px;
+    }
+}

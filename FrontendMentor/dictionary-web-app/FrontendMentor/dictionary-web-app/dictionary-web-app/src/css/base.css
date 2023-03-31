@@ -1,0 +1,27 @@
+@import url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&family=Inter:wght@400;700&family=Lora:ital,wght@0,700;1,400&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body.light {
+  background-color: #ffffff;
+}
+
+body.dark {
+  background-color: #050505;
+}
+
+.container-flex {
+  width: 90%;
+  max-width: 736px;
+  display: flex;
+}
+.container-grid {
+  width: 90%;
+  max-width: 736px;
+  display: grid;
+}
+
+/*# sourceMappingURL=base.css.map */

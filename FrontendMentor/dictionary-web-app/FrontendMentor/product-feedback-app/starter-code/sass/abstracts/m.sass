@@ -1,0 +1,18 @@
+@use 'v'
+
+@mixin containerFlex
+  width: v.$m-w
+  max-width: v.$mx-w
+  display: flex
+@mixin containerGrid
+  width: v.$m-w
+  max-width: v.$mx-w
+  display: grid
+
+// medias
+@mixin tablet 
+  @media screen and (min-width: 700px)
+    @content
+@mixin desktop
+  @media screen  and (min-width: 1150px)
+    @content

@@ -1,0 +1,44 @@
+@use '../abstracts/v'
+@use '../abstracts/m'
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@400;600;700&display=swap')
+
+// geral
+* 
+  margin: 0
+  padding: 0
+  font-family: 'Jost', sans-serif
+  text-decoration: none
+  box-sizing: border-box
+  font-weight: 400
+  font-size: 1rem
+  line-height: 23px
+  color: v.$dark-blue
+
+html
+  scroll-behavior: smooth
+
+body
+  background-color: v.$white-gray
+
+.container-flex
+  @include m.containerFlex
+.container-grid
+  @include m.containerGrid
+
+.category
+  padding: 6px 16px
+  border-radius: 10px
+  background-color: v.$white-blue
+  p
+    font-weight: 600
+    font-size: 13px
+    line-height: 19px
+    color: v.$blue
+
+.upvote:hover, .categories .category:hover
+  background-color: #CFD7FF !important
+  transition: .2s
+.upSelect
+  background-color: v.$blue !important
+  p
+    color: v.$white

@@ -1,0 +1,290 @@
+@import url("https://fonts.googleapis.com/css2?family=Jost:wght@400;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Jost", sans-serif;
+  text-decoration: none;
+  box-sizing: border-box;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 23px;
+  color: #3A4374;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #F7F8FD;
+}
+
+.container-flex {
+  width: 87.5%;
+  max-width: 1200px;
+  display: flex;
+}
+
+.container-grid {
+  width: 87.5%;
+  max-width: 1200px;
+  display: grid;
+}
+
+.category {
+  padding: 6px 16px;
+  border-radius: 10px;
+  background-color: #F2F4FF;
+}
+.category p {
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 19px;
+  color: #4661E6;
+}
+
+.upvote:hover, .categories .category:hover {
+  background-color: #CFD7FF !important;
+  transition: 0.2s;
+}
+
+.upSelect {
+  background-color: #4661E6 !important;
+}
+.upSelect p {
+  color: #FFFFFF;
+}
+
+.btn-primary {
+  width: auto;
+  display: grid;
+  place-items: center;
+}
+.btn-primary button, .btn-primary input, .btn-primary a {
+  padding: 10.5px 16.5px;
+  border: none;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 19px;
+  color: #F2F4FF;
+  cursor: pointer;
+}
+@media screen and (min-width: 700px) {
+  .btn-primary button, .btn-primary input, .btn-primary a {
+    font-size: 14px;
+    line-height: 20px;
+    padding: 12.5px 25px;
+  }
+}
+.btn-primary button:hover, .btn-primary input:hover, .btn-primary a:hover {
+  transition: 0.2s;
+}
+
+.btn-purple button, .btn-purple input {
+  background-color: #AD1FEA;
+}
+.btn-purple button:hover, .btn-purple input:hover {
+  background-color: #C75AF6;
+}
+
+.btn-blue button, .btn-blue input {
+  background-color: #4661E6;
+}
+.btn-blue button:hover, .btn-blue input:hover {
+  background-color: #7C91F9;
+}
+
+.btn-dark-blue button, .btn-dark-blue input, .btn-dark-blue a {
+  background-color: #373F68;
+}
+.btn-dark-blue button:hover, .btn-dark-blue input:hover, .btn-dark-blue a:hover {
+  background-color: #656EA3;
+}
+
+.btn-red button, .btn-red input {
+  background-color: #D73737;
+}
+.btn-red button:hover, .btn-red input:hover {
+  background-color: #E98888;
+}
+
+.btn-goback-primary {
+  width: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+}
+.btn-goback-primary p {
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 19px;
+  color: #647196;
+}
+.btn-goback-primary:hover {
+  text-decoration: underline;
+}
+
+.btn-goback-secundary {
+  width: auto;
+  padding: 16px 41px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  background-color: #373F68;
+}
+.btn-goback-secundary p {
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 19px;
+  color: #FFFFFF;
+}
+.btn-goback-secundary:hover p {
+  text-decoration: underline;
+}
+
+header {
+  display: grid;
+  place-items: center;
+  padding-block: 24px;
+}
+header > div {
+  align-items: center;
+  justify-content: space-between;
+}
+
+main .feed {
+  margin: 0;
+}
+main .feed > div .comment {
+  margin: 0;
+  cursor: default;
+}
+main .feed > div .comment .comments {
+  cursor: default;
+}
+
+@media screen and (min-width: 700px) {
+  header > div, main > div {
+    max-width: 540px !important;
+  }
+}
+
+main .feed > div .comment {
+  cursor: alias !important;
+}
+
+main {
+  width: 100%;
+  display: grid;
+  place-items: center;
+  margin-block: 31px;
+}
+main > div {
+  background-color: #FFFFFF;
+  padding: 24px;
+  border-radius: 10px;
+  position: relative;
+}
+@media screen and (min-width: 700px) {
+  main > div {
+    padding: 42px;
+  }
+}
+main > div::before {
+  content: "";
+  top: -20px;
+  left: 24px;
+  height: 40px;
+  width: 40px;
+  border-radius: 100%;
+  display: flex;
+  position: absolute;
+  background-image: url("assets/shared/icon-edit-feedback.svg");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+main > div.plus::before {
+  background-image: url("assets/shared/icon-new-feedback.svg");
+}
+main > div form {
+  margin-block-start: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+main > div form h2 {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 26px;
+  letter-spacing: -0.25px;
+}
+main > div form label h3, main > div form label small {
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 19px;
+  letter-spacing: -0.180556px;
+}
+main > div form label small {
+  font-weight: 400;
+  letter-spacing: inherit;
+  color: #647196;
+}
+main > div form label input, main > div form label textarea {
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 19px;
+  padding: 15px;
+  width: 100%;
+  margin-block-start: 1rem;
+  border: none;
+  border-radius: 5px;
+  background-color: #F7F8FD;
+}
+main > div form label textarea {
+  resize: none;
+}
+main > div form label select {
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 19px;
+  padding: 15px;
+  width: 100%;
+  margin-block-start: 1rem;
+  border: none;
+  border-radius: 5px;
+  background-color: #F7F8FD;
+}
+main > div .btn-primary {
+  display: grid;
+  place-items: center;
+  gap: 1rem;
+}
+@media screen and (min-width: 700px) {
+  main > div .btn-primary {
+    grid-template-columns: 93px 1fr 93px 144px;
+  }
+  main > div .btn-primary > .btn-purple, main > div .btn-primary > .btn-dark-blue, main > div .btn-primary > .btn-red {
+    grid-row-start: 1;
+  }
+  main > div .btn-primary > .btn-purple {
+    grid-column: 4/5;
+  }
+  main > div .btn-primary > .btn-dark-blue {
+    grid-column: 3/4;
+  }
+  main > div .btn-primary > .btn-red {
+    grid-column: 1/2;
+  }
+}
+main > div .btn-primary > div {
+  width: 100%;
+}
+main > div .btn-primary button, main > div .btn-primary input {
+  width: 100%;
+}
+
+/*# sourceMappingURL=feedback-detail.css.map */

@@ -1,0 +1,356 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+    list-style: none;
+    text-decoration: none;
+}
+
+html {
+    scroll-behavior: smooth;
+    background-color: var(--Off-white);
+}
+
+p {
+    font-size: 15px;
+}
+
+.container-flex {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+}
+
+.sections-container-flex {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+}
+
+:root {
+    --Soft-orange: hsl(35, 77%, 62%);
+    --Soft-red: hsl(5, 85%, 63%);
+    --Off-white: hsl(36, 100%, 99%);
+    --Grayish-blue: hsl(233, 8%, 79%);
+    --Dark-grayish-blue: hsl(236, 13%, 42%);
+    --Very-dark-blue: hsl(240, 100%, 5%);
+}
+
+/* HEADER */
+header {
+    width: 100%;
+}
+
+#nav {
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.close-btn, .desktop-menu, .menu-content {
+    display: none;
+}
+
+.desktop-menu ul {
+    display: flex;
+}
+
+.desktop-menu ul li {
+    margin: 35px ;
+}
+
+.desktop-menu ul li a {
+    width: 100%;
+    margin: 0 0 0 30px;
+    padding: 20px 0;
+    font-size: 1.1rem;
+    color: var(--Very-dark-blue);
+    transition: .2s;
+}
+
+.desktop-menu ul li a:hover {
+    color: var(--Soft-orange);
+    transition: .2s;
+}
+
+.menu-content {
+    display: none;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 60%;
+    height: 100vh;
+    background-color: var(--Off-white);
+    filter: none !important;
+}
+
+.menu-content img {
+    margin: 20px 20px auto auto;
+    width: 40px;
+    height: 40px;
+}
+
+.menu-content li {
+    margin: 20px auto auto 20px;
+}
+
+.menu-content li a {
+    width: 100%;
+    margin: 0 0 0 30px;
+    padding: 20px 0;
+    font-size: 1.1rem;
+    color: var(--Very-dark-blue);
+}
+
+/* HERO */
+#hero {
+    width: 100%;
+    margin-bottom: 50px;
+}
+
+.hero-img figure img {
+    width: 100%;
+}
+
+.hero-img-desktop {
+    display: none;
+}
+
+.figure figcaption h1{
+    margin: 20px auto;
+    color: var(--Very-dark-blue);
+    font-size: 2.5rem;
+    font-weight: 800;
+    line-height: 2.5rem;
+}
+
+.figure p {
+    color: var(--Dark-grayish-blue);
+    margin: 20px auto 20px auto;
+}
+
+.btn-primary {
+    text-transform: uppercase;
+    color: var(--Off-white);
+    font-size: .8rem;
+    font-weight: 700;
+    letter-spacing: .3rem;
+    padding: 15px 30px;
+    background-color: var(--Soft-red);
+    border: none;
+    cursor: pointer;
+}
+
+/* NEW */
+#new {
+    width: 100%;
+}
+
+.new {
+    background-color: var(--Very-dark-blue);
+    flex-direction: column;
+    padding: 20px;
+    margin-bottom: 50px;
+}
+
+.news:nth-of-type(1), .news:nth-of-type(2) {
+    margin-bottom: 30px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid rgba(255, 255, 255, .4);
+}
+
+.new h2 {
+    font-size: 2rem;
+    color: var(--Soft-orange);
+    margin-bottom: 30px;
+}
+
+.news > h3 {
+    color: var(--Off-white);
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.news > p {
+    color: var(--Grayish-blue);
+    font-weight: 400;
+}
+
+/* SECTION POPULAR */
+.post {
+    margin-bottom: 30px;
+}
+.post figure {
+    justify-content: space-between;
+}
+
+.post figure > img {
+    width: 30%;
+}
+
+.post-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 65%;
+}
+
+.post-content figcaption {
+    font-size: 1.7rem;
+    font-weight: 700;
+    color: var(--Grayish-blue);
+}
+
+.post-content > h2 {
+    font-size: 18px;
+    font-weight: 800;
+    color: var(--Very-dark-blue);
+    transition: .2s;
+}
+
+.post-content > p {
+    color: var(--Dark-grayish-blue);
+}
+
+/* FOOTER */
+footer {
+    font-size: 11px;
+    text-align: center;
+    margin-block: 10px;
+}
+
+footer a {
+    color: hsl(228, 45%, 44%);
+}
+
+@media screen and (min-width: 1000px) {
+    .container-flex {
+        width: 75%;
+    }
+
+    .sections-container-flex {
+        width: 100%;
+    }
+
+    .mobile-menu, .hero-img-mobile {
+        display: none;
+    }
+
+    header {
+        padding: 50px 0 25px 0 ;
+    }
+
+    .hero-img-desktop {
+        display: flex;
+    }
+
+    .desktop-menu {
+        display: flex;
+    }
+
+    .desktop-menu ul li {
+        margin: 0;
+    }
+    .desktop-menu ul li a {
+        margin-left: 35px;
+    }
+
+    main {
+        display: grid;
+        width: 75%;
+        margin: 0 auto;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    #hero {
+        grid-column: 1/3;
+        margin: 0;
+    }
+
+    .figure { 
+        margin-top: 30px;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .figure figcaption {
+        width: 50%;
+        height: 100%;
+    }
+
+    .figure figcaption h1{
+        margin: 0;
+        font-size: 3.5rem;
+        line-height: 3.5rem;
+        width: 100%;
+    }
+
+    .figure-content {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .figure-content p {
+        margin: 0;
+        line-height: 1.5rem;
+    }
+
+    .new {
+        width: calc(100% - 30px);
+        margin-left: 30px;
+        height: calc(100% - 50px);
+        padding: 25px;
+    }
+
+    .new h2 {
+        font-size: 3rem;
+    }
+
+    #popular {
+        height: 125px;
+        grid-column: 1/4;
+        margin-bottom: 25px;
+    }
+
+    .posts {
+        height: 100%;
+        width: 100%;
+        margin: 0;
+        display: flex;
+        justify-content: space;
+    }
+
+    .post {
+        width: 100%;
+        margin: 0;
+        display: flex;
+        margin: 0;
+    }
+
+    .post:hover .post-content > h2{
+        transition: .2s;
+        color: var(--Soft-orange);
+    }
+
+    .post-content p{
+        max-width: 229px;
+    }
+
+    .post figure figcaption {
+        font-size: 2.2rem;
+    }
+
+    .posttt {
+        width: 100%;
+        margin-left: 30px;
+    }
+}

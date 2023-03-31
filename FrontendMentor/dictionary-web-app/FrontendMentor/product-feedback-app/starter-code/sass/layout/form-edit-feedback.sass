@@ -1,0 +1,99 @@
+@use '../abstracts/v'
+@use '../abstracts/m'
+
+header > div, main > div 
+  @include m.tablet
+    max-width: 540px !important
+
+main .feed > div .comment
+  cursor: alias !important
+
+main
+  width: 100%
+  display: grid
+  place-items: center
+  margin-block: 31px
+  > div
+    background-color: v.$white
+    padding: 24px
+    border-radius: 10px
+    position: relative
+    @include m.tablet
+      padding: 42px
+    &::before
+      content: ''
+      top: -20px
+      left: 24px
+      height: 40px
+      width: 40px
+      border-radius: 100%
+      display: flex
+      position: absolute
+      background-image: url('assets/shared/icon-edit-feedback.svg')
+      background-size: contain
+      background-position: center
+      background-repeat: no-repeat
+    &.plus::before 
+      background-image: url('assets/shared/icon-new-feedback.svg')
+    form 
+      margin-block-start: 24px
+      display: flex
+      flex-direction: column
+      gap: 24px
+      h2
+        font-weight: 700
+        font-size: 18px
+        line-height: 26px
+        letter-spacing: -0.25px
+      label
+        h3, small
+          font-weight: 700
+          font-size: 13px
+          line-height: 19px
+          letter-spacing: -0.180556px
+        small
+          font-weight: 400
+          letter-spacing: inherit
+          color: v.$gray-blue
+        input, textarea
+          font-weight: 400
+          font-size: 13px
+          line-height: 19px
+          padding: 15px
+          width: 100%
+          margin-block-start: 1rem
+          border: none
+          border-radius: 5px
+          background-color: v.$white-gray
+        textarea
+          resize: none
+        select
+          font-weight: 400
+          font-size: 13px
+          line-height: 19px
+          padding: 15px
+          width: 100%
+          margin-block-start: 1rem
+          border: none
+          border-radius: 5px
+          background-color: v.$white-gray
+    .btn-primary 
+      display: grid
+      place-items: center
+      gap: 1rem
+      @include m.tablet
+        grid-template-columns: 93px 1fr 93px 144px
+        > .btn
+            &-purple, &-dark-blue, &-red
+              grid-row-start: 1
+        > .btn-purple
+          grid-column: 4/5
+        > .btn-dark-blue
+          grid-column: 3/4
+        > .btn-red
+          grid-column: 1/2
+      > div
+        width: 100% 
+      button, input
+        width: 100%
+  

@@ -1,0 +1,13 @@
+@use './v'
+
+@mixin mobile()
+	@media screen and (min-width: 321px) 
+		@content
+
+@mixin tablet()
+	@media screen and (min-width: 500px) 
+		@content
+
+@mixin desktop()
+	@media screen and (min-width: 850px) 
+		@content

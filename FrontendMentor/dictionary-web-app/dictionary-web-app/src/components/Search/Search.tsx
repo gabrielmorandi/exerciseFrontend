@@ -84,7 +84,7 @@ const Search: React.FC<Props> = () => {
             }}
           />
           <span className={validation ? '' : 'error'}>Whoops, can’t be empty…</span>
-          <button onClick={searchTerm.length > 0 ? handleSearch : notValid}>
+          <button onClick={searchTerm > 0 ? handleSearch : notValid}>
             <img src={IconSearch} alt="IconSearch" />
           </button>
         </div>

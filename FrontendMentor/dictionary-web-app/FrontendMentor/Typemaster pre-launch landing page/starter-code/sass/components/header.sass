@@ -1,0 +1,91 @@
+header
+  width: 100%
+  display: grid
+  place-items: center
+  .container-grid
+    padding-block-start: 23px
+    place-items: center
+    gap: 64px
+    @include m.tablet
+      padding-block-start: 40px
+    @include m.xga
+      padding-block-start: 55px
+    nav
+      width: 100%
+      display: flex
+      justify-content: space-between
+      align-items: center
+  .hero
+    display: grid
+    place-items: center
+    margin-block-start: 64px
+    gap: 64px
+    max-width: 1100px
+    @include m.tablet
+      width: 93.625%
+      justify-self: end
+      display: flex
+      flex-direction: row  
+      align-items: center
+      gap: 59px
+      margin-block-end: 40px
+    @include m.xga
+      width: 87.25%
+      justify-self: center
+      gap: 125px
+    @include m.desktop
+      justify-content: space-between
+    .hero-txt
+      width: 87.25%
+      display: flex
+      flex-direction: column
+      gap: 32px
+      @include m.tablet
+        width: 100%
+        max-width: 339px
+      div 
+        display: flex
+        align-items: center
+        gap: 32px
+        p span
+          font-weight: 700
+          text-transform: uppercase
+          color: v.$blue-gray
+    .hero-img
+      width: 100%
+      display: grid
+      @include m.tablet 
+        margin: 0
+      picture
+        display: grid
+        @include m.xga
+          max-width: 540px
+        @include m.desktop
+          place-self: end
+        img
+          justify-self: flex-end
+          width: 93.625%
+          border-radius: 20px 0 0 20px
+          @include m.tablet
+            width: 100%
+            height: 425px
+            object-fit: cover
+            object-position: left
+          @include m.xga
+            border-radius: 20px
+    .box
+      display: none
+      position: absolute
+      right: 0
+      max-width: 135px
+      height: 240px
+      align-self: start
+      @include m.blob
+        display: flex
+      img
+        width: 100%
+        height: 240px
+        object-fit: cover
+        object-position: left
+
+  

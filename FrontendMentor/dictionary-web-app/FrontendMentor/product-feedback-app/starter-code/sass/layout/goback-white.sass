@@ -1,0 +1,37 @@
+@use '../abstracts/v'
+@use '../abstracts/m'
+
+header
+  width: 100%
+  display: grid
+  place-items: center
+  padding-block: 26px
+  background-color: v.$very-dark-blue
+  @include m.tablet
+    width: v.$m-w
+    max-width: 1100px
+    margin: 40px auto 12px auto
+    border-radius: 10px
+  > div 
+    align-items: center
+    justify-content: space-between
+    .header-left
+        display: grid
+        place-items: center
+        h2
+            font-weight: 700
+            font-size: 18px
+            line-height: 26px
+            letter-spacing: -0.25px
+            color: v.$white
+        a p
+            font-size: 13px
+            line-height: 19px
+            color: v.$white !important
+
+main
+  .feed
+    margin: 0
+    > div
+      .comment
+        margin: 0

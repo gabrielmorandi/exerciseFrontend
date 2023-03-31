@@ -1,0 +1,33 @@
+@use '../abstracts/v'
+@use '../abstracts/m'
+
+.btn
+    button
+        width: max-content
+        border: none
+        border-radius: 8px
+        padding: 16px 20px
+        font-weight: 700
+        font-size: 14px
+        line-height: 18px
+        color: v.$white
+        cursor: pointer
+        @include m.mobile
+            padding: 16px 27px
+            font-weight: 700
+            font-size: 16px
+            line-height: 26px
+    &.btn-primary
+        button
+            background-color: v.$orange
+            &:hover
+                transition: .2s
+                background-color: v.$orange-ligth
+    &.btn-secundary
+        button 
+            background-color: v.$white-blue
+            color: v.$blue
+            &:hover
+                transition: .2s
+                background-color: v.$blue
+                color: v.$white

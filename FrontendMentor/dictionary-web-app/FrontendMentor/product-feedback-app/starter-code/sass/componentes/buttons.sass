@@ -1,0 +1,71 @@
+@use '../abstracts/v'
+@use '../abstracts/m'
+
+.btn-primary
+  width: auto
+  display: grid
+  place-items: center
+  button, input, a
+    padding: 10.5px 16.5px
+    border: none
+    border-radius: 10px
+    font-weight: 700
+    font-size: 13px
+    line-height: 19px
+    color: v.$white-blue
+    cursor: pointer
+    @include m.tablet
+      font-size: 14px
+      line-height: 20px
+      padding: 12.5px 25px
+    &:hover
+      transition: .2s
+.btn-purple
+  button, input
+    background-color: v.$purple
+    &:hover
+      background-color: #C75AF6
+.btn-blue
+  button, input
+    background-color: v.$blue
+    &:hover
+      background-color: #7C91F9
+.btn-dark-blue
+  button, input, a
+    background-color: v.$very-dark-blue
+    &:hover
+      background-color: #656EA3
+.btn-red
+  button, input
+    background-color: v.$red
+    &:hover
+      background-color: #E98888
+
+.btn-goback-primary
+  width: auto
+  display: flex
+  justify-content: space-between
+  align-items: center
+  gap: 15px
+  p
+    font-weight: 700
+    font-size: 13px
+    line-height: 19px
+    color: v.$gray-blue
+  &:hover
+    text-decoration: underline
+.btn-goback-secundary
+  width: auto
+  padding: 16px 41px
+  border-radius: 10px
+  display: flex
+  align-items: center
+  gap: 15px
+  background-color: v.$very-dark-blue
+  p
+    font-weight: 700
+    font-size: 13px
+    line-height: 19px
+    color: v.$white
+  &:hover p
+    text-decoration: underline
