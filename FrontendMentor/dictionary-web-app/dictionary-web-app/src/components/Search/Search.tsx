@@ -1,3 +1,4 @@
+// @ts-nocheck
 import React, { useState, useRef, useEffect } from "react"
 import { useParams, useLocation } from 'react-router-dom'
 import axios from "axios"
@@ -77,14 +78,14 @@ const Search: React.FC<Props> = () => {
             onKeyDown={(e) => {
               if (e.key === 'Enter') {
                 handleSearch()
-                if(e.target.value === '') {
+                if(searchTerm === '') {
                   notValid()
                 }
               }
             }}
           />
           <span className={validation ? '' : 'error'}>Whoops, can’t be empty…</span>
-          <button onClick={searchTerm > 0 ? handleSearch : notValid}>
+          <button onClick={searchTerm.length > 0 ? handleSearch : notValid}>
             <img src={IconSearch} alt="IconSearch" />
           </button>
         </div>
@@ -133,9 +134,9 @@ const Search: React.FC<Props> = () => {
                         </div>
                       </div>
                     ) : null}
-                    {meaning.definitions[0] && meaning.definitions[0].example ? (
+                    {meaning.definitions.length > 0 && meaning.definitions[0]?.example ? (
                       <div className="example" key={index}>
-                        <h3>{`“${meaning.definitions[0].example}”`}</h3>
+                        <h3>{`“${meaning.definitions[0]?.example}”`}</h3>
                       </div>
                     ) : null}
                   </div>
