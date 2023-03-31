@@ -1,17 +1,16 @@
+import { BrowserRouter as Router, Routes, Route, useParams} from "react-router-dom"
+
 import Header from "./components/Header/Header"
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
+import Search from "./components/Search/Search"
 
 function App() {
   return (
     <Router>
       <Header />
       <Routes>
-        {/* <Route path="*" element={<NotFound />}></Route> */}
-        {/* <Route path="/" element={<Index />}></Route> */}
-        {/* <Route path="/home" element={<Home />}></Route> */}
-        {/* <Route path="/ajuda" element={<Ajuda />}></Route> */}
-        {/* <Route path="/admin" element={<Admin />}></Route> */}
-        {/* <Route path="/admin/cliente/:idCliente" Component={Cliente}></Route> */}
+        <Route path="*" element={<Search />}></Route>
+        <Route path="/" element={<Search />}></Route>
+        <Route path="/word/:word" element={<Search />}></Route>
       </Routes>
     </Router>
   )

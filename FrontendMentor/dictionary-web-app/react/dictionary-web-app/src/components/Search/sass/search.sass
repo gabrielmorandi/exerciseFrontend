@@ -1,0 +1,273 @@
+@use '../../../sass/abstracts/v'
+@use '../../../sass/abstracts/m'
+
+#search
+	width: 100%
+	display: grid
+	place-items: center
+	> div
+		flex-direction: column
+		gap: 24px
+		@include m.tablet()
+			gap: 43px
+		@include m.desktop()
+			gap: 45px
+		.search
+			position: relative
+			width: 100%
+			display: flex
+			flex-direction: column
+			input
+				width: 100%
+				padding: 14px 24px
+				border: none
+				border-radius: 16px
+				font-weight: 700
+				font-size: 16px
+				line-height: 19px
+				@include m.tablet()
+					padding-block: 22px
+					font-size: 20px
+					line-height: 21px
+				@include m.desktop()
+					line-height: 24px
+					padding-block: 20px
+				&:focus, &:hover
+					outline: 1px solid v.$purple
+				&.error
+					border: 1px solid v.$red
+					&:focus
+						outline: 1px solid v.$red
+			span
+				position: absolute
+				display: none
+				top: calc( 100% + 8px )
+				font-weight: 400
+				font-size: 16px
+				line-height: 18px
+				color: v.$red
+				&.error
+					display: flex
+			button
+				background-color: transparent
+				border: none
+				position: absolute
+				top: 50%
+				right: 19px
+				transform: translateY(-50%)
+				cursor: pointer
+				svg
+					padding: 5px
+		.result
+			width: 100%
+			display: flex
+			flex-direction: column
+			.result-header
+				width: 100%
+				display: flex
+				justify-content: space-between
+				align-items: center
+				> div
+					display: flex
+					flex-direction: column
+					gap: 7px
+					@include m.tablet()
+						gap: 11px
+					@include m.desktop()
+						gap: 8px
+					h2
+						width: 100%
+						font-weight: 700
+						font-size: 32px
+						line-height: 39px
+						@include m.tablet()
+							font-size: 64px
+							line-height: 67px
+						@include m.desktop()
+							line-height: 77px
+					h3
+						font-weight: 400
+						font-size: 18px
+						line-height: 24px
+						color: v.$purple
+						@include m.tablet()
+							font-size: 24px
+							line-height: 29px
+				svg
+					max-width: 48px
+					cursor: pointer
+					@include m.tablet()
+						max-width: 75px
+					&:hover g path
+						fill: v.$white
+					&:hover g circle
+						opacity: 1
+			.result-content
+				width: 100%
+				display: flex
+				flex-direction: column
+				.meaning
+					width: 100%
+					display: flex
+					flex-direction: column
+					gap: 17px
+					margin-block-start: 35px
+					@include m.tablet()
+						gap: 43px
+						margin-block-start: 42px
+					@include m.desktop()
+						gap: 40px
+						margin-block-start: 40px
+					h2
+						display: flex
+						align-items: center
+						gap: 25px
+						font-style: italic
+						font-weight: 700
+						font-size: 18px
+						line-height: 19px
+						@include m.tablet()
+							font-size: 24px
+							line-height: 25px
+						@include m.desktop()
+							line-height: 29px
+						&::after
+							content: ''
+							display: flex
+							width: 100%
+							height: 1px
+							background-color: v.$gray
+					> div
+						width: 100%
+						display: flex
+						flex-direction: column
+						gap: 17px
+						@include m.tablet()
+							gap: 27px
+						@include m.desktop()
+							gap: 25px
+						h3
+							font-weight: 400
+							font-size: 16px
+							line-height: 17px
+							color: v.$gray-light
+							@include m.tablet()
+								font-size: 20px
+								line-height: 21px
+							@include m.desktop()
+								line-height: 24px
+						ul
+							width: 100%
+							display: flex
+							flex-direction: column
+							gap: 13px
+							li
+								display: flex
+								align-items: flex-start
+								@include m.tablet()
+									font-size: 18px
+									line-height: 24px
+								.circle
+									display: flex
+									min-width: 5px
+									min-height: 5px
+									border-radius: 100%
+									background-color: v.$purple
+									margin-block-start: 10px
+									margin-inline-end: 15px
+						.synonyms
+							display: flex
+							gap: 20px
+							margin-block-start: 5px
+							@include m.tablet()
+								margin-block-start: 24px
+							> div
+								width: 100%
+								display: flex
+								flex-wrap: wrap
+								gap: 10px
+								a
+									font-weight: 700
+									font-size: 16px
+									line-height: 20px
+									text-decoration: none
+									color: v.$purple !important
+									@include m.tablet()
+										font-size: 20px
+										line-height: 21px
+									&:hover
+										text-decoration: underline
+						.example
+							display: flex
+							padding-inline-start: 25px
+							@include m.tablet()
+								margin-block-start: -14px
+							@include m.desktop()
+								margin-block-start: -12px
+			.result-footer
+				display: flex
+				flex-direction: column
+				border-top: 1px solid v.$gray
+				margin-block: 32px 63px
+				padding-block-start: 26px
+				gap: 10px
+				@include m.tablet()
+					flex-direction: row
+					flex-wrap: wrap
+					column-gap: 25px
+					padding-block-start: 20px
+					margin-block: 40px 117px
+				h2
+					font-weight: 400
+					font-size: 14px
+					line-height: 16px
+					color: v.$gray-light
+					text-decoration: underline
+					@include m.desktop()
+						line-height: 17px	
+				a
+					display: flex
+					gap: 8px
+					align-items: center
+					font-weight: 400
+					font-size: 14px
+					line-height: 16px
+					text-decoration: none
+					max-width: 100%
+					overflow-x: hidden
+					@include m.tablet()
+						gap: 9px
+					@include m.desktop()
+						line-height: 17px
+						text-decoration: underline
+					&:hover
+						text-decoration: underline
+		.not-found
+			width: 100%
+			display: flex
+			flex-direction: column
+			gap: 24px
+			.bad
+				font-size: 64px
+				line-height: 75px
+				margin-block-end: 20px
+			h2, p
+				text-align: center
+
+body.dark
+	#search *, input::placeholder
+		color: v.$white
+	input
+		background-color: v.$black-gray
+
+body.light
+	#search *, input::placeholder
+		color: v.$gray-dark
+	input
+		background-color: v.$white-gray-light
+	.result-footer
+		border-top: 1px solid v.$white-gray !important
+	.meaning h2::after
+		background-color: v.$white-gray !important
+	#search a
+		color: v.$gray-dark !important

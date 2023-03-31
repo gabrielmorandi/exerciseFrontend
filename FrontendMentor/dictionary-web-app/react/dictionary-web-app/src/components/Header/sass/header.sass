@@ -1,10 +1,13 @@
 @use '../../../sass/abstracts/v'
+@use '../../../sass/abstracts/m'
 
 header
 	width: 100%
 	display: grid
 	place-items: center
 	margin-block: 24px
+	@include m.tablet()
+		margin-block: 58px 51.5px
 	> div
 		place-items: center
 		nav
@@ -19,6 +22,8 @@ header
 					display: flex
 					align-items: center
 					gap: 12px
+					@include m.tablet()
+						gap: 20px
 					.switch
 						position: relative
 						display: inline-block
@@ -30,9 +35,13 @@ header
 							height: 0
 						input:checked + .slider
 							background-color: v.$purple
+						input:checked:hover + .slider
+							background-color: v.$gray-light
 						input:not(:checked) + .slider
 							background-color: v.$gray-light
-						input:checked + .slider:before 
+						input:not(:checked):hover + .slider
+							background-color: v.$purple
+						input:checked + .slider:before
 							-webkit-transform: translateX(20px)
 							-ms-transform: translateX(20px)
 							transform: translateX(20px)
@@ -65,7 +74,6 @@ header
 					button
 						background-color: transparent
 						border: none
-						color: #4a4a4a
 						cursor: pointer
 						height: 2.5em
 						display: flex
@@ -84,6 +92,10 @@ header
 						width: 1px
 						margin-inline: 10px
 						background-color: v.$white-gray
+						@include m.mobile()
+							margin-inline: 16px
+						@include m.tablet()
+							margin-inline: 26px
 				.dropdown-menu
 					position: absolute
 					top: 100%
@@ -94,8 +106,6 @@ header
 					min-width: 160px
 					padding-block: 24px
 					margin-block-start: 10px
-					background-color: v.$white
-					box-shadow: 0px 5px 30px rgba(0, 0, 0, 0.1)
 					border-radius: 16px
 					.dropdown-content
 						display: flex
@@ -107,7 +117,6 @@ header
 							font-weight: 700
 							font-size: 18px
 							line-height: 24px
-							color: #4a4a4a
 							cursor: pointer
 							padding-inline: 24px
 							&:hover
@@ -120,7 +129,20 @@ header
 								font-family: "Lora"
 							&.Inconsolata
 								font-family: "Inconsolata"
-			.dropdown.is-active .dropdown-menu 
+			.dropdown.is-active .dropdown-menu
 				display: flex
 				flex-direction: column
-		
+
+body.dark
+	nav *
+		color: v.$white
+	.dropdown-menu
+		background-color: v.$black-gray
+		box-shadow: 0px 5px 30px v.$purple
+
+body.light
+	nav *
+		color: v.$gray-dark
+	.dropdown-menu
+		background-color: v.$white
+		box-shadow: 0px 5px 30px rgba(0, 0, 0, 0.1)

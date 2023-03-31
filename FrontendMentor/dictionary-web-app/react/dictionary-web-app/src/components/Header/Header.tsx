@@ -8,18 +8,17 @@ import ArrowDown from '../../assets/images/icon-arrow-down.svg'
 
 const Header = () => {
   // toggle theme
-  const body = document.querySelector('body')
   const [theme, setTheme] = useState<string>(() => localStorage.getItem('theme') || 'light')
 
-  if (theme === 'light') {
-    body?.classList.add('light')
-    body?.classList.remove('dark')
-    console.log(body?.className)
-  } else {
-    body?.classList.remove('light')
-    body?.classList.add('dark')
-    console.log(body?.className)
-  }
+  useEffect(() => {
+    if (theme === 'light') {
+      document.body.classList.add('light')
+      document.body.classList.remove('dark')
+    } else {
+      document.body.classList.remove('light')
+      document.body.classList.add('dark')
+    }
+  }, [theme])
 
   const toggleTheme = () => {
     const newTheme = theme === 'light' ? 'dark' : 'light'
@@ -29,12 +28,18 @@ const Header = () => {
 
   useEffect(() => {
     const savedTheme = localStorage.getItem('theme')
-
+    const savedFont = localStorage.getItem('selectedFont')
+    
     if (savedTheme) {
       setTheme(savedTheme)
     }
+  
+    if (savedFont) {
+      setSelectedFont(savedFont)
+      document.body.style.fontFamily = `${savedFont}`
+    }
   }, [])
-
+  
   // toggle font
   const fontOptions = [
     { value: "Inter", label: "Sans Serif" },
@@ -51,36 +56,44 @@ const Header = () => {
   }, [selectedFont])
 
   const handleFontSelect = (fontValue: string, fontLabel: string) => {
-    setSelectedFont(fontLabel)
+    setSelectedFont(fontValue)
     setIsOpen(false)
     document.body.style.fontFamily = `${fontValue}`
-  };
+  }
 
+  {fontOptions.map((font, index) => (
+    <a
+      key={index}
+      className={`dropdown-item ${selectedFont === font.value ? "is-active" : ""} ${font.value}`}
+      onClick={() => handleFontSelect(font.value, font.label)}
+    >
+      {font.label}
+    </a>
+  ))}
+  
   return (
     <header>
       <div className="container-grid">
         <nav>
-          <Link to={'/'}><img src={Logo} alt="Logo" /></Link>
+          <a href='/' ><img src={Logo} alt="Logo" /></a>
           <div className="switches">
             <div className={`dropdown ${isOpen ? "is-active" : ""}`}>
               <div className="dropdown-trigger">
                 <button
-                  aria-haspopup="true"
-                  aria-controls="dropdown-menu2"
                   onClick={() => setIsOpen(!isOpen)}
                 >
-                  <span className='font-selected'>{selectedFont}</span>
+                  <span className='font-selected'>{fontOptions.map((font: { value: string, label: string }) => (font.value === selectedFont ? font.label : null))}</span>
                   <span className="icon is-small">
                     <img src={ArrowDown} alt="ArrowDown" />
                   </span>
                 </button>
               </div>
-              <div className={`dropdown-menu ${isOpen ? "is-active" : ""}`} id="dropdown-menu2" role="menu">
+              <div className={`dropdown-menu ${isOpen ? "is-active" : ""}`}>
                 <div className="dropdown-content">
                   {fontOptions.map((font, index) => (
                     <a
                       key={index}
-                      className={`dropdown-item ${selectedFont === font.label ? "is-active" : ""} ${font.value}`}
+                      className={`dropdown-item ${selectedFont === font.value ? "is-active" : ""} ${font.value}`}
                       onClick={() => handleFontSelect(font.value, font.label)}
                     >
                       {font.label}
