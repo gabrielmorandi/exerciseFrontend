@@ -1,0 +1,32 @@
+@use '../abstracts/v'
+
+footer
+  width: 100%
+  display: grid
+  place-items: center
+  padding-block: 5rem 4.5rem
+  .container-flex
+    flex-direction: column
+    align-items: center
+    background-color: v.$grey-blue
+    gap: 3rem
+    padding-block: 3.37rem
+    .menu
+      display: flex
+      flex-direction: column
+      align-items: center
+      gap: 1.5rem
+      a
+        font-family: Barlow
+        font-size: 0.75rem
+        font-style: normal
+        font-weight: 700
+        line-height: 0.9375rem
+        letter-spacing: 0.05769rem
+        text-transform: uppercase
+        color: v.$grey
+    .socials
+      display: flex
+      gap: 1.5rem
+      a
+        display: flex

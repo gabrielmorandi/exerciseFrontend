@@ -1,0 +1,25 @@
+@use '../abstracts/v'
+@use '../abstracts/m'
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@400;700&family=Fraunces:wght@900&display=swap')
+
+*
+  margin: 0
+  padding: 0
+  box-sizing: border-box
+  font-family: Barlow, sans-serif
+
+body
+  background-color: v.$light
+
+.container
+  &-flex
+    width: 87%
+    max-width: 1100px
+    display: flex
+  &-grid
+    width: 87%
+    max-width: 1100px
+    display: grid
+
+a
+  text-decoration: none

@@ -1,0 +1,345 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@400;700&family=Fraunces:wght@900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Barlow, sans-serif;
+}
+
+body {
+  background-color: #FEFCF7;
+}
+
+.container-flex {
+  width: 87%;
+  max-width: 1100px;
+  display: flex;
+}
+.container-grid {
+  width: 87%;
+  max-width: 1100px;
+  display: grid;
+}
+
+a {
+  text-decoration: none;
+}
+
+.button-primary {
+  display: grid;
+  place-items: center;
+}
+.button-primary a {
+  display: flex;
+  justify-content: center;
+}
+.button-primary a button {
+  padding: 1rem 1.94rem;
+  border: none;
+  border-radius: 0.375rem;
+  background: #0E8784;
+  text-align: center;
+  font-family: Fraunces;
+  font-size: 1.125rem;
+  font-style: normal;
+  font-weight: 900;
+  line-height: 1.5625rem;
+  color: #FEFCF7;
+  cursor: pointer;
+}
+
+header {
+  width: 100%;
+  display: grid;
+  place-items: center;
+  margin-block-end: 120px;
+}
+header nav {
+  width: 100%;
+  display: grid;
+  place-items: center;
+  padding-block: 2rem 2.5rem;
+}
+header nav .container-flex {
+  justify-content: space-between;
+  align-items: center;
+}
+header nav .container-flex .logo {
+  display: flex;
+}
+header nav .container-flex .logo img {
+  width: 100%;
+  max-width: 163px;
+}
+header nav .container-flex .mobile-menu {
+  display: flex;
+}
+header nav .container-flex .mobile-menu .menu {
+  display: none;
+}
+header .hero {
+  width: 100%;
+  display: grid;
+  place-items: center;
+}
+header .hero .container-flex {
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 6.25rem 1.5rem;
+  background-image: url("../assets/home/mobile/image-hero-coffeepress.jpg");
+  background-size: cover;
+  border-radius: 10px;
+}
+header .hero .container-flex h2, header .hero .container-flex p {
+  color: #FEFCF7;
+}
+header .hero .container-flex h2 {
+  font-family: Fraunces;
+  font-size: 2.5rem;
+  font-weight: 900;
+  line-height: 2.5rem;
+  text-align: center;
+}
+header .hero .container-flex p {
+  font-size: 0.9375rem;
+  font-weight: 400;
+  line-height: 1.5625rem;
+  text-align: center;
+  margin-block-end: 0.94rem;
+  opacity: 0.8000000119;
+}
+
+main {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 7.5rem;
+}
+main #collection {
+  width: 100%;
+  display: grid;
+  place-items: center;
+}
+main #collection .container-flex {
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+}
+main #collection .container-flex h2 {
+  width: 100%;
+  text-align: center;
+  font-family: Fraunces;
+  font-size: 2.5rem;
+  font-weight: 900;
+  line-height: 4.5rem;
+  background: linear-gradient(180deg, rgb(131, 136, 143) 0%, #FEFCF7 80%);
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
+}
+main #collection .container-flex .card {
+  width: 100%;
+  max-width: 280px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+main #collection .container-flex .card img {
+  width: 100%;
+  max-width: 12.5rem;
+}
+main #collection .container-flex .card h3, main #collection .container-flex .card p {
+  color: #333D4B;
+}
+main #collection .container-flex .card h3 {
+  text-align: center;
+  font-family: Fraunces;
+  font-size: 1.5rem;
+  font-weight: 900;
+  line-height: 2rem;
+}
+main #collection .container-flex .card p {
+  text-align: center;
+  font-family: Barlow;
+  font-size: 0.9375rem;
+  font-weight: 400;
+  line-height: 1.5625rem;
+}
+main #why {
+  width: 100%;
+  display: grid;
+  place-items: center;
+}
+main #why .container-flex {
+  flex-direction: column;
+}
+main #why .container-flex .why-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #2c343e;
+  border-radius: 10px 10px 0 0;
+  padding: 4rem 1.5rem 1.75rem 1.5rem;
+  gap: 1.5rem;
+}
+main #why .container-flex .why-header h2, main #why .container-flex .why-header p {
+  color: #FEFCF7;
+}
+main #why .container-flex .why-header h2 {
+  text-align: center;
+  font-family: Fraunces;
+  font-size: 1.75rem;
+  font-weight: 900;
+  line-height: 1.75rem;
+}
+main #why .container-flex .why-header p {
+  text-align: center;
+  font-family: Barlow;
+  font-size: 0.9375rem;
+  font-weight: 400;
+  line-height: 1.5625rem;
+  opacity: 0.8000000119;
+}
+main #why .container-flex .why-cards {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1.5rem;
+  gap: 1.5rem;
+  background-color: #293039;
+  border-radius: 0 0 10px 10px;
+}
+main #why .container-flex .why-cards .why-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 4.5rem 0.75rem 3rem 0.75rem;
+  gap: 1.5rem;
+  width: 100%;
+  background-color: #0E8784;
+  border-radius: 10px;
+}
+main #why .container-flex .why-cards .why-card img {
+  width: 100%;
+  max-width: 4.5rem;
+  margin-bottom: 2rem;
+}
+main #why .container-flex .why-cards .why-card h3, main #why .container-flex .why-cards .why-card p {
+  color: #FEFCF7;
+}
+main #why .container-flex .why-cards .why-card h3 {
+  text-align: center;
+  font-family: Fraunces 9pt;
+  font-size: 1.5rem;
+  font-weight: 900;
+  line-height: 2rem;
+}
+main #why .container-flex .why-cards .why-card p {
+  width: 100%;
+  max-width: 13.25rem;
+  text-align: center;
+  font-family: Barlow;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.625rem;
+}
+main #how {
+  width: 100%;
+  display: grid;
+  place-items: center;
+}
+main #how .container-flex {
+  flex-direction: column;
+  gap: 5rem;
+}
+main #how .container-flex h2 {
+  text-align: center;
+  font-family: Fraunces;
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 900;
+  line-height: 2rem;
+  color: #83888F;
+}
+main #how .container-flex .how-cards {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3.5rem;
+}
+main #how .container-flex .how-cards .how-card {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+main #how .container-flex .how-cards .how-card span {
+  text-align: center;
+  font-family: Fraunces;
+  font-size: 4.5rem;
+  font-style: normal;
+  font-weight: 900;
+  line-height: 4.5rem;
+  color: #FDD6BA;
+}
+main #how .container-flex .how-cards .how-card h3, main #how .container-flex .how-cards .how-card p {
+  color: #333D4B;
+}
+main #how .container-flex .how-cards .how-card h3 {
+  text-align: center;
+  font-family: Fraunces 9pt;
+  font-size: 1.75rem;
+  font-style: normal;
+  font-weight: 900;
+  line-height: 2rem;
+}
+main #how .container-flex .how-cards .how-card p {
+  text-align: center;
+  font-family: Barlow;
+  font-size: 0.9375rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.5625rem;
+}
+
+footer {
+  width: 100%;
+  display: grid;
+  place-items: center;
+  padding-block: 5rem 4.5rem;
+}
+footer .container-flex {
+  flex-direction: column;
+  align-items: center;
+  background-color: #333D4B;
+  gap: 3rem;
+  padding-block: 3.37rem;
+}
+footer .container-flex .menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+footer .container-flex .menu a {
+  font-family: Barlow;
+  font-size: 0.75rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 0.9375rem;
+  letter-spacing: 0.05769rem;
+  text-transform: uppercase;
+  color: #83888F;
+}
+footer .container-flex .socials {
+  display: flex;
+  gap: 1.5rem;
+}
+footer .container-flex .socials a {
+  display: flex;
+}
+
+/*# sourceMappingURL=index.css.map */
