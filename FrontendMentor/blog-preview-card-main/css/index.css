@@ -1,0 +1,84 @@
+@import url("https://fonts.googleapis.com/css2?family=Figtree:wght@500;600;800&family=Poppins:wght@300;400;500&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Figtree;
+  font-weight: 500;
+}
+
+main {
+  height: 100vh;
+  display: grid;
+  place-items: center;
+  background-color: #F4D04E;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 1.5rem;
+  border-radius: 20px;
+  border: 1px solid #111;
+  box-shadow: 8px 8px 0 0 #000;
+  max-width: 384px;
+  background-color: #fff;
+  text-decoration: none;
+  color: #000;
+}
+@media (max-width: 400px) {
+  .card {
+    max-width: 279px;
+  }
+}
+.card:hover h2 {
+  color: #f4d04e;
+  transition: 0.2s;
+}
+.card > img {
+  border-radius: 10px;
+}
+.card .card-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+.card .card-content span {
+  width: min-content;
+  display: flex;
+  padding: 0.25rem 0.75rem;
+  background-color: #f4d04e;
+  border-radius: 0.25rem;
+  font-weight: 800;
+}
+.card .card-content h2 {
+  font-size: 1.5rem;
+  font-weight: 800;
+  line-height: 150%;
+}
+.card .card-content p {
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 150%;
+}
+.card .card-content p:last-child {
+  color: #7F7F7F;
+}
+.card .user {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+.card .user img {
+  width: 2rem;
+}
+.card .user h3 {
+  font-size: 0.875rem;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 150%;
+}
+
+/*# sourceMappingURL=index.css.map */
