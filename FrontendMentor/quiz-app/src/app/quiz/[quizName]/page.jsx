@@ -12,23 +12,25 @@ export default function Quiz({ params }) {
   return (
     <>
       <Header quizName={params.quizName} />
-      {!isFinishTime ? (
-        <QuizOptions
-          quizName={params.quizName}
-          setIsFinishTime={setIsFinishTime}
-          qntCorrectAnswers={qntCorrectAnswers}
-          setQntCorrectAnswers={setQntCorrectAnswers}
-          setQuestionLength={setQuestionLength}
-        />
-      ) : (
-        <Finish
-          quizName={params.quizName}
-          qntCorrectAnswers={qntCorrectAnswers}
-          questionLength={questionLength}
-          setIsFinishTime={setIsFinishTime}
-          setQntCorrectAnswers={setQntCorrectAnswers}
-        />
-      )}
+      <main className="grid w-full place-items-center">
+        {!isFinishTime ? (
+          <QuizOptions
+            quizName={params.quizName}
+            setIsFinishTime={setIsFinishTime}
+            qntCorrectAnswers={qntCorrectAnswers}
+            setQntCorrectAnswers={setQntCorrectAnswers}
+            setQuestionLength={setQuestionLength}
+          />
+        ) : (
+          <Finish
+            quizName={params.quizName}
+            qntCorrectAnswers={qntCorrectAnswers}
+            questionLength={questionLength}
+            setIsFinishTime={setIsFinishTime}
+            setQntCorrectAnswers={setQntCorrectAnswers}
+          />
+        )}
+      </main>
     </>
   )
 }

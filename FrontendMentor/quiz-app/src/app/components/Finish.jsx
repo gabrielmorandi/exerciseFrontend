@@ -10,7 +10,7 @@ export default function Finish({
   setQntCorrectAnswers,
 }) {
   return (
-    <main className="grid w-full gap-10 pt-12 place-items-center">
+    <div className="grid w-full gap-10 pt-12 place-items-center">
       <div className="flex flex-col w-11/12 gap-4">
         <div className="flex gap-2 flex-col text-[#313E51] text-[40px] leading-none font-light dark:text-white">
           <h2>Quiz completed</h2>
@@ -77,6 +77,6 @@ export default function Finish({
           </button>
         </div>
       </div>
-    </main>
+    </div>
   )
 }

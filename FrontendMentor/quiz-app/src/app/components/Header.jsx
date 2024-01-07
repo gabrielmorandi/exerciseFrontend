@@ -4,16 +4,16 @@ import Image from "next/image"
 export default function Header({ quizName }) {
   if (!quizName) {
     return (
-      <header className="grid w-full place-items-center pt-[26px] md:pt-10">
-        <div className="flex flex-row-reverse w-11/12 place-items-center">
+      <header className="grid w-full place-items-center pt-[26px] md:pt-10 lg:pt-24">
+        <div className="flex flex-row-reverse w-11/12 place-items-center max-w-[1160px]">
           <SwithTheme />
         </div>
       </header>
     )
   } else {
     return (
-      <header className="grid w-full place-items-center pt-[26px] md:pt-10">
-        <div className="flex flex-row-reverse justify-between w-11/12 place-items-center">
+      <header className="grid w-full place-items-center pt-[26px] md:pt-10 lg:pt-24">
+        <div className="flex flex-row-reverse justify-between w-11/12 place-items-center max-w-[1160px]">
           <SwithTheme />
           {quizName === "html" ? (
             <div className="flex items-center gap-4 md:gap-6">
