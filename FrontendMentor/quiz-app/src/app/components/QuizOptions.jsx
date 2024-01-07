@@ -11,6 +11,8 @@ export default function QuizOptions({
   qntCorrectAnswers,
   setQntCorrectAnswers,
   setQuestionLength,
+  submitedAlert,
+  setSubmitedAlert,
 }) {
   const [data, setData] = useState()
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0)
@@ -44,6 +46,8 @@ export default function QuizOptions({
   const handleSubmit = () => {
     if (selectedOptionIndex !== null) {
       setSubmited(true)
+    } else {
+      setSubmitedAlert(true)
     }
     if (selectedOptionIndex === correctIndex) {
       setQntCorrectAnswers(qntCorrectAnswers + 1)
@@ -55,6 +59,7 @@ export default function QuizOptions({
       setCurrentQuestionIndex(currentQuestionIndex + 1)
       setSelectedOptionIndex(null)
       setSubmited(false)
+      setSubmitedAlert(false)
     } else {
       setIsFinishTime(true)
     }
@@ -81,15 +86,15 @@ export default function QuizOptions({
               />
             </div>
             <div className="flex flex-col items-center w-full pb-10">
-              <div className="flex flex-col w-full gap-3 md:gap-6">
+              <div className="relative flex flex-col w-full gap-3 md:gap-6">
                 {data[0].questions[currentQuestionIndex].options.map(
                   (option, index) => (
                     <button
                       key={index}
-                      className={`flex items-center w-full gap-8 p-3 focus:border-[#a729f5] bg-white dark:bg-[#3B4D66] rounded-xl md:rounded-3xl outline-none outline-0 border-[3px] border-transparent ${
+                      className={`flex items-center w-full gap-8 p-3 [&>div]:hover:bg-[#F6E7FF] [&>div]:hover:text-[#A729F5] focus:border-[#a729f5] bg-white dark:bg-[#3B4D66] rounded-xl md:rounded-3xl outline-none outline-0 border-[3px] ${
                         selectedOptionIndex !== null && !submited
                           ? index === selectedOptionIndex
-                            ? "border-[#a729f5] [&>div]:bg-[#a729f5] [&>div]:text-white"
+                            ? "border-[#a729f5] [&>div]:bg-[#a729f5] [&>div]:hover:bg-[#a729f5] [&>div]:text-white [&>div]:hover:text-white"
                             : null
                           : null
                       } ${
@@ -99,7 +104,7 @@ export default function QuizOptions({
                               ? "border-[#26D782] [&>div]:bg-[#26D782] [&>div]:text-white"
                               : "border-[#EE5454] [&>div]:bg-[#EE5454] [&>div]:text-white"
                             : index === correctIndex
-                            ? null
+                            ? "border-transparent"
                             : "border-transparent"
                           : "border-transparent"
                       } `}
@@ -144,19 +149,35 @@ export default function QuizOptions({
                 {submited ? (
                   <button
                     onClick={handleNext}
-                    className="w-full p-[19px] bg-[#A729F5] md:text-[28px] md:p-8 md:rounded-3xl rounded-xl text-[18px] text-white font-medium leading-5 md:mt-2"
+                    className="w-full p-[19px] bg-[#A729F5] hover:bg-[#d394fa] md:text-[28px] md:p-8 md:rounded-3xl rounded-xl text-[18px] text-white font-medium leading-5 md:mt-2"
                   >
                     {currentQuestionIndex < data[0].questions.length - 1
                       ? "Next Question"
                       : "Finish Quiz"}
                   </button>
                 ) : (
-                  <button
-                    onClick={handleSubmit}
-                    className="w-full p-[19px] bg-[#A729F5] md:text-[28px] md:p-8 md:rounded-3xl rounded-xl text-[18px] text-white font-medium leading-5  md:mt-2"
-                  >
-                    Submit Answer
-                  </button>
+                  <>
+                    <button
+                      onClick={handleSubmit}
+                      className="w-full p-[19px] outline-[#3b4d66] hover:bg-[#d394fa] dar:outline-[#fff] outline-offset-4 bg-[#A729F5] md:text-[28px] md:p-8 md:rounded-3xl rounded-xl text-[18px] text-white font-medium leading-5  md:mt-2"
+                    >
+                      Submit Answer
+                    </button>
+                    {submitedAlert ? (
+                      <div className="absolute bottom-[-16px] pb-2 left-0 grid w-full h-0 place-items-center">
+                        <div className="flex items-center gap-2">
+                          <Image
+                            src={"/icon-incorrect.svg"}
+                            width={24}
+                            height={24}
+                          />
+                          <p className="md:text-[24px] text-[18px] leading-[100%] md:leading-[150%] text-[#EE5454]">
+                            Please select an answer
+                          </p>
+                        </div>
+                      </div>
+                    ) : null}
+                  </>
                 )}
               </div>
             </div>

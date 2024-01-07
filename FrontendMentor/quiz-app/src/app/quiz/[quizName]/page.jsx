@@ -8,6 +8,7 @@ export default function Quiz({ params }) {
   const [isFinishTime, setIsFinishTime] = useState(false)
   const [qntCorrectAnswers, setQntCorrectAnswers] = useState(0)
   const [questionLength, setQuestionLength] = useState(0)
+  const [submitedAlert, setSubmitedAlert] = useState(false)
 
   return (
     <>
@@ -20,6 +21,8 @@ export default function Quiz({ params }) {
             qntCorrectAnswers={qntCorrectAnswers}
             setQntCorrectAnswers={setQntCorrectAnswers}
             setQuestionLength={setQuestionLength}
+            submitedAlert={submitedAlert}
+            setSubmitedAlert={setSubmitedAlert}
           />
         ) : (
           <Finish
